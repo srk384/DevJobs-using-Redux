@@ -1,0 +1,886 @@
+[
+    {
+        "id": 1,
+        "company": "ByteWorks",
+        "title": "UI/UX Designer",
+        "description": "Participate in code reviews and agile ceremonies.",
+        "salary": "$126000 - $187000",
+        "location": "San Francisco, CA",
+        "skills": [
+            "Java",
+            "TypeScript",
+            "MongoDB",
+            "Docker",
+            "CSS"
+        ],
+        "applicants": 27,
+        "company_logo": "https://dummyimage.com/100x100/777/fff&text=ByteWorks",
+        "_id": "d755e941-1d1f-43ad-a77f-6891d5f62671"
+    },
+    {
+        "id": 2,
+        "company": "NextGen Labs",
+        "title": "Product Manager",
+        "description": "Design robust APIs and integrate third-party services.",
+        "salary": "$72000 - $238000",
+        "location": "Boston, MA",
+        "skills": [
+            "React",
+            "Docker",
+            "C++",
+            "JavaScript",
+            "Git"
+        ],
+        "applicants": 66,
+        "company_logo": "https://dummyimage.com/100x100/444/fff&text=NextGen",
+        "_id": "df7b5472-af56-45b6-94ff-87ae8b930890"
+    },
+    {
+        "id": 3,
+        "company": "PixelLogic",
+        "title": "Full Stack Developer",
+        "description": "Ensure optimal performance and user experience.",
+        "salary": "$80000 - $174000",
+        "location": "Seattle, WA",
+        "skills": [
+            "Flask",
+            "Kubernetes",
+            "Docker",
+            "C++",
+            "SQL",
+            "Java"
+        ],
+        "applicants": 32,
+        "company_logo": "https://dummyimage.com/100x100/888/fff&text=PixelLogic",
+        "_id": "455fac11-0e55-4e6d-86c2-0ee2465161c1"
+    },
+    {
+        "id": 4,
+        "company": "CloudWare",
+        "title": "Full Stack Developer",
+        "description": "Collaborate with cross-functional teams to deliver high-quality solutions.",
+        "salary": "$149000 - $160000",
+        "location": "Los Angeles, CA",
+        "skills": [
+            "TypeScript",
+            "Docker",
+            "MongoDB",
+            "AWS",
+            "SQL"
+        ],
+        "applicants": 8,
+        "company_logo": "https://dummyimage.com/100x100/555/fff&text=CloudWare",
+        "_id": "2f16f0aa-8c3d-4a30-b84f-092afd923cf1"
+    },
+    {
+        "id": 5,
+        "company": "AlgoRhythm",
+        "title": "Security Analyst",
+        "description": "Research and implement new technologies.",
+        "salary": "$135000 - $217000",
+        "location": "Austin, TX",
+        "skills": [
+            "JavaScript",
+            "Kubernetes",
+            "Docker",
+            "Python",
+            "Git"
+        ],
+        "applicants": 5,
+        "company_logo": "https://dummyimage.com/100x100/666/fff&text=AlgoRhythm",
+        "_id": "43b13794-4ca5-4f3d-baae-12a4f292350c"
+    },
+    {
+        "id": 6,
+        "company": "SoftServe Systems",
+        "title": "Security Analyst",
+        "description": "Write clean, efficient, and well-documented code.",
+        "salary": "$76000 - $223000",
+        "location": "San Francisco, CA",
+        "skills": [
+            "Django",
+            "Python",
+            "TypeScript",
+            "React",
+            "AWS"
+        ],
+        "applicants": 141,
+        "company_logo": "https://dummyimage.com/100x100/999/fff&text=SoftServe",
+        "_id": "1e3a5311-eec7-44de-a06d-0da20d1a6937"
+    },
+    {
+        "id": 7,
+        "company": "DevSphere",
+        "title": "Security Analyst",
+        "description": "Design robust APIs and integrate third-party services.",
+        "salary": "$149000 - $178000",
+        "location": "Denver, CO",
+        "skills": [
+            "C++",
+            "MongoDB",
+            "CSS",
+            "Django",
+            "HTML",
+            "Kubernetes"
+        ],
+        "applicants": 39,
+        "company_logo": "https://dummyimage.com/100x100/222/fff&text=DevSphere",
+        "_id": "1cd97fb3-faba-463f-915d-8307981319ab"
+    },
+    {
+        "id": 8,
+        "company": "CodeCrafters",
+        "title": "Full Stack Developer",
+        "description": "Collaborate with cross-functional teams to deliver high-quality solutions.",
+        "salary": "$114000 - $220000",
+        "location": "Los Angeles, CA",
+        "skills": [
+            "MongoDB",
+            "React",
+            "Git",
+            "C++",
+            "Node.js",
+            "AWS"
+        ],
+        "applicants": 115,
+        "company_logo": "https://dummyimage.com/100x100/111/fff&text=CodeCrafters",
+        "_id": "e2a94294-b51b-4443-92cd-cebc075177d9"
+    },
+    {
+        "id": 9,
+        "company": "PixelLogic",
+        "title": "Product Manager",
+        "description": "Design robust APIs and integrate third-party services.",
+        "salary": "$106000 - $239000",
+        "location": "Remote",
+        "skills": [
+            "SQL",
+            "JavaScript",
+            "MongoDB"
+        ],
+        "applicants": 93,
+        "company_logo": "https://dummyimage.com/100x100/888/fff&text=PixelLogic",
+        "_id": "298b20bc-870f-4366-817d-05b2ed7c1eb6"
+    },
+    {
+        "id": 10,
+        "company": "PixelLogic",
+        "title": "UI/UX Designer",
+        "description": "Research and implement new technologies.",
+        "salary": "$105000 - $170000",
+        "location": "Atlanta, GA",
+        "skills": [
+            "MongoDB",
+            "Django",
+            "CSS",
+            "TypeScript"
+        ],
+        "applicants": 61,
+        "company_logo": "https://dummyimage.com/100x100/888/fff&text=PixelLogic",
+        "_id": "3665e2fc-2395-4aea-9594-a9b9f1452f49"
+    },
+    {
+        "id": 11,
+        "company": "ByteWorks",
+        "title": "UI/UX Designer",
+        "description": "Troubleshoot issues and improve system performance.",
+        "salary": "$69000 - $229000",
+        "location": "Austin, TX",
+        "skills": [
+            "Docker",
+            "Python",
+            "JavaScript",
+            "TypeScript"
+        ],
+        "applicants": 149,
+        "company_logo": "https://dummyimage.com/100x100/777/fff&text=ByteWorks",
+        "_id": "cefc60d5-396f-4872-be60-cbad971bd0ac"
+    },
+    {
+        "id": 12,
+        "company": "CloudWare",
+        "title": "Product Manager",
+        "description": "Develop and maintain scalable software systems.",
+        "salary": "$73000 - $162000",
+        "location": "Denver, CO",
+        "skills": [
+            "React",
+            "Django",
+            "HTML",
+            "C++",
+            "Git",
+            "Flask"
+        ],
+        "applicants": 84,
+        "company_logo": "https://dummyimage.com/100x100/555/fff&text=CloudWare",
+        "_id": "0aac62a5-11eb-4813-9bc4-8b56124867a3"
+    },
+    {
+        "id": 13,
+        "company": "PixelLogic",
+        "title": "Frontend Developer",
+        "description": "Troubleshoot issues and improve system performance.",
+        "salary": "$102000 - $165000",
+        "location": "New York, NY",
+        "skills": [
+            "Python",
+            "AWS",
+            "Node.js",
+            "C++",
+            "Git"
+        ],
+        "applicants": 145,
+        "company_logo": "https://dummyimage.com/100x100/888/fff&text=PixelLogic",
+        "_id": "6041a267-64fe-411e-a9c7-29fe9caa2dc5"
+    },
+    {
+        "id": 14,
+        "company": "DevSphere",
+        "title": "Backend Engineer",
+        "description": "Develop and maintain scalable software systems.",
+        "salary": "$104000 - $237000",
+        "location": "Austin, TX",
+        "skills": [
+            "C++",
+            "SQL",
+            "Java",
+            "Node.js",
+            "Flask",
+            "React"
+        ],
+        "applicants": 133,
+        "company_logo": "https://dummyimage.com/100x100/222/fff&text=DevSphere",
+        "_id": "b6aeeff7-d42f-42b6-b3aa-03cfb201a4c1"
+    },
+    {
+        "id": 15,
+        "company": "CloudWare",
+        "title": "Full Stack Developer",
+        "description": "Research and implement new technologies.",
+        "salary": "$61000 - $240000",
+        "location": "Seattle, WA",
+        "skills": [
+            "Docker",
+            "Flask",
+            "AWS",
+            "Git",
+            "HTML",
+            "C++"
+        ],
+        "applicants": 84,
+        "company_logo": "https://dummyimage.com/100x100/555/fff&text=CloudWare",
+        "_id": "a326decc-1fde-4230-8d94-8742f3588521"
+    },
+    {
+        "id": 16,
+        "company": "CodeCrafters",
+        "title": "Frontend Developer",
+        "description": "Troubleshoot issues and improve system performance.",
+        "salary": "$109000 - $210000",
+        "location": "Austin, TX",
+        "skills": [
+            "C++",
+            "Python",
+            "React",
+            "TypeScript",
+            "Java",
+            "SQL"
+        ],
+        "applicants": 67,
+        "company_logo": "https://dummyimage.com/100x100/111/fff&text=CodeCrafters",
+        "_id": "a12f43f6-dc2b-4169-8bba-20357d83fef6"
+    },
+    {
+        "id": 17,
+        "company": "NextGen Labs",
+        "title": "ML Engineer",
+        "description": "Collaborate with cross-functional teams to deliver high-quality solutions.",
+        "salary": "$83000 - $167000",
+        "location": "Remote",
+        "skills": [
+            "JavaScript",
+            "C++",
+            "Node.js"
+        ],
+        "applicants": 126,
+        "company_logo": "https://dummyimage.com/100x100/444/fff&text=NextGen",
+        "_id": "f1722ec9-1651-4101-a73c-6d591d7af1e5"
+    },
+    {
+        "id": 18,
+        "company": "CodeCrafters",
+        "title": "Security Analyst",
+        "description": "Troubleshoot issues and improve system performance.",
+        "salary": "$136000 - $243000",
+        "location": "Austin, TX",
+        "skills": [
+            "Python",
+            "React",
+            "Node.js",
+            "HTML"
+        ],
+        "applicants": 6,
+        "company_logo": "https://dummyimage.com/100x100/111/fff&text=CodeCrafters",
+        "_id": "3b04a457-6103-4d9c-bbc3-e460001cd926"
+    },
+    {
+        "id": 19,
+        "company": "CodeCrafters",
+        "title": "Security Analyst",
+        "description": "Design robust APIs and integrate third-party services.",
+        "salary": "$75000 - $185000",
+        "location": "Atlanta, GA",
+        "skills": [
+            "AWS",
+            "Flask",
+            "Java",
+            "Node.js",
+            "SQL"
+        ],
+        "applicants": 87,
+        "company_logo": "https://dummyimage.com/100x100/111/fff&text=CodeCrafters",
+        "_id": "674c9569-647e-4d7e-b8dc-80b72383c9f0"
+    },
+    {
+        "id": 20,
+        "company": "TechNova Inc.",
+        "title": "Frontend Developer",
+        "description": "Design robust APIs and integrate third-party services.",
+        "salary": "$106000 - $172000",
+        "location": "San Francisco, CA",
+        "skills": [
+            "HTML",
+            "Flask",
+            "MongoDB",
+            "SQL"
+        ],
+        "applicants": 12,
+        "company_logo": "https://dummyimage.com/100x100/000/fff&text=TechNova",
+        "_id": "9bbbb2e9-e9f9-42ce-b679-95c83205979c"
+    },
+    {
+        "id": 21,
+        "company": "SoftServe Systems",
+        "title": "Backend Engineer",
+        "description": "Research and implement new technologies.",
+        "salary": "$99000 - $199000",
+        "location": "Atlanta, GA",
+        "skills": [
+            "JavaScript",
+            "Git",
+            "MongoDB"
+        ],
+        "applicants": 63,
+        "company_logo": "https://dummyimage.com/100x100/999/fff&text=SoftServe",
+        "_id": "1ed2f6a5-9ceb-4ae2-be1e-b7a66aecd3bb"
+    },
+    {
+        "id": 22,
+        "company": "CodeCrafters",
+        "title": "Full Stack Developer",
+        "description": "Ensure optimal performance and user experience.",
+        "salary": "$113000 - $198000",
+        "location": "Los Angeles, CA",
+        "skills": [
+            "JavaScript",
+            "C++",
+            "CSS",
+            "Kubernetes"
+        ],
+        "applicants": 95,
+        "company_logo": "https://dummyimage.com/100x100/111/fff&text=CodeCrafters",
+        "_id": "747f7fc9-c24a-4296-b7ce-48b821d75718"
+    },
+    {
+        "id": 23,
+        "company": "CodeCrafters",
+        "title": "QA Engineer",
+        "description": "Collaborate with cross-functional teams to deliver high-quality solutions.",
+        "salary": "$120000 - $223000",
+        "location": "Chicago, IL",
+        "skills": [
+            "Docker",
+            "React",
+            "Python",
+            "Django"
+        ],
+        "applicants": 140,
+        "company_logo": "https://dummyimage.com/100x100/111/fff&text=CodeCrafters",
+        "_id": "39431372-7bb5-4adc-bc3e-f475189b053a"
+    },
+    {
+        "id": 24,
+        "company": "InnoSoft Solutions",
+        "title": "Product Manager",
+        "description": "Ensure optimal performance and user experience.",
+        "salary": "$79000 - $249000",
+        "location": "Los Angeles, CA",
+        "skills": [
+            "JavaScript",
+            "Docker",
+            "React",
+            "Django",
+            "Flask",
+            "Kubernetes"
+        ],
+        "applicants": 50,
+        "company_logo": "https://dummyimage.com/100x100/333/fff&text=InnoSoft",
+        "_id": "2da52881-23b3-456b-bcb5-f22e92759f47"
+    },
+    {
+        "id": 25,
+        "company": "CodeCrafters",
+        "title": "UI/UX Designer",
+        "description": "Design robust APIs and integrate third-party services.",
+        "salary": "$61000 - $183000",
+        "location": "New York, NY",
+        "skills": [
+            "Git",
+            "MongoDB",
+            "Django"
+        ],
+        "applicants": 104,
+        "company_logo": "https://dummyimage.com/100x100/111/fff&text=CodeCrafters",
+        "_id": "26e63b52-723b-4ee0-9ed5-183fa0352c27"
+    },
+    {
+        "id": 26,
+        "company": "InnoSoft Solutions",
+        "title": "Frontend Developer",
+        "description": "Design robust APIs and integrate third-party services.",
+        "salary": "$85000 - $167000",
+        "location": "Seattle, WA",
+        "skills": [
+            "CSS",
+            "Java",
+            "Django"
+        ],
+        "applicants": 138,
+        "company_logo": "https://dummyimage.com/100x100/333/fff&text=InnoSoft",
+        "_id": "5e10360e-45fa-4a73-91e4-3a0f45bde09e"
+    },
+    {
+        "id": 27,
+        "company": "ByteWorks",
+        "title": "Frontend Developer",
+        "description": "Troubleshoot issues and improve system performance.",
+        "salary": "$87000 - $200000",
+        "location": "Seattle, WA",
+        "skills": [
+            "Python",
+            "Kubernetes",
+            "React"
+        ],
+        "applicants": 89,
+        "company_logo": "https://dummyimage.com/100x100/777/fff&text=ByteWorks",
+        "_id": "d8fc21dc-8815-4083-8bd5-44bc34acf714"
+    },
+    {
+        "id": 28,
+        "company": "TechNova Inc.",
+        "title": "UI/UX Designer",
+        "description": "Ensure optimal performance and user experience.",
+        "salary": "$118000 - $198000",
+        "location": "San Francisco, CA",
+        "skills": [
+            "MongoDB",
+            "CSS",
+            "HTML"
+        ],
+        "applicants": 120,
+        "company_logo": "https://dummyimage.com/100x100/000/fff&text=TechNova",
+        "_id": "eaa2ebff-a075-4370-8fa2-bf3a447c530f"
+    },
+    {
+        "id": 29,
+        "company": "TechNova Inc.",
+        "title": "Backend Engineer",
+        "description": "Collaborate with cross-functional teams to deliver high-quality solutions.",
+        "salary": "$144000 - $200000",
+        "location": "San Francisco, CA",
+        "skills": [
+            "SQL",
+            "Kubernetes",
+            "Django",
+            "Docker"
+        ],
+        "applicants": 145,
+        "company_logo": "https://dummyimage.com/100x100/000/fff&text=TechNova",
+        "_id": "2159d3ba-430c-4537-8298-96b623904963"
+    },
+    {
+        "id": 30,
+        "company": "CloudWare",
+        "title": "Frontend Developer",
+        "description": "Troubleshoot issues and improve system performance.",
+        "salary": "$80000 - $197000",
+        "location": "New York, NY",
+        "skills": [
+            "MongoDB",
+            "Django",
+            "SQL",
+            "CSS"
+        ],
+        "applicants": 8,
+        "company_logo": "https://dummyimage.com/100x100/555/fff&text=CloudWare",
+        "_id": "9af26964-8297-4342-9c26-40e5bc47b2f5"
+    },
+    {
+        "id": 31,
+        "company": "CodeCrafters",
+        "title": "Frontend Developer",
+        "description": "Ensure optimal performance and user experience.",
+        "salary": "$96000 - $233000",
+        "location": "Atlanta, GA",
+        "skills": [
+            "Git",
+            "React",
+            "Django",
+            "Kubernetes",
+            "C++"
+        ],
+        "applicants": 37,
+        "company_logo": "https://dummyimage.com/100x100/111/fff&text=CodeCrafters",
+        "_id": "7617a012-2af8-4557-8eee-b3a925694e5d"
+    },
+    {
+        "id": 32,
+        "company": "DevSphere",
+        "title": "DevOps Engineer",
+        "description": "Research and implement new technologies.",
+        "salary": "$137000 - $226000",
+        "location": "San Francisco, CA",
+        "skills": [
+            "Kubernetes",
+            "Java",
+            "Docker"
+        ],
+        "applicants": 19,
+        "company_logo": "https://dummyimage.com/100x100/222/fff&text=DevSphere",
+        "_id": "390e4ea2-fddc-4d07-a9ab-585d34488e87"
+    },
+    {
+        "id": 33,
+        "company": "DevSphere",
+        "title": "Security Analyst",
+        "description": "Ensure optimal performance and user experience.",
+        "salary": "$108000 - $193000",
+        "location": "Austin, TX",
+        "skills": [
+            "Node.js",
+            "Git",
+            "Flask"
+        ],
+        "applicants": 143,
+        "company_logo": "https://dummyimage.com/100x100/222/fff&text=DevSphere",
+        "_id": "e85493d0-99b5-42bd-b0df-80f0c3d06080"
+    },
+    {
+        "id": 34,
+        "company": "NextGen Labs",
+        "title": "Data Scientist",
+        "description": "Collaborate with cross-functional teams to deliver high-quality solutions.",
+        "salary": "$148000 - $164000",
+        "location": "Austin, TX",
+        "skills": [
+            "JavaScript",
+            "Python",
+            "C++",
+            "Java",
+            "Node.js",
+            "CSS"
+        ],
+        "applicants": 114,
+        "company_logo": "https://dummyimage.com/100x100/444/fff&text=NextGen",
+        "_id": "28b38dfa-39f5-4ea6-981c-f42b006d1b18"
+    },
+    {
+        "id": 35,
+        "company": "DevSphere",
+        "title": "Full Stack Developer",
+        "description": "Ensure optimal performance and user experience.",
+        "salary": "$130000 - $218000",
+        "location": "Austin, TX",
+        "skills": [
+            "Java",
+            "C++",
+            "Python",
+            "HTML",
+            "SQL",
+            "TypeScript"
+        ],
+        "applicants": 56,
+        "company_logo": "https://dummyimage.com/100x100/222/fff&text=DevSphere",
+        "_id": "8e7bfc90-5dda-45d0-b7ca-378334e23824"
+    },
+    {
+        "id": 36,
+        "company": "CodeCrafters",
+        "title": "DevOps Engineer",
+        "description": "Participate in code reviews and agile ceremonies.",
+        "salary": "$73000 - $178000",
+        "location": "Boston, MA",
+        "skills": [
+            "Git",
+            "Django",
+            "SQL",
+            "React",
+            "Flask"
+        ],
+        "applicants": 87,
+        "company_logo": "https://dummyimage.com/100x100/111/fff&text=CodeCrafters",
+        "_id": "e2ac6416-10f6-4f94-ae6b-d5ae33f09127"
+    },
+    {
+        "id": 37,
+        "company": "SoftServe Systems",
+        "title": "Data Scientist",
+        "description": "Collaborate with cross-functional teams to deliver high-quality solutions.",
+        "salary": "$92000 - $222000",
+        "location": "Remote",
+        "skills": [
+            "AWS",
+            "Java",
+            "JavaScript",
+            "Git",
+            "Node.js",
+            "HTML"
+        ],
+        "applicants": 150,
+        "company_logo": "https://dummyimage.com/100x100/999/fff&text=SoftServe",
+        "_id": "ea5b9fc6-1566-4892-a0b8-e62df29a4ab6"
+    },
+    {
+        "id": 38,
+        "company": "PixelLogic",
+        "title": "QA Engineer",
+        "description": "Design robust APIs and integrate third-party services.",
+        "salary": "$118000 - $193000",
+        "location": "Boston, MA",
+        "skills": [
+            "AWS",
+            "Node.js",
+            "SQL",
+            "Django",
+            "React"
+        ],
+        "applicants": 69,
+        "company_logo": "https://dummyimage.com/100x100/888/fff&text=PixelLogic",
+        "_id": "b6ffa212-7c2d-48b2-937a-548b85c146bc"
+    },
+    {
+        "id": 39,
+        "company": "NextGen Labs",
+        "title": "Backend Engineer",
+        "description": "Design robust APIs and integrate third-party services.",
+        "salary": "$72000 - $207000",
+        "location": "Los Angeles, CA",
+        "skills": [
+            "Django",
+            "C++",
+            "MongoDB",
+            "React",
+            "AWS",
+            "Kubernetes"
+        ],
+        "applicants": 122,
+        "company_logo": "https://dummyimage.com/100x100/444/fff&text=NextGen",
+        "_id": "7e4c4925-e15d-48ef-89b5-d449fadd2a23"
+    },
+    {
+        "id": 40,
+        "company": "DevSphere",
+        "title": "UI/UX Designer",
+        "description": "Participate in code reviews and agile ceremonies.",
+        "salary": "$89000 - $164000",
+        "location": "San Francisco, CA",
+        "skills": [
+            "MongoDB",
+            "Java",
+            "Python",
+            "AWS",
+            "Docker",
+            "TypeScript"
+        ],
+        "applicants": 39,
+        "company_logo": "https://dummyimage.com/100x100/222/fff&text=DevSphere",
+        "_id": "68f9c17f-2766-4bcb-8dd2-315ed88bc489"
+    },
+    {
+        "id": 41,
+        "company": "ByteWorks",
+        "title": "Full Stack Developer",
+        "description": "Troubleshoot issues and improve system performance.",
+        "salary": "$116000 - $208000",
+        "location": "New York, NY",
+        "skills": [
+            "Git",
+            "React",
+            "TypeScript",
+            "MongoDB",
+            "Python",
+            "C++"
+        ],
+        "applicants": 102,
+        "company_logo": "https://dummyimage.com/100x100/777/fff&text=ByteWorks",
+        "_id": "96612ce4-6556-44e6-b8be-486f8b817801"
+    },
+    {
+        "id": 42,
+        "company": "NextGen Labs",
+        "title": "Frontend Developer",
+        "description": "Develop and maintain scalable software systems.",
+        "salary": "$76000 - $202000",
+        "location": "Seattle, WA",
+        "skills": [
+            "HTML",
+            "Node.js",
+            "React",
+            "MongoDB"
+        ],
+        "applicants": 142,
+        "company_logo": "https://dummyimage.com/100x100/444/fff&text=NextGen",
+        "_id": "1b122c59-fcb6-431c-b27f-17c3080a2bf6"
+    },
+    {
+        "id": 43,
+        "company": "TechNova Inc.",
+        "title": "QA Engineer",
+        "description": "Develop and maintain scalable software systems.",
+        "salary": "$150000 - $180000",
+        "location": "Los Angeles, CA",
+        "skills": [
+            "Django",
+            "TypeScript",
+            "JavaScript"
+        ],
+        "applicants": 55,
+        "company_logo": "https://dummyimage.com/100x100/000/fff&text=TechNova",
+        "_id": "a1b6984e-e4ba-4d76-8383-4d9540bd1bc6"
+    },
+    {
+        "id": 44,
+        "company": "ByteWorks",
+        "title": "ML Engineer",
+        "description": "Develop and maintain scalable software systems.",
+        "salary": "$114000 - $223000",
+        "location": "Los Angeles, CA",
+        "skills": [
+            "Kubernetes",
+            "Python",
+            "Git",
+            "Flask",
+            "Django",
+            "CSS"
+        ],
+        "applicants": 116,
+        "company_logo": "https://dummyimage.com/100x100/777/fff&text=ByteWorks",
+        "_id": "4240a99d-7347-4ad9-b63f-c68ba8eb4833"
+    },
+    {
+        "id": 45,
+        "company": "InnoSoft Solutions",
+        "title": "ML Engineer",
+        "description": "Research and implement new technologies.",
+        "salary": "$68000 - $218000",
+        "location": "Boston, MA",
+        "skills": [
+            "CSS",
+            "SQL",
+            "React",
+            "Java",
+            "Node.js",
+            "Django"
+        ],
+        "applicants": 66,
+        "company_logo": "https://dummyimage.com/100x100/333/fff&text=InnoSoft",
+        "_id": "f6ff6549-040e-4820-8074-8127c5a1c421"
+    },
+    {
+        "id": 46,
+        "company": "PixelLogic",
+        "title": "DevOps Engineer",
+        "description": "Write clean, efficient, and well-documented code.",
+        "salary": "$68000 - $188000",
+        "location": "Austin, TX",
+        "skills": [
+            "SQL",
+            "Docker",
+            "C++",
+            "MongoDB"
+        ],
+        "applicants": 104,
+        "company_logo": "https://dummyimage.com/100x100/888/fff&text=PixelLogic",
+        "_id": "571ed92e-928f-4759-887e-379907221281"
+    },
+    {
+        "id": 47,
+        "company": "TechNova Inc.",
+        "title": "Backend Engineer",
+        "description": "Develop and maintain scalable software systems.",
+        "salary": "$135000 - $168000",
+        "location": "Remote",
+        "skills": [
+            "AWS",
+            "Docker",
+            "Django",
+            "Kubernetes"
+        ],
+        "applicants": 101,
+        "company_logo": "https://dummyimage.com/100x100/000/fff&text=TechNova",
+        "_id": "0ab573de-5018-4def-87d9-f8d8004e01d8"
+    },
+    {
+        "id": 48,
+        "company": "AlgoRhythm",
+        "title": "DevOps Engineer",
+        "description": "Develop and maintain scalable software systems.",
+        "salary": "$69000 - $172000",
+        "location": "San Francisco, CA",
+        "skills": [
+            "Java",
+            "SQL",
+            "React",
+            "Django",
+            "CSS"
+        ],
+        "applicants": 108,
+        "company_logo": "https://dummyimage.com/100x100/666/fff&text=AlgoRhythm",
+        "_id": "316559c0-a4ac-4566-acae-f6d2c9f2625a"
+    },
+    {
+        "id": 49,
+        "company": "CodeCrafters",
+        "title": "UI/UX Designer",
+        "description": "Research and implement new technologies.",
+        "salary": "$72000 - $212000",
+        "location": "Remote",
+        "skills": [
+            "Git",
+            "MongoDB",
+            "Flask",
+            "SQL"
+        ],
+        "applicants": 107,
+        "company_logo": "https://dummyimage.com/100x100/111/fff&text=CodeCrafters",
+        "_id": "b15e3a1a-4d2c-4de5-8744-14788d65d3d4"
+    },
+    {
+        "id": 50,
+        "company": "SoftServe Systems",
+        "title": "DevOps Engineer",
+        "description": "Write clean, efficient, and well-documented code.",
+        "salary": "$62000 - $239000",
+        "location": "Seattle, WA",
+        "skills": [
+            "C++",
+            "Java",
+            "CSS",
+            "Django",
+            "TypeScript"
+        ],
+        "applicants": 90,
+        "company_logo": "https://dummyimage.com/100x100/999/fff&text=SoftServe",
+        "_id": "989066ac-d851-4af9-a885-2d518b0d347f"
+    }
+]

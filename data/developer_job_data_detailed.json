@@ -1,0 +1,888 @@
+[
+  {
+    "id": 1,
+    "company": "CodeCrafters",
+    "title": "Full Stack Developer",
+    "description": "\nCodeCrafters is hiring for the role of Full Stack Developer!\n\n**Responsibilities of the Candidate:**\n\n- Design, develop, and maintain scalable and efficient software applications.\n- Write clean, modular, and documented code using technologies such as Python, Django, PostgreSQL.\n- Collaborate with cross-functional teams including product managers and designers.\n- Perform unit and integration testing, and fix bugs identified by QA.\n- Participate in sprint planning, code reviews, and agile ceremonies.\n- Document features, code logic, and architectural decisions.\n\n**Requirements:**\n\n- Bachelor's degree in Computer Science or related field.\n- At least 4 years of professional experience as a Full Stack Developer.\n- Strong understanding of programming fundamentals and system design.\n- Experience with tools and frameworks like VS Code, Postman.\n- Familiarity with version control (Git), CI/CD pipelines, and RESTful APIs.\n- Excellent communication, problem-solving, and collaboration skills.\n- Experience with Agile methodologies.\n\n**Nice to have:** Experience with Docker, Kubernetes, AWS, or GCP.\n",
+    "salary": "$145000 - $205000",
+    "location": "Chicago, IL",
+    "skills": [
+      "Python",
+      "C++",
+      "CSS",
+      "TypeScript",
+      "Java",
+      "SQL",
+      "HTML"
+    ],
+    "applicants": 121,
+    "company_logo": "https://dummyimage.com/100x100/f94144/fff&text=CodeCrafters"
+  },
+  {
+    "id": 2,
+    "company": "ByteWorks",
+    "title": "Data Scientist",
+    "description": "\nByteWorks is hiring for the role of Data Scientist!\n\n**Responsibilities of the Candidate:**\n\n- Design, develop, and maintain scalable and efficient software applications.\n- Write clean, modular, and documented code using technologies such as Java, Spring Boot, MySQL.\n- Collaborate with cross-functional teams including product managers and designers.\n- Perform unit and integration testing, and fix bugs identified by QA.\n- Participate in sprint planning, code reviews, and agile ceremonies.\n- Document features, code logic, and architectural decisions.\n\n**Requirements:**\n\n- Bachelor's degree in Computer Science or related field.\n- At least 3 years of professional experience as a Data Scientist.\n- Strong understanding of programming fundamentals and system design.\n- Experience with tools and frameworks like GitHub Actions, Cypress.\n- Familiarity with version control (Git), CI/CD pipelines, and RESTful APIs.\n- Excellent communication, problem-solving, and collaboration skills.\n- Experience with Agile methodologies.\n\n**Nice to have:** Experience with Docker, Kubernetes, AWS, or GCP.\n",
+    "salary": "$79000 - $176000",
+    "location": "Boston, MA",
+    "skills": [
+      "JavaScript",
+      "Java",
+      "Python",
+      "CSS"
+    ],
+    "applicants": 17,
+    "company_logo": "https://dummyimage.com/100x100/f3722c/fff&text=ByteWorks"
+  },
+  {
+    "id": 3,
+    "company": "TechNova Inc.",
+    "title": "Full Stack Developer",
+    "description": "\nTechNova Inc. is hiring for the role of Full Stack Developer!\n\n**Responsibilities of the Candidate:**\n\n- Design, develop, and maintain scalable and efficient software applications.\n- Write clean, modular, and documented code using technologies such as Angular, Flask, SQLAlchemy.\n- Collaborate with cross-functional teams including product managers and designers.\n- Perform unit and integration testing, and fix bugs identified by QA.\n- Participate in sprint planning, code reviews, and agile ceremonies.\n- Document features, code logic, and architectural decisions.\n\n**Requirements:**\n\n- Bachelor's degree in Computer Science or related field.\n- At least 6 years of professional experience as a Full Stack Developer.\n- Strong understanding of programming fundamentals and system design.\n- Experience with tools and frameworks like VS Code, Postman.\n- Familiarity with version control (Git), CI/CD pipelines, and RESTful APIs.\n- Excellent communication, problem-solving, and collaboration skills.\n- Experience with Agile methodologies.\n\n**Nice to have:** Experience with Docker, Kubernetes, AWS, or GCP.\n",
+    "salary": "$84000 - $186000",
+    "location": "Boston, MA",
+    "skills": [
+      "Django",
+      "MongoDB",
+      "TypeScript",
+      "C++",
+      "HTML",
+      "Git"
+    ],
+    "applicants": 103,
+    "company_logo": "https://dummyimage.com/100x100/f8961e/fff&text=TechNova+Inc."
+  },
+  {
+    "id": 4,
+    "company": "AlgoRhythm",
+    "title": "Full Stack Developer",
+    "description": "\nAlgoRhythm is hiring for the role of Full Stack Developer!\n\n**Responsibilities of the Candidate:**\n\n- Design, develop, and maintain scalable and efficient software applications.\n- Write clean, modular, and documented code using technologies such as Java, Spring Boot, MySQL.\n- Collaborate with cross-functional teams including product managers and designers.\n- Perform unit and integration testing, and fix bugs identified by QA.\n- Participate in sprint planning, code reviews, and agile ceremonies.\n- Document features, code logic, and architectural decisions.\n\n**Requirements:**\n\n- Bachelor's degree in Computer Science or related field.\n- At least 5 years of professional experience as a Full Stack Developer.\n- Strong understanding of programming fundamentals and system design.\n- Experience with tools and frameworks like AWS, Terraform.\n- Familiarity with version control (Git), CI/CD pipelines, and RESTful APIs.\n- Excellent communication, problem-solving, and collaboration skills.\n- Experience with Agile methodologies.\n\n**Nice to have:** Experience with Docker, Kubernetes, AWS, or GCP.\n",
+    "salary": "$142000 - $187000",
+    "location": "Chicago, IL",
+    "skills": [
+      "React",
+      "AWS",
+      "Docker",
+      "Python",
+      "Git",
+      "TypeScript",
+      "C++"
+    ],
+    "applicants": 149,
+    "company_logo": "https://dummyimage.com/100x100/f9844a/fff&text=AlgoRhythm"
+  },
+  {
+    "id": 5,
+    "company": "PixelLogic",
+    "title": "Data Scientist",
+    "description": "\nPixelLogic is hiring for the role of Data Scientist!\n\n**Responsibilities of the Candidate:**\n\n- Design, develop, and maintain scalable and efficient software applications.\n- Write clean, modular, and documented code using technologies such as Angular, Flask, SQLAlchemy.\n- Collaborate with cross-functional teams including product managers and designers.\n- Perform unit and integration testing, and fix bugs identified by QA.\n- Participate in sprint planning, code reviews, and agile ceremonies.\n- Document features, code logic, and architectural decisions.\n\n**Requirements:**\n\n- Bachelor's degree in Computer Science or related field.\n- At least 2 years of professional experience as a Data Scientist.\n- Strong understanding of programming fundamentals and system design.\n- Experience with tools and frameworks like JIRA, GitLab CI.\n- Familiarity with version control (Git), CI/CD pipelines, and RESTful APIs.\n- Excellent communication, problem-solving, and collaboration skills.\n- Experience with Agile methodologies.\n\n**Nice to have:** Experience with Docker, Kubernetes, AWS, or GCP.\n",
+    "salary": "$149000 - $217000",
+    "location": "Boston, MA",
+    "skills": [
+      "Git",
+      "AWS",
+      "Kubernetes",
+      "Django",
+      "TypeScript",
+      "SQL"
+    ],
+    "applicants": 108,
+    "company_logo": "https://dummyimage.com/100x100/f9c74f/fff&text=PixelLogic"
+  },
+  {
+    "id": 6,
+    "company": "TechNova Inc.",
+    "title": "Data Scientist",
+    "description": "\nTechNova Inc. is hiring for the role of Data Scientist!\n\n**Responsibilities of the Candidate:**\n\n- Design, develop, and maintain scalable and efficient software applications.\n- Write clean, modular, and documented code using technologies such as Next.js, TypeScript, Firebase.\n- Collaborate with cross-functional teams including product managers and designers.\n- Perform unit and integration testing, and fix bugs identified by QA.\n- Participate in sprint planning, code reviews, and agile ceremonies.\n- Document features, code logic, and architectural decisions.\n\n**Requirements:**\n\n- Bachelor's degree in Computer Science or related field.\n- At least 4 years of professional experience as a Data Scientist.\n- Strong understanding of programming fundamentals and system design.\n- Experience with tools and frameworks like GitHub Actions, Cypress.\n- Familiarity with version control (Git), CI/CD pipelines, and RESTful APIs.\n- Excellent communication, problem-solving, and collaboration skills.\n- Experience with Agile methodologies.\n\n**Nice to have:** Experience with Docker, Kubernetes, AWS, or GCP.\n",
+    "salary": "$104000 - $207000",
+    "location": "Austin, TX",
+    "skills": [
+      "React",
+      "MongoDB",
+      "Kubernetes",
+      "Python"
+    ],
+    "applicants": 147,
+    "company_logo": "https://dummyimage.com/100x100/90be6d/fff&text=TechNova+Inc."
+  },
+  {
+    "id": 7,
+    "company": "PixelLogic",
+    "title": "Full Stack Developer",
+    "description": "\nPixelLogic is hiring for the role of Full Stack Developer!\n\n**Responsibilities of the Candidate:**\n\n- Design, develop, and maintain scalable and efficient software applications.\n- Write clean, modular, and documented code using technologies such as Angular, Flask, SQLAlchemy.\n- Collaborate with cross-functional teams including product managers and designers.\n- Perform unit and integration testing, and fix bugs identified by QA.\n- Participate in sprint planning, code reviews, and agile ceremonies.\n- Document features, code logic, and architectural decisions.\n\n**Requirements:**\n\n- Bachelor's degree in Computer Science or related field.\n- At least 3 years of professional experience as a Full Stack Developer.\n- Strong understanding of programming fundamentals and system design.\n- Experience with tools and frameworks like GitHub Actions, Cypress.\n- Familiarity with version control (Git), CI/CD pipelines, and RESTful APIs.\n- Excellent communication, problem-solving, and collaboration skills.\n- Experience with Agile methodologies.\n\n**Nice to have:** Experience with Docker, Kubernetes, AWS, or GCP.\n",
+    "salary": "$72000 - $174000",
+    "location": "Los Angeles, CA",
+    "skills": [
+      "Docker",
+      "JavaScript",
+      "C++",
+      "Kubernetes",
+      "HTML",
+      "React",
+      "Flask"
+    ],
+    "applicants": 99,
+    "company_logo": "https://dummyimage.com/100x100/43aa8b/fff&text=PixelLogic"
+  },
+  {
+    "id": 8,
+    "company": "SoftServe Systems",
+    "title": "Data Scientist",
+    "description": "\nSoftServe Systems is hiring for the role of Data Scientist!\n\n**Responsibilities of the Candidate:**\n\n- Design, develop, and maintain scalable and efficient software applications.\n- Write clean, modular, and documented code using technologies such as Next.js, TypeScript, Firebase.\n- Collaborate with cross-functional teams including product managers and designers.\n- Perform unit and integration testing, and fix bugs identified by QA.\n- Participate in sprint planning, code reviews, and agile ceremonies.\n- Document features, code logic, and architectural decisions.\n\n**Requirements:**\n\n- Bachelor's degree in Computer Science or related field.\n- At least 6 years of professional experience as a Data Scientist.\n- Strong understanding of programming fundamentals and system design.\n- Experience with tools and frameworks like GitHub Actions, Cypress.\n- Familiarity with version control (Git), CI/CD pipelines, and RESTful APIs.\n- Excellent communication, problem-solving, and collaboration skills.\n- Experience with Agile methodologies.\n\n**Nice to have:** Experience with Docker, Kubernetes, AWS, or GCP.\n",
+    "salary": "$136000 - $167000",
+    "location": "Denver, CO",
+    "skills": [
+      "HTML",
+      "Django",
+      "Java",
+      "React",
+      "AWS",
+      "CSS"
+    ],
+    "applicants": 126,
+    "company_logo": "https://dummyimage.com/100x100/4d908e/fff&text=SoftServe+Systems"
+  },
+  {
+    "id": 9,
+    "company": "TechNova Inc.",
+    "title": "ML Engineer",
+    "description": "\nTechNova Inc. is hiring for the role of ML Engineer!\n\n**Responsibilities of the Candidate:**\n\n- Design, develop, and maintain scalable and efficient software applications.\n- Write clean, modular, and documented code using technologies such as React, Node.js, Express, MongoDB.\n- Collaborate with cross-functional teams including product managers and designers.\n- Perform unit and integration testing, and fix bugs identified by QA.\n- Participate in sprint planning, code reviews, and agile ceremonies.\n- Document features, code logic, and architectural decisions.\n\n**Requirements:**\n\n- Bachelor's degree in Computer Science or related field.\n- At least 5 years of professional experience as a ML Engineer.\n- Strong understanding of programming fundamentals and system design.\n- Experience with tools and frameworks like Git, Docker, Jenkins.\n- Familiarity with version control (Git), CI/CD pipelines, and RESTful APIs.\n- Excellent communication, problem-solving, and collaboration skills.\n- Experience with Agile methodologies.\n\n**Nice to have:** Experience with Docker, Kubernetes, AWS, or GCP.\n",
+    "salary": "$81000 - $248000",
+    "location": "Remote",
+    "skills": [
+      "MongoDB",
+      "TypeScript",
+      "Python",
+      "Java",
+      "SQL",
+      "C++",
+      "Kubernetes"
+    ],
+    "applicants": 51,
+    "company_logo": "https://dummyimage.com/100x100/577590/fff&text=TechNova+Inc."
+  },
+  {
+    "id": 10,
+    "company": "CloudWare",
+    "title": "Full Stack Developer",
+    "description": "\nCloudWare is hiring for the role of Full Stack Developer!\n\n**Responsibilities of the Candidate:**\n\n- Design, develop, and maintain scalable and efficient software applications.\n- Write clean, modular, and documented code using technologies such as React, Node.js, Express, MongoDB.\n- Collaborate with cross-functional teams including product managers and designers.\n- Perform unit and integration testing, and fix bugs identified by QA.\n- Participate in sprint planning, code reviews, and agile ceremonies.\n- Document features, code logic, and architectural decisions.\n\n**Requirements:**\n\n- Bachelor's degree in Computer Science or related field.\n- At least 5 years of professional experience as a Full Stack Developer.\n- Strong understanding of programming fundamentals and system design.\n- Experience with tools and frameworks like VS Code, Postman.\n- Familiarity with version control (Git), CI/CD pipelines, and RESTful APIs.\n- Excellent communication, problem-solving, and collaboration skills.\n- Experience with Agile methodologies.\n\n**Nice to have:** Experience with Docker, Kubernetes, AWS, or GCP.\n",
+    "salary": "$70000 - $191000",
+    "location": "Seattle, WA",
+    "skills": [
+      "Python",
+      "Kubernetes",
+      "MongoDB",
+      "Git",
+      "Django",
+      "React",
+      "Node.js"
+    ],
+    "applicants": 15,
+    "company_logo": "https://dummyimage.com/100x100/277da1/fff&text=CloudWare"
+  },
+  {
+    "id": 11,
+    "company": "NextGen Labs",
+    "title": "DevOps Engineer",
+    "description": "\nNextGen Labs is hiring for the role of DevOps Engineer!\n\n**Responsibilities of the Candidate:**\n\n- Design, develop, and maintain scalable and efficient software applications.\n- Write clean, modular, and documented code using technologies such as Next.js, TypeScript, Firebase.\n- Collaborate with cross-functional teams including product managers and designers.\n- Perform unit and integration testing, and fix bugs identified by QA.\n- Participate in sprint planning, code reviews, and agile ceremonies.\n- Document features, code logic, and architectural decisions.\n\n**Requirements:**\n\n- Bachelor's degree in Computer Science or related field.\n- At least 3 years of professional experience as a DevOps Engineer.\n- Strong understanding of programming fundamentals and system design.\n- Experience with tools and frameworks like Git, Docker, Jenkins.\n- Familiarity with version control (Git), CI/CD pipelines, and RESTful APIs.\n- Excellent communication, problem-solving, and collaboration skills.\n- Experience with Agile methodologies.\n\n**Nice to have:** Experience with Docker, Kubernetes, AWS, or GCP.\n",
+    "salary": "$91000 - $250000",
+    "location": "New York, NY",
+    "skills": [
+      "Flask",
+      "CSS",
+      "JavaScript",
+      "Java",
+      "MongoDB"
+    ],
+    "applicants": 73,
+    "company_logo": "https://dummyimage.com/100x100/f94144/fff&text=NextGen+Labs"
+  },
+  {
+    "id": 12,
+    "company": "SoftServe Systems",
+    "title": "Backend Engineer",
+    "description": "\nSoftServe Systems is hiring for the role of Backend Engineer!\n\n**Responsibilities of the Candidate:**\n\n- Design, develop, and maintain scalable and efficient software applications.\n- Write clean, modular, and documented code using technologies such as Java, Spring Boot, MySQL.\n- Collaborate with cross-functional teams including product managers and designers.\n- Perform unit and integration testing, and fix bugs identified by QA.\n- Participate in sprint planning, code reviews, and agile ceremonies.\n- Document features, code logic, and architectural decisions.\n\n**Requirements:**\n\n- Bachelor's degree in Computer Science or related field.\n- At least 2 years of professional experience as a Backend Engineer.\n- Strong understanding of programming fundamentals and system design.\n- Experience with tools and frameworks like JIRA, GitLab CI.\n- Familiarity with version control (Git), CI/CD pipelines, and RESTful APIs.\n- Excellent communication, problem-solving, and collaboration skills.\n- Experience with Agile methodologies.\n\n**Nice to have:** Experience with Docker, Kubernetes, AWS, or GCP.\n",
+    "salary": "$66000 - $160000",
+    "location": "Remote",
+    "skills": [
+      "Java",
+      "Django",
+      "SQL",
+      "JavaScript",
+      "React"
+    ],
+    "applicants": 34,
+    "company_logo": "https://dummyimage.com/100x100/f3722c/fff&text=SoftServe+Systems"
+  },
+  {
+    "id": 13,
+    "company": "TechNova Inc.",
+    "title": "Full Stack Developer",
+    "description": "\nTechNova Inc. is hiring for the role of Full Stack Developer!\n\n**Responsibilities of the Candidate:**\n\n- Design, develop, and maintain scalable and efficient software applications.\n- Write clean, modular, and documented code using technologies such as Java, Spring Boot, MySQL.\n- Collaborate with cross-functional teams including product managers and designers.\n- Perform unit and integration testing, and fix bugs identified by QA.\n- Participate in sprint planning, code reviews, and agile ceremonies.\n- Document features, code logic, and architectural decisions.\n\n**Requirements:**\n\n- Bachelor's degree in Computer Science or related field.\n- At least 4 years of professional experience as a Full Stack Developer.\n- Strong understanding of programming fundamentals and system design.\n- Experience with tools and frameworks like GitHub Actions, Cypress.\n- Familiarity with version control (Git), CI/CD pipelines, and RESTful APIs.\n- Excellent communication, problem-solving, and collaboration skills.\n- Experience with Agile methodologies.\n\n**Nice to have:** Experience with Docker, Kubernetes, AWS, or GCP.\n",
+    "salary": "$126000 - $208000",
+    "location": "Denver, CO",
+    "skills": [
+      "Kubernetes",
+      "Docker",
+      "JavaScript",
+      "C++",
+      "Python",
+      "AWS"
+    ],
+    "applicants": 145,
+    "company_logo": "https://dummyimage.com/100x100/f8961e/fff&text=TechNova+Inc."
+  },
+  {
+    "id": 14,
+    "company": "TechNova Inc.",
+    "title": "Data Scientist",
+    "description": "\nTechNova Inc. is hiring for the role of Data Scientist!\n\n**Responsibilities of the Candidate:**\n\n- Design, develop, and maintain scalable and efficient software applications.\n- Write clean, modular, and documented code using technologies such as React, Node.js, Express, MongoDB.\n- Collaborate with cross-functional teams including product managers and designers.\n- Perform unit and integration testing, and fix bugs identified by QA.\n- Participate in sprint planning, code reviews, and agile ceremonies.\n- Document features, code logic, and architectural decisions.\n\n**Requirements:**\n\n- Bachelor's degree in Computer Science or related field.\n- At least 6 years of professional experience as a Data Scientist.\n- Strong understanding of programming fundamentals and system design.\n- Experience with tools and frameworks like VS Code, Postman.\n- Familiarity with version control (Git), CI/CD pipelines, and RESTful APIs.\n- Excellent communication, problem-solving, and collaboration skills.\n- Experience with Agile methodologies.\n\n**Nice to have:** Experience with Docker, Kubernetes, AWS, or GCP.\n",
+    "salary": "$139000 - $214000",
+    "location": "New York, NY",
+    "skills": [
+      "React",
+      "Java",
+      "CSS",
+      "Git",
+      "Docker",
+      "Node.js"
+    ],
+    "applicants": 101,
+    "company_logo": "https://dummyimage.com/100x100/f9844a/fff&text=TechNova+Inc."
+  },
+  {
+    "id": 15,
+    "company": "NextGen Labs",
+    "title": "Frontend Developer",
+    "description": "\nNextGen Labs is hiring for the role of Frontend Developer!\n\n**Responsibilities of the Candidate:**\n\n- Design, develop, and maintain scalable and efficient software applications.\n- Write clean, modular, and documented code using technologies such as Angular, Flask, SQLAlchemy.\n- Collaborate with cross-functional teams including product managers and designers.\n- Perform unit and integration testing, and fix bugs identified by QA.\n- Participate in sprint planning, code reviews, and agile ceremonies.\n- Document features, code logic, and architectural decisions.\n\n**Requirements:**\n\n- Bachelor's degree in Computer Science or related field.\n- At least 6 years of professional experience as a Frontend Developer.\n- Strong understanding of programming fundamentals and system design.\n- Experience with tools and frameworks like JIRA, GitLab CI.\n- Familiarity with version control (Git), CI/CD pipelines, and RESTful APIs.\n- Excellent communication, problem-solving, and collaboration skills.\n- Experience with Agile methodologies.\n\n**Nice to have:** Experience with Docker, Kubernetes, AWS, or GCP.\n",
+    "salary": "$62000 - $224000",
+    "location": "Atlanta, GA",
+    "skills": [
+      "TypeScript",
+      "C++",
+      "Node.js",
+      "React",
+      "JavaScript",
+      "HTML",
+      "Django"
+    ],
+    "applicants": 69,
+    "company_logo": "https://dummyimage.com/100x100/f9c74f/fff&text=NextGen+Labs"
+  },
+  {
+    "id": 16,
+    "company": "ByteWorks",
+    "title": "Data Scientist",
+    "description": "\nByteWorks is hiring for the role of Data Scientist!\n\n**Responsibilities of the Candidate:**\n\n- Design, develop, and maintain scalable and efficient software applications.\n- Write clean, modular, and documented code using technologies such as Python, Django, PostgreSQL.\n- Collaborate with cross-functional teams including product managers and designers.\n- Perform unit and integration testing, and fix bugs identified by QA.\n- Participate in sprint planning, code reviews, and agile ceremonies.\n- Document features, code logic, and architectural decisions.\n\n**Requirements:**\n\n- Bachelor's degree in Computer Science or related field.\n- At least 6 years of professional experience as a Data Scientist.\n- Strong understanding of programming fundamentals and system design.\n- Experience with tools and frameworks like VS Code, Postman.\n- Familiarity with version control (Git), CI/CD pipelines, and RESTful APIs.\n- Excellent communication, problem-solving, and collaboration skills.\n- Experience with Agile methodologies.\n\n**Nice to have:** Experience with Docker, Kubernetes, AWS, or GCP.\n",
+    "salary": "$150000 - $231000",
+    "location": "San Francisco, CA",
+    "skills": [
+      "CSS",
+      "Node.js",
+      "Flask",
+      "TypeScript",
+      "React",
+      "Java",
+      "Django"
+    ],
+    "applicants": 104,
+    "company_logo": "https://dummyimage.com/100x100/90be6d/fff&text=ByteWorks"
+  },
+  {
+    "id": 17,
+    "company": "TechNova Inc.",
+    "title": "Full Stack Developer",
+    "description": "\nTechNova Inc. is hiring for the role of Full Stack Developer!\n\n**Responsibilities of the Candidate:**\n\n- Design, develop, and maintain scalable and efficient software applications.\n- Write clean, modular, and documented code using technologies such as Python, Django, PostgreSQL.\n- Collaborate with cross-functional teams including product managers and designers.\n- Perform unit and integration testing, and fix bugs identified by QA.\n- Participate in sprint planning, code reviews, and agile ceremonies.\n- Document features, code logic, and architectural decisions.\n\n**Requirements:**\n\n- Bachelor's degree in Computer Science or related field.\n- At least 5 years of professional experience as a Full Stack Developer.\n- Strong understanding of programming fundamentals and system design.\n- Experience with tools and frameworks like AWS, Terraform.\n- Familiarity with version control (Git), CI/CD pipelines, and RESTful APIs.\n- Excellent communication, problem-solving, and collaboration skills.\n- Experience with Agile methodologies.\n\n**Nice to have:** Experience with Docker, Kubernetes, AWS, or GCP.\n",
+    "salary": "$104000 - $198000",
+    "location": "Chicago, IL",
+    "skills": [
+      "Django",
+      "JavaScript",
+      "CSS",
+      "SQL"
+    ],
+    "applicants": 27,
+    "company_logo": "https://dummyimage.com/100x100/43aa8b/fff&text=TechNova+Inc."
+  },
+  {
+    "id": 18,
+    "company": "AlgoRhythm",
+    "title": "Backend Engineer",
+    "description": "\nAlgoRhythm is hiring for the role of Backend Engineer!\n\n**Responsibilities of the Candidate:**\n\n- Design, develop, and maintain scalable and efficient software applications.\n- Write clean, modular, and documented code using technologies such as Java, Spring Boot, MySQL.\n- Collaborate with cross-functional teams including product managers and designers.\n- Perform unit and integration testing, and fix bugs identified by QA.\n- Participate in sprint planning, code reviews, and agile ceremonies.\n- Document features, code logic, and architectural decisions.\n\n**Requirements:**\n\n- Bachelor's degree in Computer Science or related field.\n- At least 4 years of professional experience as a Backend Engineer.\n- Strong understanding of programming fundamentals and system design.\n- Experience with tools and frameworks like JIRA, GitLab CI.\n- Familiarity with version control (Git), CI/CD pipelines, and RESTful APIs.\n- Excellent communication, problem-solving, and collaboration skills.\n- Experience with Agile methodologies.\n\n**Nice to have:** Experience with Docker, Kubernetes, AWS, or GCP.\n",
+    "salary": "$150000 - $203000",
+    "location": "Chicago, IL",
+    "skills": [
+      "SQL",
+      "Python",
+      "JavaScript",
+      "AWS"
+    ],
+    "applicants": 92,
+    "company_logo": "https://dummyimage.com/100x100/4d908e/fff&text=AlgoRhythm"
+  },
+  {
+    "id": 19,
+    "company": "ByteWorks",
+    "title": "Data Scientist",
+    "description": "\nByteWorks is hiring for the role of Data Scientist!\n\n**Responsibilities of the Candidate:**\n\n- Design, develop, and maintain scalable and efficient software applications.\n- Write clean, modular, and documented code using technologies such as Next.js, TypeScript, Firebase.\n- Collaborate with cross-functional teams including product managers and designers.\n- Perform unit and integration testing, and fix bugs identified by QA.\n- Participate in sprint planning, code reviews, and agile ceremonies.\n- Document features, code logic, and architectural decisions.\n\n**Requirements:**\n\n- Bachelor's degree in Computer Science or related field.\n- At least 3 years of professional experience as a Data Scientist.\n- Strong understanding of programming fundamentals and system design.\n- Experience with tools and frameworks like Git, Docker, Jenkins.\n- Familiarity with version control (Git), CI/CD pipelines, and RESTful APIs.\n- Excellent communication, problem-solving, and collaboration skills.\n- Experience with Agile methodologies.\n\n**Nice to have:** Experience with Docker, Kubernetes, AWS, or GCP.\n",
+    "salary": "$101000 - $162000",
+    "location": "San Francisco, CA",
+    "skills": [
+      "MongoDB",
+      "Flask",
+      "Django",
+      "Git",
+      "SQL",
+      "AWS"
+    ],
+    "applicants": 121,
+    "company_logo": "https://dummyimage.com/100x100/577590/fff&text=ByteWorks"
+  },
+  {
+    "id": 20,
+    "company": "NextGen Labs",
+    "title": "Data Scientist",
+    "description": "\nNextGen Labs is hiring for the role of Data Scientist!\n\n**Responsibilities of the Candidate:**\n\n- Design, develop, and maintain scalable and efficient software applications.\n- Write clean, modular, and documented code using technologies such as Java, Spring Boot, MySQL.\n- Collaborate with cross-functional teams including product managers and designers.\n- Perform unit and integration testing, and fix bugs identified by QA.\n- Participate in sprint planning, code reviews, and agile ceremonies.\n- Document features, code logic, and architectural decisions.\n\n**Requirements:**\n\n- Bachelor's degree in Computer Science or related field.\n- At least 4 years of professional experience as a Data Scientist.\n- Strong understanding of programming fundamentals and system design.\n- Experience with tools and frameworks like AWS, Terraform.\n- Familiarity with version control (Git), CI/CD pipelines, and RESTful APIs.\n- Excellent communication, problem-solving, and collaboration skills.\n- Experience with Agile methodologies.\n\n**Nice to have:** Experience with Docker, Kubernetes, AWS, or GCP.\n",
+    "salary": "$119000 - $219000",
+    "location": "Austin, TX",
+    "skills": [
+      "SQL",
+      "CSS",
+      "Kubernetes",
+      "Django",
+      "TypeScript",
+      "Flask"
+    ],
+    "applicants": 18,
+    "company_logo": "https://dummyimage.com/100x100/277da1/fff&text=NextGen+Labs"
+  },
+  {
+    "id": 21,
+    "company": "CloudWare",
+    "title": "Backend Engineer",
+    "description": "\nCloudWare is hiring for the role of Backend Engineer!\n\n**Responsibilities of the Candidate:**\n\n- Design, develop, and maintain scalable and efficient software applications.\n- Write clean, modular, and documented code using technologies such as React, Node.js, Express, MongoDB.\n- Collaborate with cross-functional teams including product managers and designers.\n- Perform unit and integration testing, and fix bugs identified by QA.\n- Participate in sprint planning, code reviews, and agile ceremonies.\n- Document features, code logic, and architectural decisions.\n\n**Requirements:**\n\n- Bachelor's degree in Computer Science or related field.\n- At least 5 years of professional experience as a Backend Engineer.\n- Strong understanding of programming fundamentals and system design.\n- Experience with tools and frameworks like GitHub Actions, Cypress.\n- Familiarity with version control (Git), CI/CD pipelines, and RESTful APIs.\n- Excellent communication, problem-solving, and collaboration skills.\n- Experience with Agile methodologies.\n\n**Nice to have:** Experience with Docker, Kubernetes, AWS, or GCP.\n",
+    "salary": "$70000 - $182000",
+    "location": "Seattle, WA",
+    "skills": [
+      "AWS",
+      "Java",
+      "CSS",
+      "Docker",
+      "Python",
+      "Kubernetes",
+      "Django"
+    ],
+    "applicants": 25,
+    "company_logo": "https://dummyimage.com/100x100/f94144/fff&text=CloudWare"
+  },
+  {
+    "id": 22,
+    "company": "TechNova Inc.",
+    "title": "Full Stack Developer",
+    "description": "\nTechNova Inc. is hiring for the role of Full Stack Developer!\n\n**Responsibilities of the Candidate:**\n\n- Design, develop, and maintain scalable and efficient software applications.\n- Write clean, modular, and documented code using technologies such as Java, Spring Boot, MySQL.\n- Collaborate with cross-functional teams including product managers and designers.\n- Perform unit and integration testing, and fix bugs identified by QA.\n- Participate in sprint planning, code reviews, and agile ceremonies.\n- Document features, code logic, and architectural decisions.\n\n**Requirements:**\n\n- Bachelor's degree in Computer Science or related field.\n- At least 4 years of professional experience as a Full Stack Developer.\n- Strong understanding of programming fundamentals and system design.\n- Experience with tools and frameworks like GitHub Actions, Cypress.\n- Familiarity with version control (Git), CI/CD pipelines, and RESTful APIs.\n- Excellent communication, problem-solving, and collaboration skills.\n- Experience with Agile methodologies.\n\n**Nice to have:** Experience with Docker, Kubernetes, AWS, or GCP.\n",
+    "salary": "$80000 - $174000",
+    "location": "New York, NY",
+    "skills": [
+      "MongoDB",
+      "SQL",
+      "JavaScript",
+      "Kubernetes",
+      "Git",
+      "HTML"
+    ],
+    "applicants": 11,
+    "company_logo": "https://dummyimage.com/100x100/f3722c/fff&text=TechNova+Inc."
+  },
+  {
+    "id": 23,
+    "company": "CloudWare",
+    "title": "Frontend Developer",
+    "description": "\nCloudWare is hiring for the role of Frontend Developer!\n\n**Responsibilities of the Candidate:**\n\n- Design, develop, and maintain scalable and efficient software applications.\n- Write clean, modular, and documented code using technologies such as Next.js, TypeScript, Firebase.\n- Collaborate with cross-functional teams including product managers and designers.\n- Perform unit and integration testing, and fix bugs identified by QA.\n- Participate in sprint planning, code reviews, and agile ceremonies.\n- Document features, code logic, and architectural decisions.\n\n**Requirements:**\n\n- Bachelor's degree in Computer Science or related field.\n- At least 6 years of professional experience as a Frontend Developer.\n- Strong understanding of programming fundamentals and system design.\n- Experience with tools and frameworks like JIRA, GitLab CI.\n- Familiarity with version control (Git), CI/CD pipelines, and RESTful APIs.\n- Excellent communication, problem-solving, and collaboration skills.\n- Experience with Agile methodologies.\n\n**Nice to have:** Experience with Docker, Kubernetes, AWS, or GCP.\n",
+    "salary": "$60000 - $163000",
+    "location": "San Francisco, CA",
+    "skills": [
+      "TypeScript",
+      "CSS",
+      "Flask",
+      "Django",
+      "C++",
+      "HTML",
+      "React"
+    ],
+    "applicants": 21,
+    "company_logo": "https://dummyimage.com/100x100/f8961e/fff&text=CloudWare"
+  },
+  {
+    "id": 24,
+    "company": "InnoSoft Solutions",
+    "title": "ML Engineer",
+    "description": "\nInnoSoft Solutions is hiring for the role of ML Engineer!\n\n**Responsibilities of the Candidate:**\n\n- Design, develop, and maintain scalable and efficient software applications.\n- Write clean, modular, and documented code using technologies such as Java, Spring Boot, MySQL.\n- Collaborate with cross-functional teams including product managers and designers.\n- Perform unit and integration testing, and fix bugs identified by QA.\n- Participate in sprint planning, code reviews, and agile ceremonies.\n- Document features, code logic, and architectural decisions.\n\n**Requirements:**\n\n- Bachelor's degree in Computer Science or related field.\n- At least 6 years of professional experience as a ML Engineer.\n- Strong understanding of programming fundamentals and system design.\n- Experience with tools and frameworks like JIRA, GitLab CI.\n- Familiarity with version control (Git), CI/CD pipelines, and RESTful APIs.\n- Excellent communication, problem-solving, and collaboration skills.\n- Experience with Agile methodologies.\n\n**Nice to have:** Experience with Docker, Kubernetes, AWS, or GCP.\n",
+    "salary": "$83000 - $189000",
+    "location": "Remote",
+    "skills": [
+      "HTML",
+      "TypeScript",
+      "CSS",
+      "SQL"
+    ],
+    "applicants": 9,
+    "company_logo": "https://dummyimage.com/100x100/f9844a/fff&text=InnoSoft+Solutions"
+  },
+  {
+    "id": 25,
+    "company": "CloudWare",
+    "title": "DevOps Engineer",
+    "description": "\nCloudWare is hiring for the role of DevOps Engineer!\n\n**Responsibilities of the Candidate:**\n\n- Design, develop, and maintain scalable and efficient software applications.\n- Write clean, modular, and documented code using technologies such as Python, Django, PostgreSQL.\n- Collaborate with cross-functional teams including product managers and designers.\n- Perform unit and integration testing, and fix bugs identified by QA.\n- Participate in sprint planning, code reviews, and agile ceremonies.\n- Document features, code logic, and architectural decisions.\n\n**Requirements:**\n\n- Bachelor's degree in Computer Science or related field.\n- At least 5 years of professional experience as a DevOps Engineer.\n- Strong understanding of programming fundamentals and system design.\n- Experience with tools and frameworks like VS Code, Postman.\n- Familiarity with version control (Git), CI/CD pipelines, and RESTful APIs.\n- Excellent communication, problem-solving, and collaboration skills.\n- Experience with Agile methodologies.\n\n**Nice to have:** Experience with Docker, Kubernetes, AWS, or GCP.\n",
+    "salary": "$93000 - $224000",
+    "location": "Seattle, WA",
+    "skills": [
+      "Docker",
+      "React",
+      "TypeScript",
+      "HTML",
+      "Kubernetes"
+    ],
+    "applicants": 26,
+    "company_logo": "https://dummyimage.com/100x100/f9c74f/fff&text=CloudWare"
+  },
+  {
+    "id": 26,
+    "company": "PixelLogic",
+    "title": "Full Stack Developer",
+    "description": "\nPixelLogic is hiring for the role of Full Stack Developer!\n\n**Responsibilities of the Candidate:**\n\n- Design, develop, and maintain scalable and efficient software applications.\n- Write clean, modular, and documented code using technologies such as React, Node.js, Express, MongoDB.\n- Collaborate with cross-functional teams including product managers and designers.\n- Perform unit and integration testing, and fix bugs identified by QA.\n- Participate in sprint planning, code reviews, and agile ceremonies.\n- Document features, code logic, and architectural decisions.\n\n**Requirements:**\n\n- Bachelor's degree in Computer Science or related field.\n- At least 6 years of professional experience as a Full Stack Developer.\n- Strong understanding of programming fundamentals and system design.\n- Experience with tools and frameworks like GitHub Actions, Cypress.\n- Familiarity with version control (Git), CI/CD pipelines, and RESTful APIs.\n- Excellent communication, problem-solving, and collaboration skills.\n- Experience with Agile methodologies.\n\n**Nice to have:** Experience with Docker, Kubernetes, AWS, or GCP.\n",
+    "salary": "$77000 - $217000",
+    "location": "Austin, TX",
+    "skills": [
+      "Java",
+      "C++",
+      "Kubernetes",
+      "HTML",
+      "Flask"
+    ],
+    "applicants": 111,
+    "company_logo": "https://dummyimage.com/100x100/90be6d/fff&text=PixelLogic"
+  },
+  {
+    "id": 27,
+    "company": "DevSphere",
+    "title": "Frontend Developer",
+    "description": "\nDevSphere is hiring for the role of Frontend Developer!\n\n**Responsibilities of the Candidate:**\n\n- Design, develop, and maintain scalable and efficient software applications.\n- Write clean, modular, and documented code using technologies such as Next.js, TypeScript, Firebase.\n- Collaborate with cross-functional teams including product managers and designers.\n- Perform unit and integration testing, and fix bugs identified by QA.\n- Participate in sprint planning, code reviews, and agile ceremonies.\n- Document features, code logic, and architectural decisions.\n\n**Requirements:**\n\n- Bachelor's degree in Computer Science or related field.\n- At least 4 years of professional experience as a Frontend Developer.\n- Strong understanding of programming fundamentals and system design.\n- Experience with tools and frameworks like Git, Docker, Jenkins.\n- Familiarity with version control (Git), CI/CD pipelines, and RESTful APIs.\n- Excellent communication, problem-solving, and collaboration skills.\n- Experience with Agile methodologies.\n\n**Nice to have:** Experience with Docker, Kubernetes, AWS, or GCP.\n",
+    "salary": "$115000 - $217000",
+    "location": "San Francisco, CA",
+    "skills": [
+      "JavaScript",
+      "Flask",
+      "Node.js",
+      "TypeScript"
+    ],
+    "applicants": 44,
+    "company_logo": "https://dummyimage.com/100x100/43aa8b/fff&text=DevSphere"
+  },
+  {
+    "id": 28,
+    "company": "NextGen Labs",
+    "title": "Frontend Developer",
+    "description": "\nNextGen Labs is hiring for the role of Frontend Developer!\n\n**Responsibilities of the Candidate:**\n\n- Design, develop, and maintain scalable and efficient software applications.\n- Write clean, modular, and documented code using technologies such as Java, Spring Boot, MySQL.\n- Collaborate with cross-functional teams including product managers and designers.\n- Perform unit and integration testing, and fix bugs identified by QA.\n- Participate in sprint planning, code reviews, and agile ceremonies.\n- Document features, code logic, and architectural decisions.\n\n**Requirements:**\n\n- Bachelor's degree in Computer Science or related field.\n- At least 5 years of professional experience as a Frontend Developer.\n- Strong understanding of programming fundamentals and system design.\n- Experience with tools and frameworks like JIRA, GitLab CI.\n- Familiarity with version control (Git), CI/CD pipelines, and RESTful APIs.\n- Excellent communication, problem-solving, and collaboration skills.\n- Experience with Agile methodologies.\n\n**Nice to have:** Experience with Docker, Kubernetes, AWS, or GCP.\n",
+    "salary": "$116000 - $220000",
+    "location": "Chicago, IL",
+    "skills": [
+      "SQL",
+      "Docker",
+      "Python",
+      "Java",
+      "HTML"
+    ],
+    "applicants": 108,
+    "company_logo": "https://dummyimage.com/100x100/4d908e/fff&text=NextGen+Labs"
+  },
+  {
+    "id": 29,
+    "company": "InnoSoft Solutions",
+    "title": "Frontend Developer",
+    "description": "\nInnoSoft Solutions is hiring for the role of Frontend Developer!\n\n**Responsibilities of the Candidate:**\n\n- Design, develop, and maintain scalable and efficient software applications.\n- Write clean, modular, and documented code using technologies such as Next.js, TypeScript, Firebase.\n- Collaborate with cross-functional teams including product managers and designers.\n- Perform unit and integration testing, and fix bugs identified by QA.\n- Participate in sprint planning, code reviews, and agile ceremonies.\n- Document features, code logic, and architectural decisions.\n\n**Requirements:**\n\n- Bachelor's degree in Computer Science or related field.\n- At least 2 years of professional experience as a Frontend Developer.\n- Strong understanding of programming fundamentals and system design.\n- Experience with tools and frameworks like JIRA, GitLab CI.\n- Familiarity with version control (Git), CI/CD pipelines, and RESTful APIs.\n- Excellent communication, problem-solving, and collaboration skills.\n- Experience with Agile methodologies.\n\n**Nice to have:** Experience with Docker, Kubernetes, AWS, or GCP.\n",
+    "salary": "$68000 - $232000",
+    "location": "Los Angeles, CA",
+    "skills": [
+      "AWS",
+      "MongoDB",
+      "React",
+      "TypeScript",
+      "Node.js"
+    ],
+    "applicants": 7,
+    "company_logo": "https://dummyimage.com/100x100/577590/fff&text=InnoSoft+Solutions"
+  },
+  {
+    "id": 30,
+    "company": "TechNova Inc.",
+    "title": "Frontend Developer",
+    "description": "\nTechNova Inc. is hiring for the role of Frontend Developer!\n\n**Responsibilities of the Candidate:**\n\n- Design, develop, and maintain scalable and efficient software applications.\n- Write clean, modular, and documented code using technologies such as Python, Django, PostgreSQL.\n- Collaborate with cross-functional teams including product managers and designers.\n- Perform unit and integration testing, and fix bugs identified by QA.\n- Participate in sprint planning, code reviews, and agile ceremonies.\n- Document features, code logic, and architectural decisions.\n\n**Requirements:**\n\n- Bachelor's degree in Computer Science or related field.\n- At least 5 years of professional experience as a Frontend Developer.\n- Strong understanding of programming fundamentals and system design.\n- Experience with tools and frameworks like VS Code, Postman.\n- Familiarity with version control (Git), CI/CD pipelines, and RESTful APIs.\n- Excellent communication, problem-solving, and collaboration skills.\n- Experience with Agile methodologies.\n\n**Nice to have:** Experience with Docker, Kubernetes, AWS, or GCP.\n",
+    "salary": "$102000 - $184000",
+    "location": "Los Angeles, CA",
+    "skills": [
+      "Flask",
+      "Python",
+      "JavaScript",
+      "Git",
+      "AWS",
+      "SQL"
+    ],
+    "applicants": 108,
+    "company_logo": "https://dummyimage.com/100x100/277da1/fff&text=TechNova+Inc."
+  },
+  {
+    "id": 31,
+    "company": "SoftServe Systems",
+    "title": "DevOps Engineer",
+    "description": "\nSoftServe Systems is hiring for the role of DevOps Engineer!\n\n**Responsibilities of the Candidate:**\n\n- Design, develop, and maintain scalable and efficient software applications.\n- Write clean, modular, and documented code using technologies such as React, Node.js, Express, MongoDB.\n- Collaborate with cross-functional teams including product managers and designers.\n- Perform unit and integration testing, and fix bugs identified by QA.\n- Participate in sprint planning, code reviews, and agile ceremonies.\n- Document features, code logic, and architectural decisions.\n\n**Requirements:**\n\n- Bachelor's degree in Computer Science or related field.\n- At least 5 years of professional experience as a DevOps Engineer.\n- Strong understanding of programming fundamentals and system design.\n- Experience with tools and frameworks like JIRA, GitLab CI.\n- Familiarity with version control (Git), CI/CD pipelines, and RESTful APIs.\n- Excellent communication, problem-solving, and collaboration skills.\n- Experience with Agile methodologies.\n\n**Nice to have:** Experience with Docker, Kubernetes, AWS, or GCP.\n",
+    "salary": "$110000 - $227000",
+    "location": "Chicago, IL",
+    "skills": [
+      "Flask",
+      "AWS",
+      "JavaScript",
+      "Django",
+      "TypeScript"
+    ],
+    "applicants": 6,
+    "company_logo": "https://dummyimage.com/100x100/f94144/fff&text=SoftServe+Systems"
+  },
+  {
+    "id": 32,
+    "company": "PixelLogic",
+    "title": "Data Scientist",
+    "description": "\nPixelLogic is hiring for the role of Data Scientist!\n\n**Responsibilities of the Candidate:**\n\n- Design, develop, and maintain scalable and efficient software applications.\n- Write clean, modular, and documented code using technologies such as Java, Spring Boot, MySQL.\n- Collaborate with cross-functional teams including product managers and designers.\n- Perform unit and integration testing, and fix bugs identified by QA.\n- Participate in sprint planning, code reviews, and agile ceremonies.\n- Document features, code logic, and architectural decisions.\n\n**Requirements:**\n\n- Bachelor's degree in Computer Science or related field.\n- At least 6 years of professional experience as a Data Scientist.\n- Strong understanding of programming fundamentals and system design.\n- Experience with tools and frameworks like Git, Docker, Jenkins.\n- Familiarity with version control (Git), CI/CD pipelines, and RESTful APIs.\n- Excellent communication, problem-solving, and collaboration skills.\n- Experience with Agile methodologies.\n\n**Nice to have:** Experience with Docker, Kubernetes, AWS, or GCP.\n",
+    "salary": "$141000 - $187000",
+    "location": "Remote",
+    "skills": [
+      "Node.js",
+      "TypeScript",
+      "AWS",
+      "Docker",
+      "Git"
+    ],
+    "applicants": 5,
+    "company_logo": "https://dummyimage.com/100x100/f3722c/fff&text=PixelLogic"
+  },
+  {
+    "id": 33,
+    "company": "CloudWare",
+    "title": "Backend Engineer",
+    "description": "\nCloudWare is hiring for the role of Backend Engineer!\n\n**Responsibilities of the Candidate:**\n\n- Design, develop, and maintain scalable and efficient software applications.\n- Write clean, modular, and documented code using technologies such as Java, Spring Boot, MySQL.\n- Collaborate with cross-functional teams including product managers and designers.\n- Perform unit and integration testing, and fix bugs identified by QA.\n- Participate in sprint planning, code reviews, and agile ceremonies.\n- Document features, code logic, and architectural decisions.\n\n**Requirements:**\n\n- Bachelor's degree in Computer Science or related field.\n- At least 2 years of professional experience as a Backend Engineer.\n- Strong understanding of programming fundamentals and system design.\n- Experience with tools and frameworks like Git, Docker, Jenkins.\n- Familiarity with version control (Git), CI/CD pipelines, and RESTful APIs.\n- Excellent communication, problem-solving, and collaboration skills.\n- Experience with Agile methodologies.\n\n**Nice to have:** Experience with Docker, Kubernetes, AWS, or GCP.\n",
+    "salary": "$89000 - $237000",
+    "location": "Remote",
+    "skills": [
+      "Node.js",
+      "React",
+      "C++",
+      "Docker",
+      "Django",
+      "SQL",
+      "Git"
+    ],
+    "applicants": 35,
+    "company_logo": "https://dummyimage.com/100x100/f8961e/fff&text=CloudWare"
+  },
+  {
+    "id": 34,
+    "company": "AlgoRhythm",
+    "title": "Data Scientist",
+    "description": "\nAlgoRhythm is hiring for the role of Data Scientist!\n\n**Responsibilities of the Candidate:**\n\n- Design, develop, and maintain scalable and efficient software applications.\n- Write clean, modular, and documented code using technologies such as Python, Django, PostgreSQL.\n- Collaborate with cross-functional teams including product managers and designers.\n- Perform unit and integration testing, and fix bugs identified by QA.\n- Participate in sprint planning, code reviews, and agile ceremonies.\n- Document features, code logic, and architectural decisions.\n\n**Requirements:**\n\n- Bachelor's degree in Computer Science or related field.\n- At least 2 years of professional experience as a Data Scientist.\n- Strong understanding of programming fundamentals and system design.\n- Experience with tools and frameworks like JIRA, GitLab CI.\n- Familiarity with version control (Git), CI/CD pipelines, and RESTful APIs.\n- Excellent communication, problem-solving, and collaboration skills.\n- Experience with Agile methodologies.\n\n**Nice to have:** Experience with Docker, Kubernetes, AWS, or GCP.\n",
+    "salary": "$106000 - $243000",
+    "location": "Los Angeles, CA",
+    "skills": [
+      "Python",
+      "CSS",
+      "React",
+      "SQL",
+      "Git",
+      "MongoDB",
+      "Node.js"
+    ],
+    "applicants": 6,
+    "company_logo": "https://dummyimage.com/100x100/f9844a/fff&text=AlgoRhythm"
+  },
+  {
+    "id": 35,
+    "company": "DevSphere",
+    "title": "Frontend Developer",
+    "description": "\nDevSphere is hiring for the role of Frontend Developer!\n\n**Responsibilities of the Candidate:**\n\n- Design, develop, and maintain scalable and efficient software applications.\n- Write clean, modular, and documented code using technologies such as Python, Django, PostgreSQL.\n- Collaborate with cross-functional teams including product managers and designers.\n- Perform unit and integration testing, and fix bugs identified by QA.\n- Participate in sprint planning, code reviews, and agile ceremonies.\n- Document features, code logic, and architectural decisions.\n\n**Requirements:**\n\n- Bachelor's degree in Computer Science or related field.\n- At least 5 years of professional experience as a Frontend Developer.\n- Strong understanding of programming fundamentals and system design.\n- Experience with tools and frameworks like GitHub Actions, Cypress.\n- Familiarity with version control (Git), CI/CD pipelines, and RESTful APIs.\n- Excellent communication, problem-solving, and collaboration skills.\n- Experience with Agile methodologies.\n\n**Nice to have:** Experience with Docker, Kubernetes, AWS, or GCP.\n",
+    "salary": "$109000 - $230000",
+    "location": "Atlanta, GA",
+    "skills": [
+      "AWS",
+      "TypeScript",
+      "SQL",
+      "Java",
+      "Flask",
+      "JavaScript",
+      "Git"
+    ],
+    "applicants": 65,
+    "company_logo": "https://dummyimage.com/100x100/f9c74f/fff&text=DevSphere"
+  },
+  {
+    "id": 36,
+    "company": "AlgoRhythm",
+    "title": "Data Scientist",
+    "description": "\nAlgoRhythm is hiring for the role of Data Scientist!\n\n**Responsibilities of the Candidate:**\n\n- Design, develop, and maintain scalable and efficient software applications.\n- Write clean, modular, and documented code using technologies such as Angular, Flask, SQLAlchemy.\n- Collaborate with cross-functional teams including product managers and designers.\n- Perform unit and integration testing, and fix bugs identified by QA.\n- Participate in sprint planning, code reviews, and agile ceremonies.\n- Document features, code logic, and architectural decisions.\n\n**Requirements:**\n\n- Bachelor's degree in Computer Science or related field.\n- At least 2 years of professional experience as a Data Scientist.\n- Strong understanding of programming fundamentals and system design.\n- Experience with tools and frameworks like Git, Docker, Jenkins.\n- Familiarity with version control (Git), CI/CD pipelines, and RESTful APIs.\n- Excellent communication, problem-solving, and collaboration skills.\n- Experience with Agile methodologies.\n\n**Nice to have:** Experience with Docker, Kubernetes, AWS, or GCP.\n",
+    "salary": "$135000 - $228000",
+    "location": "Chicago, IL",
+    "skills": [
+      "MongoDB",
+      "React",
+      "Kubernetes",
+      "AWS",
+      "Django",
+      "Flask",
+      "SQL"
+    ],
+    "applicants": 46,
+    "company_logo": "https://dummyimage.com/100x100/90be6d/fff&text=AlgoRhythm"
+  },
+  {
+    "id": 37,
+    "company": "TechNova Inc.",
+    "title": "ML Engineer",
+    "description": "\nTechNova Inc. is hiring for the role of ML Engineer!\n\n**Responsibilities of the Candidate:**\n\n- Design, develop, and maintain scalable and efficient software applications.\n- Write clean, modular, and documented code using technologies such as Angular, Flask, SQLAlchemy.\n- Collaborate with cross-functional teams including product managers and designers.\n- Perform unit and integration testing, and fix bugs identified by QA.\n- Participate in sprint planning, code reviews, and agile ceremonies.\n- Document features, code logic, and architectural decisions.\n\n**Requirements:**\n\n- Bachelor's degree in Computer Science or related field.\n- At least 6 years of professional experience as a ML Engineer.\n- Strong understanding of programming fundamentals and system design.\n- Experience with tools and frameworks like Git, Docker, Jenkins.\n- Familiarity with version control (Git), CI/CD pipelines, and RESTful APIs.\n- Excellent communication, problem-solving, and collaboration skills.\n- Experience with Agile methodologies.\n\n**Nice to have:** Experience with Docker, Kubernetes, AWS, or GCP.\n",
+    "salary": "$75000 - $166000",
+    "location": "Chicago, IL",
+    "skills": [
+      "TypeScript",
+      "Django",
+      "Python",
+      "AWS",
+      "HTML",
+      "Flask"
+    ],
+    "applicants": 18,
+    "company_logo": "https://dummyimage.com/100x100/43aa8b/fff&text=TechNova+Inc."
+  },
+  {
+    "id": 38,
+    "company": "InnoSoft Solutions",
+    "title": "ML Engineer",
+    "description": "\nInnoSoft Solutions is hiring for the role of ML Engineer!\n\n**Responsibilities of the Candidate:**\n\n- Design, develop, and maintain scalable and efficient software applications.\n- Write clean, modular, and documented code using technologies such as Java, Spring Boot, MySQL.\n- Collaborate with cross-functional teams including product managers and designers.\n- Perform unit and integration testing, and fix bugs identified by QA.\n- Participate in sprint planning, code reviews, and agile ceremonies.\n- Document features, code logic, and architectural decisions.\n\n**Requirements:**\n\n- Bachelor's degree in Computer Science or related field.\n- At least 4 years of professional experience as a ML Engineer.\n- Strong understanding of programming fundamentals and system design.\n- Experience with tools and frameworks like VS Code, Postman.\n- Familiarity with version control (Git), CI/CD pipelines, and RESTful APIs.\n- Excellent communication, problem-solving, and collaboration skills.\n- Experience with Agile methodologies.\n\n**Nice to have:** Experience with Docker, Kubernetes, AWS, or GCP.\n",
+    "salary": "$127000 - $204000",
+    "location": "New York, NY",
+    "skills": [
+      "CSS",
+      "MongoDB",
+      "C++",
+      "Python",
+      "SQL"
+    ],
+    "applicants": 6,
+    "company_logo": "https://dummyimage.com/100x100/4d908e/fff&text=InnoSoft+Solutions"
+  },
+  {
+    "id": 39,
+    "company": "CodeCrafters",
+    "title": "Backend Engineer",
+    "description": "\nCodeCrafters is hiring for the role of Backend Engineer!\n\n**Responsibilities of the Candidate:**\n\n- Design, develop, and maintain scalable and efficient software applications.\n- Write clean, modular, and documented code using technologies such as Python, Django, PostgreSQL.\n- Collaborate with cross-functional teams including product managers and designers.\n- Perform unit and integration testing, and fix bugs identified by QA.\n- Participate in sprint planning, code reviews, and agile ceremonies.\n- Document features, code logic, and architectural decisions.\n\n**Requirements:**\n\n- Bachelor's degree in Computer Science or related field.\n- At least 3 years of professional experience as a Backend Engineer.\n- Strong understanding of programming fundamentals and system design.\n- Experience with tools and frameworks like GitHub Actions, Cypress.\n- Familiarity with version control (Git), CI/CD pipelines, and RESTful APIs.\n- Excellent communication, problem-solving, and collaboration skills.\n- Experience with Agile methodologies.\n\n**Nice to have:** Experience with Docker, Kubernetes, AWS, or GCP.\n",
+    "salary": "$100000 - $235000",
+    "location": "Chicago, IL",
+    "skills": [
+      "Git",
+      "HTML",
+      "Docker",
+      "Java"
+    ],
+    "applicants": 11,
+    "company_logo": "https://dummyimage.com/100x100/577590/fff&text=CodeCrafters"
+  },
+  {
+    "id": 40,
+    "company": "DevSphere",
+    "title": "ML Engineer",
+    "description": "\nDevSphere is hiring for the role of ML Engineer!\n\n**Responsibilities of the Candidate:**\n\n- Design, develop, and maintain scalable and efficient software applications.\n- Write clean, modular, and documented code using technologies such as Java, Spring Boot, MySQL.\n- Collaborate with cross-functional teams including product managers and designers.\n- Perform unit and integration testing, and fix bugs identified by QA.\n- Participate in sprint planning, code reviews, and agile ceremonies.\n- Document features, code logic, and architectural decisions.\n\n**Requirements:**\n\n- Bachelor's degree in Computer Science or related field.\n- At least 2 years of professional experience as a ML Engineer.\n- Strong understanding of programming fundamentals and system design.\n- Experience with tools and frameworks like JIRA, GitLab CI.\n- Familiarity with version control (Git), CI/CD pipelines, and RESTful APIs.\n- Excellent communication, problem-solving, and collaboration skills.\n- Experience with Agile methodologies.\n\n**Nice to have:** Experience with Docker, Kubernetes, AWS, or GCP.\n",
+    "salary": "$130000 - $242000",
+    "location": "Boston, MA",
+    "skills": [
+      "Java",
+      "CSS",
+      "MongoDB",
+      "Flask"
+    ],
+    "applicants": 150,
+    "company_logo": "https://dummyimage.com/100x100/277da1/fff&text=DevSphere"
+  },
+  {
+    "id": 41,
+    "company": "DevSphere",
+    "title": "Data Scientist",
+    "description": "\nDevSphere is hiring for the role of Data Scientist!\n\n**Responsibilities of the Candidate:**\n\n- Design, develop, and maintain scalable and efficient software applications.\n- Write clean, modular, and documented code using technologies such as Java, Spring Boot, MySQL.\n- Collaborate with cross-functional teams including product managers and designers.\n- Perform unit and integration testing, and fix bugs identified by QA.\n- Participate in sprint planning, code reviews, and agile ceremonies.\n- Document features, code logic, and architectural decisions.\n\n**Requirements:**\n\n- Bachelor's degree in Computer Science or related field.\n- At least 4 years of professional experience as a Data Scientist.\n- Strong understanding of programming fundamentals and system design.\n- Experience with tools and frameworks like JIRA, GitLab CI.\n- Familiarity with version control (Git), CI/CD pipelines, and RESTful APIs.\n- Excellent communication, problem-solving, and collaboration skills.\n- Experience with Agile methodologies.\n\n**Nice to have:** Experience with Docker, Kubernetes, AWS, or GCP.\n",
+    "salary": "$105000 - $229000",
+    "location": "Los Angeles, CA",
+    "skills": [
+      "MongoDB",
+      "HTML",
+      "JavaScript",
+      "TypeScript",
+      "Node.js"
+    ],
+    "applicants": 98,
+    "company_logo": "https://dummyimage.com/100x100/f94144/fff&text=DevSphere"
+  },
+  {
+    "id": 42,
+    "company": "ByteWorks",
+    "title": "Backend Engineer",
+    "description": "\nByteWorks is hiring for the role of Backend Engineer!\n\n**Responsibilities of the Candidate:**\n\n- Design, develop, and maintain scalable and efficient software applications.\n- Write clean, modular, and documented code using technologies such as Next.js, TypeScript, Firebase.\n- Collaborate with cross-functional teams including product managers and designers.\n- Perform unit and integration testing, and fix bugs identified by QA.\n- Participate in sprint planning, code reviews, and agile ceremonies.\n- Document features, code logic, and architectural decisions.\n\n**Requirements:**\n\n- Bachelor's degree in Computer Science or related field.\n- At least 2 years of professional experience as a Backend Engineer.\n- Strong understanding of programming fundamentals and system design.\n- Experience with tools and frameworks like JIRA, GitLab CI.\n- Familiarity with version control (Git), CI/CD pipelines, and RESTful APIs.\n- Excellent communication, problem-solving, and collaboration skills.\n- Experience with Agile methodologies.\n\n**Nice to have:** Experience with Docker, Kubernetes, AWS, or GCP.\n",
+    "salary": "$96000 - $221000",
+    "location": "San Francisco, CA",
+    "skills": [
+      "TypeScript",
+      "Git",
+      "Flask",
+      "MongoDB",
+      "SQL"
+    ],
+    "applicants": 116,
+    "company_logo": "https://dummyimage.com/100x100/f3722c/fff&text=ByteWorks"
+  },
+  {
+    "id": 43,
+    "company": "PixelLogic",
+    "title": "Data Scientist",
+    "description": "\nPixelLogic is hiring for the role of Data Scientist!\n\n**Responsibilities of the Candidate:**\n\n- Design, develop, and maintain scalable and efficient software applications.\n- Write clean, modular, and documented code using technologies such as Next.js, TypeScript, Firebase.\n- Collaborate with cross-functional teams including product managers and designers.\n- Perform unit and integration testing, and fix bugs identified by QA.\n- Participate in sprint planning, code reviews, and agile ceremonies.\n- Document features, code logic, and architectural decisions.\n\n**Requirements:**\n\n- Bachelor's degree in Computer Science or related field.\n- At least 4 years of professional experience as a Data Scientist.\n- Strong understanding of programming fundamentals and system design.\n- Experience with tools and frameworks like Git, Docker, Jenkins.\n- Familiarity with version control (Git), CI/CD pipelines, and RESTful APIs.\n- Excellent communication, problem-solving, and collaboration skills.\n- Experience with Agile methodologies.\n\n**Nice to have:** Experience with Docker, Kubernetes, AWS, or GCP.\n",
+    "salary": "$68000 - $160000",
+    "location": "Denver, CO",
+    "skills": [
+      "SQL",
+      "Docker",
+      "CSS",
+      "Git",
+      "MongoDB",
+      "Flask"
+    ],
+    "applicants": 31,
+    "company_logo": "https://dummyimage.com/100x100/f8961e/fff&text=PixelLogic"
+  },
+  {
+    "id": 44,
+    "company": "CodeCrafters",
+    "title": "ML Engineer",
+    "description": "\nCodeCrafters is hiring for the role of ML Engineer!\n\n**Responsibilities of the Candidate:**\n\n- Design, develop, and maintain scalable and efficient software applications.\n- Write clean, modular, and documented code using technologies such as React, Node.js, Express, MongoDB.\n- Collaborate with cross-functional teams including product managers and designers.\n- Perform unit and integration testing, and fix bugs identified by QA.\n- Participate in sprint planning, code reviews, and agile ceremonies.\n- Document features, code logic, and architectural decisions.\n\n**Requirements:**\n\n- Bachelor's degree in Computer Science or related field.\n- At least 6 years of professional experience as a ML Engineer.\n- Strong understanding of programming fundamentals and system design.\n- Experience with tools and frameworks like AWS, Terraform.\n- Familiarity with version control (Git), CI/CD pipelines, and RESTful APIs.\n- Excellent communication, problem-solving, and collaboration skills.\n- Experience with Agile methodologies.\n\n**Nice to have:** Experience with Docker, Kubernetes, AWS, or GCP.\n",
+    "salary": "$89000 - $230000",
+    "location": "Seattle, WA",
+    "skills": [
+      "HTML",
+      "TypeScript",
+      "Flask",
+      "SQL",
+      "C++",
+      "AWS"
+    ],
+    "applicants": 11,
+    "company_logo": "https://dummyimage.com/100x100/f9844a/fff&text=CodeCrafters"
+  },
+  {
+    "id": 45,
+    "company": "PixelLogic",
+    "title": "Backend Engineer",
+    "description": "\nPixelLogic is hiring for the role of Backend Engineer!\n\n**Responsibilities of the Candidate:**\n\n- Design, develop, and maintain scalable and efficient software applications.\n- Write clean, modular, and documented code using technologies such as React, Node.js, Express, MongoDB.\n- Collaborate with cross-functional teams including product managers and designers.\n- Perform unit and integration testing, and fix bugs identified by QA.\n- Participate in sprint planning, code reviews, and agile ceremonies.\n- Document features, code logic, and architectural decisions.\n\n**Requirements:**\n\n- Bachelor's degree in Computer Science or related field.\n- At least 2 years of professional experience as a Backend Engineer.\n- Strong understanding of programming fundamentals and system design.\n- Experience with tools and frameworks like GitHub Actions, Cypress.\n- Familiarity with version control (Git), CI/CD pipelines, and RESTful APIs.\n- Excellent communication, problem-solving, and collaboration skills.\n- Experience with Agile methodologies.\n\n**Nice to have:** Experience with Docker, Kubernetes, AWS, or GCP.\n",
+    "salary": "$143000 - $174000",
+    "location": "Chicago, IL",
+    "skills": [
+      "TypeScript",
+      "Python",
+      "CSS",
+      "React",
+      "C++",
+      "Django"
+    ],
+    "applicants": 134,
+    "company_logo": "https://dummyimage.com/100x100/f9c74f/fff&text=PixelLogic"
+  },
+  {
+    "id": 46,
+    "company": "CodeCrafters",
+    "title": "Backend Engineer",
+    "description": "\nCodeCrafters is hiring for the role of Backend Engineer!\n\n**Responsibilities of the Candidate:**\n\n- Design, develop, and maintain scalable and efficient software applications.\n- Write clean, modular, and documented code using technologies such as Next.js, TypeScript, Firebase.\n- Collaborate with cross-functional teams including product managers and designers.\n- Perform unit and integration testing, and fix bugs identified by QA.\n- Participate in sprint planning, code reviews, and agile ceremonies.\n- Document features, code logic, and architectural decisions.\n\n**Requirements:**\n\n- Bachelor's degree in Computer Science or related field.\n- At least 5 years of professional experience as a Backend Engineer.\n- Strong understanding of programming fundamentals and system design.\n- Experience with tools and frameworks like JIRA, GitLab CI.\n- Familiarity with version control (Git), CI/CD pipelines, and RESTful APIs.\n- Excellent communication, problem-solving, and collaboration skills.\n- Experience with Agile methodologies.\n\n**Nice to have:** Experience with Docker, Kubernetes, AWS, or GCP.\n",
+    "salary": "$134000 - $222000",
+    "location": "Denver, CO",
+    "skills": [
+      "Django",
+      "Python",
+      "Node.js",
+      "Git",
+      "CSS",
+      "HTML",
+      "JavaScript"
+    ],
+    "applicants": 22,
+    "company_logo": "https://dummyimage.com/100x100/90be6d/fff&text=CodeCrafters"
+  },
+  {
+    "id": 47,
+    "company": "TechNova Inc.",
+    "title": "Data Scientist",
+    "description": "\nTechNova Inc. is hiring for the role of Data Scientist!\n\n**Responsibilities of the Candidate:**\n\n- Design, develop, and maintain scalable and efficient software applications.\n- Write clean, modular, and documented code using technologies such as Next.js, TypeScript, Firebase.\n- Collaborate with cross-functional teams including product managers and designers.\n- Perform unit and integration testing, and fix bugs identified by QA.\n- Participate in sprint planning, code reviews, and agile ceremonies.\n- Document features, code logic, and architectural decisions.\n\n**Requirements:**\n\n- Bachelor's degree in Computer Science or related field.\n- At least 2 years of professional experience as a Data Scientist.\n- Strong understanding of programming fundamentals and system design.\n- Experience with tools and frameworks like VS Code, Postman.\n- Familiarity with version control (Git), CI/CD pipelines, and RESTful APIs.\n- Excellent communication, problem-solving, and collaboration skills.\n- Experience with Agile methodologies.\n\n**Nice to have:** Experience with Docker, Kubernetes, AWS, or GCP.\n",
+    "salary": "$70000 - $248000",
+    "location": "San Francisco, CA",
+    "skills": [
+      "AWS",
+      "Git",
+      "Docker",
+      "Django",
+      "MongoDB",
+      "React",
+      "Node.js"
+    ],
+    "applicants": 60,
+    "company_logo": "https://dummyimage.com/100x100/43aa8b/fff&text=TechNova+Inc."
+  },
+  {
+    "id": 48,
+    "company": "SoftServe Systems",
+    "title": "Backend Engineer",
+    "description": "\nSoftServe Systems is hiring for the role of Backend Engineer!\n\n**Responsibilities of the Candidate:**\n\n- Design, develop, and maintain scalable and efficient software applications.\n- Write clean, modular, and documented code using technologies such as Java, Spring Boot, MySQL.\n- Collaborate with cross-functional teams including product managers and designers.\n- Perform unit and integration testing, and fix bugs identified by QA.\n- Participate in sprint planning, code reviews, and agile ceremonies.\n- Document features, code logic, and architectural decisions.\n\n**Requirements:**\n\n- Bachelor's degree in Computer Science or related field.\n- At least 3 years of professional experience as a Backend Engineer.\n- Strong understanding of programming fundamentals and system design.\n- Experience with tools and frameworks like JIRA, GitLab CI.\n- Familiarity with version control (Git), CI/CD pipelines, and RESTful APIs.\n- Excellent communication, problem-solving, and collaboration skills.\n- Experience with Agile methodologies.\n\n**Nice to have:** Experience with Docker, Kubernetes, AWS, or GCP.\n",
+    "salary": "$96000 - $198000",
+    "location": "Atlanta, GA",
+    "skills": [
+      "React",
+      "HTML",
+      "C++",
+      "TypeScript",
+      "SQL",
+      "Docker"
+    ],
+    "applicants": 101,
+    "company_logo": "https://dummyimage.com/100x100/4d908e/fff&text=SoftServe+Systems"
+  },
+  {
+    "id": 49,
+    "company": "NextGen Labs",
+    "title": "ML Engineer",
+    "description": "\nNextGen Labs is hiring for the role of ML Engineer!\n\n**Responsibilities of the Candidate:**\n\n- Design, develop, and maintain scalable and efficient software applications.\n- Write clean, modular, and documented code using technologies such as React, Node.js, Express, MongoDB.\n- Collaborate with cross-functional teams including product managers and designers.\n- Perform unit and integration testing, and fix bugs identified by QA.\n- Participate in sprint planning, code reviews, and agile ceremonies.\n- Document features, code logic, and architectural decisions.\n\n**Requirements:**\n\n- Bachelor's degree in Computer Science or related field.\n- At least 3 years of professional experience as a ML Engineer.\n- Strong understanding of programming fundamentals and system design.\n- Experience with tools and frameworks like GitHub Actions, Cypress.\n- Familiarity with version control (Git), CI/CD pipelines, and RESTful APIs.\n- Excellent communication, problem-solving, and collaboration skills.\n- Experience with Agile methodologies.\n\n**Nice to have:** Experience with Docker, Kubernetes, AWS, or GCP.\n",
+    "salary": "$115000 - $249000",
+    "location": "Boston, MA",
+    "skills": [
+      "Node.js",
+      "Git",
+      "Java",
+      "HTML",
+      "MongoDB"
+    ],
+    "applicants": 42,
+    "company_logo": "https://dummyimage.com/100x100/577590/fff&text=NextGen+Labs"
+  },
+  {
+    "id": 50,
+    "company": "SoftServe Systems",
+    "title": "Data Scientist",
+    "description": "\nSoftServe Systems is hiring for the role of Data Scientist!\n\n**Responsibilities of the Candidate:**\n\n- Design, develop, and maintain scalable and efficient software applications.\n- Write clean, modular, and documented code using technologies such as Python, Django, PostgreSQL.\n- Collaborate with cross-functional teams including product managers and designers.\n- Perform unit and integration testing, and fix bugs identified by QA.\n- Participate in sprint planning, code reviews, and agile ceremonies.\n- Document features, code logic, and architectural decisions.\n\n**Requirements:**\n\n- Bachelor's degree in Computer Science or related field.\n- At least 5 years of professional experience as a Data Scientist.\n- Strong understanding of programming fundamentals and system design.\n- Experience with tools and frameworks like JIRA, GitLab CI.\n- Familiarity with version control (Git), CI/CD pipelines, and RESTful APIs.\n- Excellent communication, problem-solving, and collaboration skills.\n- Experience with Agile methodologies.\n\n**Nice to have:** Experience with Docker, Kubernetes, AWS, or GCP.\n",
+    "salary": "$116000 - $230000",
+    "location": "Chicago, IL",
+    "skills": [
+      "AWS",
+      "CSS",
+      "Java",
+      "C++",
+      "Django"
+    ],
+    "applicants": 122,
+    "company_logo": "https://dummyimage.com/100x100/277da1/fff&text=SoftServe+Systems"
+  }
+]
