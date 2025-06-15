@@ -1,19 +1,18 @@
-import { useEffect, useRef, useState } from "react";
+import { useState } from "react";
 import { useSelector, useDispatch } from "react-redux";
-import { setJobsData } from "../Redux/Slices/JobsDataSlice";
+import { setSkillsFilter } from "../Redux/Slices/JobsDataSlice";
 
 const SkillsFilter = () => {
-  const [jobs, setJobs] = useState([]);
   const [skills, setSkills] = useState(null);
   const [isSkillsOpen, setIsSkillsOpen] = useState(false);
   const [selectedSkills, setSelectedSkills] = useState([]);
 
-  const { jobsList } = useSelector((state) => state.JobsData);
+  const { jobsList} = useSelector((state) => state.JobsData);
   const dispatch = useDispatch();
 
   const filterBySkills = () => {
     const uniqueSkills = [];
-    jobs.forEach((job) => {
+    jobsList.forEach((job) => {
       job.skills.forEach((skill) => {
         if (!uniqueSkills.includes(skill)) {
           uniqueSkills.push(skill);
@@ -24,31 +23,11 @@ const SkillsFilter = () => {
   };
 
   const resultsBySkills = () => {
-    const filtered = [];
 
-    jobsList.forEach((job) => {
-      job.skills.forEach((skill) => {
-        if (selectedSkills.includesAll) {
-          if (filtered.includes(job)) {
-            return;
-          } else {
-            filtered.push(job);
-          }
-        }
-      });
-    });
-
-    console.log(filtered);
-    dispatch(setJobsData(filtered))
+    dispatch(setSkillsFilter(selectedSkills))
   };
 
-  useEffect(() => {
-    fetch("/data/developer_job_data_with_ids.json")
-      .then((res) => res.json())
-      .then((data) => {
-        setJobs(data);
-      });
-  }, [filterBySkills]);
+  
 
   return (
     <div
@@ -83,11 +62,9 @@ const SkillsFilter = () => {
                     e.stopPropagation();
 
                     if (selectedSkills.includes(item)) {
-                      setSelectedSkills(
-                        selectedSkills.filter((skill) => skill !== item)
-                      );
+                      setSelectedSkills(selectedSkills.filter((skill) => skill !== item))
                     } else {
-                      setSelectedSkills([...selectedSkills, item]);
+                      setSelectedSkills([...selectedSkills, item])
                     }
                   }}
                 >

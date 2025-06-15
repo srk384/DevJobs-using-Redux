@@ -1,62 +1,46 @@
-import { useEffect, useRef, useState } from "react";
+import { useState } from "react";
 import { useSelector, useDispatch } from "react-redux";
-import { setJobsData, setFilters } from "../Redux/Slices/JobsDataSlice";
+import { setTitlesFilter, sortJobs } from "../Redux/Slices/JobsDataSlice";
 import SkillsFilter from "./SkillsFilter";
 import LocationFilter from "./LocationFilter";
 
 const JobFilters = () => {
-  const [jobs, setJobs] = useState([]);
   const [category, setCategory] = useState(null);
   const [isCategoryOpen, setIsCategoryOpen] = useState(false);
   const [selectedTitles, setSelectedTitles] = useState([]);
 
-  const { jobsList, jobFilters } = useSelector((state) => state.JobsData);
+  const { jobsList, filteredJobs } = useSelector((state) => state.JobsData);
   const dispatch = useDispatch();
 
   const SalaryHightoLow = () => {
-    let sortedSalary = [...jobsList].sort((a, b) => {
+    let sortedSalary = [...filteredJobs].sort((a, b) => {
       const getMax = (str) =>
         parseInt(str.split("-")[1].replace(/[\$,]/g, "").trim());
       return getMax(b.salary) - getMax(a.salary);
     });
-    dispatch(setJobsData([...sortedSalary]));
+    dispatch(sortJobs(sortedSalary));
   };
 
   const ApplicantsLowToHigh = () => {
-    let sortedApplicants = [...jobsList].sort((a, b) => {
+    let sortedApplicants = [...filteredJobs].sort((a, b) => {
       return a.applicants - b.applicants;
     });
-    dispatch(setJobsData(sortedApplicants));
+    dispatch(sortJobs(sortedApplicants));
   };
 
   const filterTitles = () => {
     const uniqueTitles = [];
-    for (let i = 0; i < jobs.length; i++) {
-      const title = jobs[i].title;
-      if (!uniqueTitles.includes(title)) {
-        uniqueTitles.push(title);
+    jobsList.forEach((job) => {
+      if (!uniqueTitles.includes(job.title)) {
+        uniqueTitles.push(job.title);
       }
-    }
+    });
     setCategory(uniqueTitles);
   };
 
   const resultsByTitle = () => {
-    console.log(jobFilters);
-
-    const filtered = jobs.filter((job) => jobFilters.includes(job.title));
-    // filtered.length > 0
-    //   ? dispatch(setJobsData(filtered))
-    //   : dispatch(setJobsData(jobs));
-    dispatch(setJobsData(filtered));
+    dispatch(setTitlesFilter(selectedTitles));
   };
-
-  useEffect(() => {
-    fetch("/data/developer_job_data_with_ids.json")
-      .then((res) => res.json())
-      .then((data) => {
-        setJobs(data);
-      });
-  }, [filterTitles]);
 
   return (
     <div className="bg-white w-ful p-2 flex items-center px-4">
@@ -105,7 +89,7 @@ const JobFilters = () => {
         {category && isCategoryOpen && (
           <div className="absolute bg-white/50 backdrop-blur-lg top-10 left-0 w-52 shadow-lg rounded-lg flex flex-col">
             {category.map((item, index) => {
-              const isSelected = jobFilters.includes(item);
+              const isSelected = selectedTitles.includes(item);
 
               return (
                 <div
@@ -115,14 +99,12 @@ const JobFilters = () => {
                     e.preventDefault();
                     e.stopPropagation();
 
-                    if (jobFilters.includes(item)) {
-                      dispatch(
-                        setFilters({
-                          title: jobFilters.filter((title) => title !== item),
-                        })
+                    if (selectedTitles.includes(item)) {
+                      setSelectedTitles(
+                        selectedTitles.filter((title) => title !== item)
                       );
                     } else {
-                      dispatch(setFilters([{...jobFilters, item }]));
+                      setSelectedTitles([...selectedTitles, item]);
                     }
                   }}
                 >

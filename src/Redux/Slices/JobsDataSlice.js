@@ -2,23 +2,59 @@ import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
   jobsList: [],
-  jobFilters:[]
+  filters: {
+    titles: [],
+    location: [],
+    skills: [],
+  },
+  filteredJobs: [],
 };
 
 const JobsDataSlice = createSlice({
   name: "JobsData",
   initialState,
   reducers: {
-    setJobsData: (state, action) => {
-      state.jobsList = action.payload
-    //   console.log(action.payload);
+    setAllJobs: (state, action) => {
+      state.jobsList = action.payload;
+      state.filteredJobs = action.payload;
+      //   console.log(action.payload);
     },
-    setFilters: (state, action) => {
-      state.jobFilters = action.payload
-      console.log(action.payload);
+    setTitlesFilter: (state, action) => {
+      state.filters.titles = action.payload;
+      applyFilters(state);
     },
+    setLocationFilter: (state, action) => {
+      state.filters.location = action.payload;
+      applyFilters(state);
+       console.log(action.payload);
+    },
+    setSkillsFilter: (state, action) => {
+      state.filters.skills = action.payload;
+      applyFilters(state);
+    },
+    sortJobs:(state, action)=>{
+      state.filteredJobs = action.payload
+      console.log(action.payload)
+    }
   },
 });
 
-export const { setJobsData, setFilters } = JobsDataSlice.actions;
+function applyFilters(state) {
+  const { titles, location, skills } = state.filters;
+
+  state.filteredJobs = state.jobsList.filter((job) => {
+    const matchTitle = titles.length ? titles.includes(job.title) : true;
+
+    const matchLocation = location.length ? location.includes(job.location) : true;
+
+    const matchSkills = skills.length
+      ? skills.every((skill) => job.skills.includes(skill))
+      : true;
+
+    return matchTitle && matchLocation && matchSkills;
+  });
+}
+
+export const { setAllJobs, setTitlesFilter, setLocationFilter, setSkillsFilter, sortJobs } =
+  JobsDataSlice.actions;
 export default JobsDataSlice.reducer;

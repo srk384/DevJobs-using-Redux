@@ -1,9 +1,8 @@
-import { useEffect, useRef, useState } from "react";
+import { useState } from "react";
 import { useSelector, useDispatch } from "react-redux";
-import { setJobsData, setFilters } from "../Redux/Slices/JobsDataSlice";
+import { setLocationFilter } from "../Redux/Slices/JobsDataSlice";
 
 const LocationFilter = () => {
-  const [jobs, setJobs] = useState([]);
   const [location, setLocation] = useState(null);
   const [isLocationOpen, setIsLocationOpen] = useState(false);
   const [selectedLocation, setSelectedLocation] = useState([]);
@@ -13,7 +12,7 @@ const LocationFilter = () => {
 
   const filterByLocation = () => {
     const uniqueLocation = [];
-    jobs.forEach((job) => {
+    jobsList.forEach((job) => {
       if (!uniqueLocation.includes(job.location)) {
         uniqueLocation.push(job.location);
       }
@@ -22,22 +21,9 @@ const LocationFilter = () => {
   };
 
   const resultsByLocation = () => {
-
-    const filtered = jobs.filter((job) => jobFilters.includes(job.location && job.title));
-    // filtered.length > 0
-    //   ? dispatch(setJobsData(filtered))
-    //   : dispatch(setJobsData(jobs));
-    dispatch(setJobsData(filtered));
-    console.log(filtered)
+    console.log(selectedLocation)
+    dispatch(setLocationFilter(selectedLocation));
   };
-
-  useEffect(() => {
-    fetch("/data/developer_job_data_with_ids.json")
-      .then((res) => res.json())
-      .then((data) => {
-        setJobs(data);
-      });
-  }, [filterByLocation]);
 
   return (
     <div
@@ -61,7 +47,7 @@ const LocationFilter = () => {
         <div className="absolute bg-white/50 backdrop-blur-lg top-10 left-0 w-52 shadow-lg rounded-lg flex flex-col ">
           <div className="max-h-54 overflow-y-auto custom-scrollbar">
             {location.map((item, index) => {
-              const isSelected = jobFilters.includes(item);
+              const isSelected = selectedLocation.includes(item);
 
               return (
                 <div
@@ -71,10 +57,10 @@ const LocationFilter = () => {
                     e.preventDefault();
                     e.stopPropagation();
 
-                    if (jobFilters.includes(item)) {
-                      dispatch(setFilters(jobFilters.filter((location) => location !== item)))
+                    if (selectedLocation.includes(item)) {
+                      setSelectedLocation(selectedLocation.filter((location) => location !== item));
                     } else {
-                      dispatch(setFilters([...jobFilters, item]))
+                      setSelectedLocation([...selectedLocation, item]);
                     }
                   }}
                 >
