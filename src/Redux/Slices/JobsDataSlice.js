@@ -18,7 +18,7 @@ const JobsDataSlice = createSlice({
     setAllJobs: (state, action) => {
       state.jobsList = action.payload;
       state.filteredJobs = action.payload;
-      //   console.log(action.payload);
+        // console.log(action.payload);
     },
     setTitlesFilter: (state, action) => {
       state.filters.titles = action.payload;

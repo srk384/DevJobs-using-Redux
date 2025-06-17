@@ -4,8 +4,6 @@ import { useEffect, useRef } from "react";
 import { Link } from "react-router-dom";
 
 const JobDisplay = ({ job }) => {
-  console.log(job);
-
   const { company_logo } = job;
 
   const colorRef = useRef();
@@ -55,16 +53,18 @@ const JobDisplay = ({ job }) => {
       return;
     }
 
-    getDominantColorFromImage(company_logo)
-      .then((color) => {
-        Object.assign(colorRef.current.style, {
-          backgroundColor: color,
-          color: "white",
-          borderRadius: "8px",
-        });
-        // console.log(color);
-      })
-      .catch((err) => console.error("Color extraction failed", err));
+    if (company_logo){
+      getDominantColorFromImage(company_logo)
+        .then((color) => {
+          Object.assign(colorRef.current.style, {
+            backgroundColor: color,
+            color: "white",
+            borderRadius: "8px",
+          });
+          // console.log(color);
+        })
+        .catch((err) => console.error("Color extraction failed", err));
+        }
   }, [company_logo]);
 
   return (

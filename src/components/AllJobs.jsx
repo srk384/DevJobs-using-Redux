@@ -11,12 +11,14 @@ const Alljobs = () => {
   const dispatch = useDispatch();
 
   useEffect(() => {
-    fetch("/data/developer_job_data_with_ids.json")
+    if(!filteredJobs.length){
+      fetch("/data/developer_job_data_with_ids.json")
       .then((res) => res.json())
       .then((data) => {
         dispatch(setAllJobs(data));
         setJob(data[0]);
       });
+    }
   }, []);
 
   useEffect(() => {

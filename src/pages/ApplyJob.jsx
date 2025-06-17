@@ -11,8 +11,6 @@ const ApplyJob = () => {
 
   if (state) state = { ...state, hideApplyBtn: true };
 
-  console.log(state);
-
   useEffect(() => {
     if (!state) {
       fetchJobsData();

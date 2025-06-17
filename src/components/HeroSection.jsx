@@ -1,8 +1,12 @@
 import { useState } from "react";
 import { motion } from "motion/react";
+import { useJobSearch } from "../hooks/useJobSearch";
+import { Link } from "react-router-dom";
 
 export const HeroSection = () => {
   const [isSearchClicked, setIsSearchClicked] = useState(false);
+  const [searchResults, setSearchResults] = useState([]);
+  const { searchJobs } = useJobSearch();
 
   const heading = "Are you a Passionate Developer?";
 
@@ -18,6 +22,11 @@ export const HeroSection = () => {
   const wordVariants = {
     hidden: { opacity: 0, y: 10 },
     visible: { opacity: 1, y: 0, transition: { duration: 0.4 } },
+  };
+
+  const handleSearch = (e) => {
+    const { value } = e.target;
+    setSearchResults(searchJobs(value));
   };
 
   return (
@@ -58,7 +67,10 @@ export const HeroSection = () => {
             animate={{ opacity: 1 }}
             transition={{ delay: 2, duration: 1 }}
             className="relative z-1 mt-6 cursor-pointer font-semibold bg-slate-700 text-white px-4 py-3 rounded-full dark:bg-neutral-200 dark:text-slate-800 shadow-md"
-            onClick={() => setIsSearchClicked(!isSearchClicked)}
+            onClick={() => {
+              setIsSearchClicked(!isSearchClicked);
+              setSearchResults([]);
+            }}
           >
             Search Jobs
           </motion.button>
@@ -76,13 +88,31 @@ export const HeroSection = () => {
               className="absolute left-20 bottom-0.5"
             >
               <input
-                className="pl-12 border-gray-300 bg-white border dark:bg-slate-800 dark:border-gray-500 p-2 px-6 w-96 border-l-0 rounded-full shadow-md"
+                className="pl-12 border-gray-300 bg-white border dark:bg-slate-800 dark:border-gray-500 p-2 px-6 w-96 border-l-0 rounded-full shadow-md dark:text-gray-200"
                 type="text"
                 name=""
                 id=""
-                placeholder="Search"
+                placeholder="Search for job titles"
+                onChange={(e) => {
+                  handleSearch(e);
+                }}
               />
             </motion.span>
+          )}
+          {searchResults.length > 0 && (
+            <div className="absolute w-1/2 max-h-52 bg-white ml-24 mt-1 rounded-lg overflow-auto custom-scrollbar">
+              {searchResults.map((item, index) => (
+                <Link to={`/apply/${item._id}`} state={item}>
+                  <div
+                    key={index}
+                    className="flex justify-between p-2 hover:bg-gray-200 text-gray-700 cursor-pointer"
+                    onClick={() => console.log("first")}
+                  >
+                    {`${item.title} | ${item.company}`}
+                  </div>
+                </Link>
+              ))}
+            </div>
           )}
         </div>
       </div>

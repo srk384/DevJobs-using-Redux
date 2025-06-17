@@ -4,6 +4,7 @@ import { useThemeContext } from "./context/ThemeContext";
 import ThemeToggler from "./components/ThemeToggler";
 import Jobs from "./pages/Jobs";
 import ApplyJob from "./pages/ApplyJob";
+import AppliedJobs from "./pages/AppliedJobs";
 
 function App() {
   const { theme } = useThemeContext();
@@ -27,6 +28,7 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/jobs" element={<Jobs />} />
         <Route path="/apply/:id" element={<ApplyJob />} />
+        <Route path="/applied-jobs" element={<AppliedJobs />} />
       </Routes>
     </div>
   );
