@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { setTitlesFilter, sortJobs } from "../Redux/Slices/JobsDataSlice";
 import SkillsFilter from "./SkillsFilter";
@@ -8,8 +8,12 @@ const JobFilters = () => {
   const [category, setCategory] = useState(null);
   const [isCategoryOpen, setIsCategoryOpen] = useState(false);
   const [selectedTitles, setSelectedTitles] = useState([]);
+  const [isSalarySortClicked, setIsSalarySortClicked] = useState(false);
+  const [isApplicantSortClicked, setIsApplicantSortClicked] = useState(false);
 
-  const { jobsList, filteredJobs } = useSelector((state) => state.JobsData);
+  const { jobsList, filteredJobs, filters } = useSelector(
+    (state) => state.JobsData
+  );
   const dispatch = useDispatch();
 
   const SalaryHightoLow = () => {
@@ -42,27 +46,53 @@ const JobFilters = () => {
     dispatch(setTitlesFilter(selectedTitles));
   };
 
+  const filterCount = () => {
+    let count = 0;
+    for (const key in filters) {
+      count += filters[key].length;
+    }
+    return count;
+  };
+
+  useEffect(() => {
+    setIsSalarySortClicked(false);
+    setIsApplicantSortClicked(false);
+  }, [filters]);
+
   return (
-    <div className="bg-white w-ful p-2 flex items-center px-4">
+     <div className="bg-white w-full p-2 flex items-center px-4 mx-auto max-w-7xl">
       <div className="bg-[rgb(144,190,109)] px-4 p-2 inline-block text-white rounded-lg text-sm">
         Sort
       </div>
       <div className="w-px h-10 bg-gray-300 inline-block mx-4"></div>
       <div
-        className="text-sm text-gray-700 p-2 border border-gray-300 rounded-lg cursor-pointer hover:bg-gray-50 mr-4"
-        onClick={() => SalaryHightoLow()}
+        className={`text-sm text-gray-700 p-2 border rounded-lg cursor-pointer hover:bg-gray-50 mr-4 ${isSalarySortClicked ? "border-[rgb(144,190,109)] border-2" : "border-gray-300 "}`}
+        onClick={() => {
+          SalaryHightoLow();
+          setIsSalarySortClicked(true);
+          setIsApplicantSortClicked(false);
+        }}
       >
         Salary (High to Low)
       </div>
       <div
-        className="text-sm text-gray-700 p-2 border border-gray-300 rounded-lg cursor-pointer hover:bg-gray-50"
-        onClick={() => ApplicantsLowToHigh()}
+        className={`text-sm text-gray-700 p-2 border rounded-lg cursor-pointer hover:bg-gray-50 ${isApplicantSortClicked ? "border-[rgb(144,190,109)] border-2" : "border-gray-300 "}`}
+        onClick={() => {
+          ApplicantsLowToHigh();
+          setIsApplicantSortClicked(true);
+          setIsSalarySortClicked(false);
+        }}
       >
         Applicants (Low to High)
       </div>
 
       <div className="bg-[rgb(144,190,109)] px-4 p-2 inline-block text-white rounded-lg text-sm ml-10">
-        Filter
+        Filter{" "}
+        {filterCount() > 0 && (
+          <span className="text-xs bg-white inline-block size-4 rounded-full text-center text-[rgb(144,190,109)] ml-1">
+            {filterCount()}
+          </span>
+        )}
       </div>
 
       <div className="w-px h-10 bg-gray-300 inline-block mx-4"></div>

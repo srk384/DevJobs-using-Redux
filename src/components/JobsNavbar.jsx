@@ -7,11 +7,11 @@ const JobsNavbar = () => {
       <div className="bg-white p-2 flex justify-between items-center border-b border-gray-300">
         <div className="flex gap-4 items-center">
           <Link to={"/"}>
-          <img className="w-46" src="/images/logo2.png" alt="" />
+            <img className="w-46" src="/images/logo2.png" alt="" />
           </Link>
           <div className="search border border-gray-300 rounded w-96">
             <input
-              className="p-2 px-4 outline-none"
+              className="p-2 px-4 outline-none w-full"
               type="text"
               placeholder="Search Jobs"
             />
@@ -22,7 +22,6 @@ const JobsNavbar = () => {
           <div className="text-sm font-semibold">Profile</div>
         </div>
       </div>
-      <JobFilters/>
     </div>
   );
 };

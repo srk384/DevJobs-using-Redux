@@ -8,6 +8,7 @@ const initialState = {
     skills: [],
   },
   filteredJobs: [],
+  appliedJobs: [],
 };
 
 const JobsDataSlice = createSlice({
@@ -26,16 +27,18 @@ const JobsDataSlice = createSlice({
     setLocationFilter: (state, action) => {
       state.filters.location = action.payload;
       applyFilters(state);
-       console.log(action.payload);
     },
     setSkillsFilter: (state, action) => {
       state.filters.skills = action.payload;
       applyFilters(state);
     },
-    sortJobs:(state, action)=>{
-      state.filteredJobs = action.payload
-      console.log(action.payload)
-    }
+    sortJobs: (state, action) => {
+      state.filteredJobs = action.payload;
+    },
+    setAppliedJobs: (state, action) => {
+      state.appliedJobs = action.payload;
+      console.log(action.payload);
+    },
   },
 });
 
@@ -45,7 +48,9 @@ function applyFilters(state) {
   state.filteredJobs = state.jobsList.filter((job) => {
     const matchTitle = titles.length ? titles.includes(job.title) : true;
 
-    const matchLocation = location.length ? location.includes(job.location) : true;
+    const matchLocation = location.length
+      ? location.includes(job.location)
+      : true;
 
     const matchSkills = skills.length
       ? skills.every((skill) => job.skills.includes(skill))
@@ -55,6 +60,12 @@ function applyFilters(state) {
   });
 }
 
-export const { setAllJobs, setTitlesFilter, setLocationFilter, setSkillsFilter, sortJobs } =
-  JobsDataSlice.actions;
+export const {
+  setAllJobs,
+  setTitlesFilter,
+  setLocationFilter,
+  setSkillsFilter,
+  sortJobs,
+  setAppliedJobs,
+} = JobsDataSlice.actions;
 export default JobsDataSlice.reducer;

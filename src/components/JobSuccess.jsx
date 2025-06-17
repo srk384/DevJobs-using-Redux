@@ -1,0 +1,55 @@
+import { Link } from "react-router";
+import { useState } from "react";
+import { FaSpinner } from "react-icons/fa";
+
+const JobSuccess = ({jobId}) => {
+
+  const [isLoading, setisLoading] = useState(true);
+
+  setTimeout(() => {
+    setisLoading(false);
+  }, 5000);
+
+  return (
+    <div>
+      {isLoading && (
+        <div className="flex h-[70vh] flex-col items-center justify-center bg-bg-gray-50 text-center">
+          <FaSpinner className="mb-4 animate-spin text-5xl text-[#fe5156]" />
+          <h2 className="text-2xl font-semibold text-gray-700">
+            Processing your request...
+          </h2>
+          <p className="text-gray-500 mt-2">
+            Please wait while we confirm your application.
+          </p>
+        </div>
+      )}
+      {!isLoading && (
+        <div className="flex min-h-[70vh] items-center justify-center bg-gray-50 px-4">
+          <div className="w-full max-w-md rounded-2xl bg-white p-8 text-center shadow-lg">
+            <div className="mx-auto mb-6 h-28 w-28">
+              <img src="/images/check.jpg" alt="" />
+            </div>
+            <h2 className="mb-2 text-2xl font-extrabold text-gray-800">
+              🎉 Application Submitted!
+            </h2>
+            <p className="text-gray-500 text-sm mb-6">
+              Confirmation ID: <span className="font-semibold">{jobId}</span>
+            </p>
+            <p className="text-gray-700 mb-6">
+              Thank you for applying. Your application has been received
+              successfully.
+            </p>
+            <Link
+              to="/jobs"
+              className="inline-block rounded-lg border-2 border-green-600 px-4 py-2 font-semibold text-green-600 transition hover:bg-green-600 hover:text-white"
+            >
+              View All Jobs
+            </Link>
+          </div>
+        </div>
+      )}
+    </div>
+  );
+};
+
+export default JobSuccess;

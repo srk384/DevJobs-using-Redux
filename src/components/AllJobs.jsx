@@ -1,18 +1,14 @@
 import { useEffect, useState, useRef } from "react";
-import JobDisplay from "../components/JobDisplay";
-import JobsNavbar from "../components/JobsNavbar";
+import JobDisplay from "./JobDisplay";
 import { useSelector, useDispatch } from "react-redux";
 import { setAllJobs } from "../Redux/Slices/JobsDataSlice";
-import LoadingFallback from "../components/LoadingFallback";
 
 const Alljobs = () => {
-  const [job, setJob] = useState([]);
+  const [job, setJob] = useState('');
   const skipFirstRender = useRef(true);
 
   const { filteredJobs } = useSelector((state) => state.JobsData);
   const dispatch = useDispatch();
-
-  // console.log(filteredJobs);
 
   useEffect(() => {
     fetch("/data/developer_job_data_with_ids.json")
@@ -33,14 +29,12 @@ const Alljobs = () => {
 
   return (
     <>
-      <JobsNavbar />
+      {filteredJobs.length == 0 && (
+        <div className="flex justify-center items-center min-h-[70vh] text-2xl font-semibold">
+          No Result Found
+        </div>
+      )}
       <div className="flex max-w-7xl mx-auto">
-        {/* {filteredJobs.length == 0 && (
-          <div className="mx-auto">No Result Found</div>
-        )} */}
-
-        {!filteredJobs && <LoadingFallback/>}
-
         {filteredJobs.length > 0 && (
           <>
             <div className="left w-1/3 h-screen bg-gray-50 dark:bg-slate-900 p-4 overflow-auto custom-scrollbar">

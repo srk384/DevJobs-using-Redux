@@ -2,7 +2,8 @@ import { Routes, Route } from "react-router-dom";
 import Home from "./pages/Home";
 import { useThemeContext } from "./context/ThemeContext";
 import ThemeToggler from "./components/ThemeToggler";
-import Alljobs from "./pages/alljobs";
+import Jobs from "./pages/Jobs";
+import ApplyJob from "./pages/ApplyJob";
 
 function App() {
   const { theme } = useThemeContext();
@@ -24,7 +25,8 @@ function App() {
       <ThemeToggler />
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/alljobs" element={<Alljobs />} />
+        <Route path="/jobs" element={<Jobs />} />
+        <Route path="/apply/:id" element={<ApplyJob />} />
       </Routes>
     </div>
   );

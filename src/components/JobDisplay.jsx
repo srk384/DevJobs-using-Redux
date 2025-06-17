@@ -1,8 +1,11 @@
 import { IoLocationOutline } from "react-icons/io5";
 import { SlCalender } from "react-icons/sl";
 import { useEffect, useRef } from "react";
+import { Link } from "react-router-dom";
 
 const JobDisplay = ({ job }) => {
+  console.log(job);
+
   const { company_logo } = job;
 
   const colorRef = useRef();
@@ -67,7 +70,7 @@ const JobDisplay = ({ job }) => {
   return (
     <>
       {job && (
-        <div>
+        <div className="max-h-[88.5vh] overflow-auto custom-scrollbar pr-3">
           {/* section 1 */}
           <div className="w-full bg-white p-5 shadow-sm mb-4 rounded-lg dark:bg-slate-800">
             <div className="flex gap-5 items-center">
@@ -104,12 +107,19 @@ const JobDisplay = ({ job }) => {
                   </span>
                 </div>
               </div>
-              <button
-                ref={colorRef}
-                className={`border-2 px-10 py-2 rounded-lg cursor-pointer transition text-white font-semibold`}
-              >
-                Apply
-              </button>
+
+              {job.hideApplyBtn ? (
+                ""
+              ) : (
+                <Link to={`/apply/${job._id}`} state={job}>
+                  <button
+                    ref={colorRef}
+                    className={`border-2 px-10 py-2 rounded-lg cursor-pointer transition text-white font-semibold`}
+                  >
+                    Apply
+                  </button>
+                </Link>
+              )}
             </div>
           </div>
 
