@@ -33,7 +33,7 @@ const JobSuccess = ({jobId}) => {
               🎉 Application Submitted!
             </h2>
             <p className="text-gray-500 text-sm mb-6">
-              Confirmation ID: <span className="font-semibold">{jobId}</span>
+              Application ID: <span className="font-semibold">{jobId}</span>
             </p>
             <p className="text-gray-700 mb-6">
               Thank you for applying. Your application has been received
