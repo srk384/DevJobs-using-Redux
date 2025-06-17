@@ -1,4 +1,4 @@
-import { data, useLocation, useParams } from "react-router-dom";
+import { useLocation, useParams } from "react-router-dom";
 import JobDisplay from "../components/JobDisplay";
 import JobsNavbar from "../components/JobsNavbar";
 import ApplyForm from "../components/ApplyForm";
@@ -29,9 +29,6 @@ const ApplyJob = () => {
     const jobById = jobs.find((job) => job._id == params.id);
     setJob({ ...jobById, hideApplyBtn: true });
   };
-
-  //   console.log(state)
-  console.log(job);
 
   return (
     <>
