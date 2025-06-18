@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useRef } from "react";
 import { motion } from "motion/react";
 import { useJobSearch } from "../hooks/useJobSearch";
 import { Link } from "react-router-dom";
@@ -7,6 +7,8 @@ export const HeroSection = () => {
   const [isSearchClicked, setIsSearchClicked] = useState(false);
   const [searchResults, setSearchResults] = useState([]);
   const { searchJobs } = useJobSearch();
+  const searchRef = useRef(null);
+  const searchRef2 = useRef(null);
 
   const heading = "Are you a Passionate Developer?";
 
@@ -29,6 +31,7 @@ export const HeroSection = () => {
     setSearchResults(searchJobs(value));
   };
 
+  console.log(searchRef2.current?.value)
   return (
     <div className="flex flex-col-reverse md:flex-row justify-center items-center px-4 lg:px-12 lg:py-10 border-b border-gray-100 dark:border-gray-800 pb-10">
       <div className="text-center md:text-left pb-6 md:pb-0">
@@ -70,24 +73,37 @@ export const HeroSection = () => {
             onClick={() => {
               setIsSearchClicked(!isSearchClicked);
               setSearchResults([]);
+              searchRef2.current.value = ""
             }}
           >
             Search Jobs
           </motion.button>
-          {isSearchClicked && (
+          {
             <motion.span
               initial={{
                 opacity: 0,
                 translateX: "-40%",
               }}
-              animate={{
-                opacity: 1,
-                translateX: 0,
-                transition: { duration: 0.3 },
-              }}
+              animate={
+                isSearchClicked
+                  ? {
+                      opacity: 1,
+                      translateX: 0,
+                      transition: {
+                        opacity: { delay: 0.1, duration: 0.3 },
+                        translateX: { duration: 0.3 },
+                      },
+                    }
+                  : {
+                      opacity: 0,
+                      translateX: "-40%",
+                      transition: { duration: 0.3 }
+                    }
+              }
               className="absolute left-20 bottom-0.5"
             >
               <input
+                ref={searchRef2}
                 className="pl-12 border-gray-300 bg-white border dark:bg-slate-800 dark:border-gray-500 p-2 px-6 lg:w-96 border-l-0 rounded-full shadow-md dark:text-gray-200"
                 type="text"
                 name=""
@@ -98,10 +114,12 @@ export const HeroSection = () => {
                 }}
               />
             </motion.span>
-          )}
+          }
+
           {/* mobile search bar */}
           <div className="relative">
             <input
+              ref={searchRef}
               className="border-gray-300 bg-white border dark:bg-slate-800 dark:border-gray-500 pl-12 p-2 px-8 w-full rounded-full shadow-md dark:text-gray-200 block md:hidden mx-auto mt-8"
               type="text"
               name=""
@@ -117,12 +135,15 @@ export const HeroSection = () => {
               alt=""
               className="dark:invert-75 w-8 absolute top-1 left-2 invert-50 block md:hidden"
             />
-            {searchResults.length > 0 && (
+            {searchRef.current?.value && (
               <img
                 src="/images/close.png"
                 alt=""
-                className="dark:invert-75 w-8 absolute top-1 right-2 invert-50 block md:hidden"
-                onClick={() => setSearchResults([])}
+                className="absolute right-2 top-1/2 -translate-y-1/2  w-6 dark:invert-80 cursor-pointer"
+                onClick={() => {
+                  setSearchResults([]);
+                  searchRef.current.value = "";
+                }}
               />
             )}
           </div>

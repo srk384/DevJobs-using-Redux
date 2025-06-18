@@ -4,6 +4,7 @@ import { useDispatch, useSelector } from "react-redux";
 // import FormValidation from "./FormValidation";
 import { object, string } from "yup";
 import JobSuccess from "./JobSuccess";
+import { useIsMobile } from "../hooks/useIsMobile";
 
 const ApplyForm = ({ job }) => {
   console.log(job);
@@ -50,6 +51,7 @@ const ApplyForm = ({ job }) => {
 
   const dispatch = useDispatch();
   const { appliedJobs } = useSelector((state) => state.JobsData);
+  const isMobile = useIsMobile();
 
   useEffect(() => {
     setFormData({ ...formData, skills: SelectedSkills });
@@ -118,7 +120,6 @@ const ApplyForm = ({ job }) => {
     };
 
     dispatch(setAppliedJobs([...appliedJobs, updatedFormData]));
-    // alert("Form Submitted Successfuly!");
     setFormData({
       name: "",
       email: "",
@@ -143,242 +144,241 @@ const ApplyForm = ({ job }) => {
   }, [step]);
 
   return (
-    <div className="px-2 md:px-4 my-4 lg:my-0 bg-white lg:w-2/4 lg:ml-3 rounded-lg h-fit shadow-sm dark:bg-slate-800 dark:text-gray-200">
-      {isApplied && <JobSuccess jobId={JobId} />}
+    <>
+      {isMobile && isApplied && <JobSuccess jobId={JobId} />}
+      <div className="px-2 md:px-4 mt-2 mb-4 lg:my-0 bg-white lg:w-2/4 lg:ml-3 rounded-lg h-fit shadow-sm dark:bg-slate-800 dark:text-gray-200">
+        {isApplied && <JobSuccess jobId={JobId} />}
 
-      {!isApplied && (
-        <div>
-          <h1 className="text-xl font-semibold text-center my-5 dark:text-white">
-            Applicaton Form
-          </h1>
-          <form action="" onSubmit={(e) => submitForm(e)}>
-            {step === 1 && (
-              <div className="text-center">
-                <h2 className="block w-full rounded-lg my-6 text-left">
-                  Personal Information:
-                </h2>
-                <input
-                  type="text"
-                  id="name"
-                  name="name"
-                  placeholder="Name"
-                  onChange={(e) => handleForm(e)}
-                  value={formData.name}
-                  className="block w-full p-2 border border-gray-300 dark:border-gray-700 rounded-lg my-4 dark:placeholder-bg-amber-500"
-                />
-                {validationError && validationError.name && (
-                  <span className="text-sm text-red-500">
-                    {validationError.name}
-                  </span>
-                )}
-                {/* <input
-              type="text"
-              id="lastname"
-              placeholder="Last Name"
-              className="block w-full p-2 border border-gray-300 dark:border-gray-700 rounded-lg my-4"
-            /> */}
-                <input
-                  type="email"
-                  name="email"
-                  id="email"
-                  placeholder="Email ID"
-                  onChange={(e) => handleForm(e)}
-                  value={formData.email}
-                  className="block w-full p-2 border border-gray-300 dark:border-gray-700 rounded-lg my-4"
-                />
-                {validationError && validationError.email && (
-                  <span className="text-sm text-red-500">
-                    {validationError.email}
-                  </span>
-                )}
-                <input
-                  type="tel"
-                  id="phone"
-                  name="phone"
-                  placeholder="Contact Number"
-                  onChange={(e) => handleForm(e)}
-                  value={formData.phone}
-                  className="block w-full p-2 border border-gray-300 dark:border-gray-700 rounded-lg my-4"
-                />
-                {validationError && validationError.phone && (
-                  <span className="text-sm text-red-500 block">
-                    {validationError.phone}
-                  </span>
-                )}
-
-                <button
-                  className={`px-4 py-2 border border-gray-300 dark:border-gray-700 rounded-lg my-6 cursor-pointer text-white ${
-                    isStepValid
-                      ? "bg-blue-600"
-                      : "bg-gray-400 cursor-not-allowed"
-                  }`}
-                  onClick={(e) => {
-                    e.preventDefault();
-                    next(e);
-                  }}
-                  disabled={!isStepValid}
-                >
-                  Next
-                </button>
-              </div>
-            )}
-
-            {step == 2 && (
-              <div className="text-center">
-                <h2 className="block w-full rounded-lg my-6 text-left">
-                  Experience:
-                </h2>
-                <input
-                  className="block w-full p-2 border border-gray-300 dark:border-gray-700 rounded-lg my-4"
-                  type="number"
-                  id="experience"
-                  name="experience"
-                  min={0}
-                  max={20}
-                  placeholder="Years of Experience"
-                  onChange={(e) => handleForm(e)}
-                  value={formData.experience}
-                />
-                {validationError && validationError.experience && (
-                  <span className="text-sm text-red-500">
-                    {validationError.experience}
-                  </span>
-                )}
-                <div
-                  className={`flex justify-between items-center w-full px-2 py-1 border border-gray-300 dark:border-gray-700 rounded-lg my-4 text-gray-500 text-md font-light cursor-pointer ${openSelectSkills && "border-b-0 rounded-b-none mb-0"}`}
-                  onClick={() => setOpenSelectSkills(!openSelectSkills)}
-                >
-                  Select Skills{" "}
-                  <img
-                    className="invert-50"
-                    src="/images/icon_down-filled.png"
+        {!isApplied && (
+          <div>
+            <h1 className="text-xl font-semibold text-center my-5 dark:text-white">
+              Applicaton Form
+            </h1>
+            <form action="" onSubmit={(e) => submitForm(e)}>
+              {step === 1 && (
+                <div className="text-center">
+                  <h2 className="block w-full rounded-lg my-6 text-left">
+                    Personal Information:
+                  </h2>
+                  <input
+                    type="text"
+                    id="name"
+                    name="name"
+                    placeholder="Name"
+                    onChange={(e) => handleForm(e)}
+                    value={formData.name}
+                    className="block w-full p-2 border border-gray-300 dark:border-gray-700 rounded-lg my-4 dark:placeholder-bg-amber-500"
                   />
-                </div>
-                {openSelectSkills && (
-                  <div className="block w-full py-2 border border-gray-300 dark:border-gray-700 rounded-lg border-t-0 rounded-t-none max-h-54 overflow-auto custom-scrollbar mb-4">
-                    {skills.map((item, index) => {
-                      const isSelected = SelectedSkills.includes(item);
+                  {validationError && validationError.name && (
+                    <span className="text-sm text-red-500">
+                      {validationError.name}
+                    </span>
+                  )}
 
-                      return (
+                  <input
+                    type="email"
+                    name="email"
+                    id="email"
+                    placeholder="Email ID"
+                    onChange={(e) => handleForm(e)}
+                    value={formData.email}
+                    className="block w-full p-2 border border-gray-300 dark:border-gray-700 rounded-lg my-4"
+                  />
+                  {validationError && validationError.email && (
+                    <span className="text-sm text-red-500">
+                      {validationError.email}
+                    </span>
+                  )}
+                  <input
+                    type="tel"
+                    id="phone"
+                    name="phone"
+                    placeholder="Contact Number"
+                    onChange={(e) => handleForm(e)}
+                    value={formData.phone}
+                    className="block w-full p-2 border border-gray-300 dark:border-gray-700 rounded-lg my-4"
+                  />
+                  {validationError && validationError.phone && (
+                    <span className="text-sm text-red-500 block">
+                      {validationError.phone}
+                    </span>
+                  )}
+
+                  <button
+                    className={`px-4 py-2 border border-gray-300 dark:border-gray-700 rounded-lg my-6 cursor-pointer text-white ${
+                      isStepValid
+                        ? "bg-blue-600"
+                        : "bg-gray-400 cursor-not-allowed"
+                    }`}
+                    onClick={(e) => {
+                      e.preventDefault();
+                      next(e);
+                    }}
+                    disabled={!isStepValid}
+                  >
+                    Next
+                  </button>
+                </div>
+              )}
+
+              {step == 2 && (
+                <div className="text-center">
+                  <h2 className="block w-full rounded-lg my-6 text-left">
+                    Experience:
+                  </h2>
+                  <input
+                    className="block w-full p-2 border border-gray-300 dark:border-gray-700 rounded-lg my-4"
+                    type="number"
+                    id="experience"
+                    name="experience"
+                    min={0}
+                    max={20}
+                    placeholder="Years of Experience"
+                    onChange={(e) => handleForm(e)}
+                    value={formData.experience}
+                  />
+                  {validationError && validationError.experience && (
+                    <span className="text-sm text-red-500">
+                      {validationError.experience}
+                    </span>
+                  )}
+                  <div
+                    className={`flex justify-between items-center w-full px-2 py-1 border border-gray-300 dark:border-gray-700 rounded-lg my-4 text-gray-500 text-md font-light cursor-pointer ${openSelectSkills && "border-b-0 rounded-b-none mb-0"}`}
+                    onClick={() => setOpenSelectSkills(!openSelectSkills)}
+                  >
+                    Select Skills{" "}
+                    <img
+                      className="invert-50"
+                      src="/images/icon_down-filled.png"
+                    />
+                  </div>
+                  {openSelectSkills && (
+                    <div className="block w-full py-2 border border-gray-300 dark:border-gray-700 rounded-lg border-t-0 rounded-t-none max-h-54 overflow-auto custom-scrollbar mb-4">
+                      {skills.map((item, index) => {
+                        const isSelected = SelectedSkills.includes(item);
+
+                        return (
+                          <div
+                            key={index}
+                            name="skills"
+                            className="p-2 px-3 text-gray-700 text-sm flex gap-2 items-center hover:bg-gray-200 cursor-pointer dark:text-gray-300 dark:hover:bg-gray-900"
+                            onClick={(e) => {
+                              // e.preventDefault();
+                              // e.stopPropagation();
+
+                              if (SelectedSkills.includes(item)) {
+                                setSelectedSkills(
+                                  SelectedSkills.filter(
+                                    (skill) => skill !== item
+                                  )
+                                );
+                              } else {
+                                setSelectedSkills([...SelectedSkills, item]);
+                              }
+                            }}
+                          >
+                            <input
+                              type="checkbox"
+                              checked={isSelected}
+                              readOnly
+                            />
+                            <span>{item}</span>
+                          </div>
+                        );
+                      })}
+                    </div>
+                  )}
+                  <div className="text-left">
+                    {SelectedSkills &&
+                      SelectedSkills.map((skill, index) => (
                         <div
                           key={index}
-                          name="skills"
-                          className="p-2 px-3 text-gray-700 text-sm flex gap-2 items-center hover:bg-gray-200 cursor-pointer dark:text-gray-300 dark:hover:bg-gray-900"
-                          onClick={(e) => {
-                            // e.preventDefault();
-                            // e.stopPropagation();
-
-                            if (SelectedSkills.includes(item)) {
-                              setSelectedSkills(
-                                SelectedSkills.filter((skill) => skill !== item)
-                              );
-                            } else {
-                              setSelectedSkills([...SelectedSkills, item]);
-                            }
-                          }}
+                          className="inline-block px-4 py-1 m-1 text-md bg-gray-200 dark:hover:bg-gray-800 text-gray-600 rounded-lg dark:bg-slate-700 dark:text-gray-300"
                         >
-                          <input
-                            type="checkbox"
-                            checked={isSelected}
-                            readOnly
-                          />
-                          <span>{item}</span>
+                          {skill}
                         </div>
-                      );
-                    })}
+                      ))}
                   </div>
-                )}
-                <div className="text-left">
-                  {SelectedSkills &&
-                    SelectedSkills.map((skill, index) => (
-                      <div
-                        key={index}
-                        className="inline-block px-4 py-1 m-1 text-md bg-gray-200 dark:hover:bg-gray-800 text-gray-600 rounded-lg dark:bg-slate-700 dark:text-gray-300"
-                      >
-                        {skill}
-                      </div>
-                    ))}
+                  <button
+                    className="px-4 py-2 border border-gray-300 rounded-lg my-6 mr-2 cursor-pointer bg-blue-600 dark:border-gray-700 text-white"
+                    onClick={() => back()}
+                  >
+                    Back
+                  </button>
+                  <button
+                    className={`px-4 py-2 border border-gray-300 rounded-lg my-6 cursor-pointer text-white dark:border-gray-700 ${
+                      isStepValid
+                        ? "bg-blue-600"
+                        : "bg-gray-400 cursor-not-allowed"
+                    }`}
+                    onClick={(e) => {
+                      e.preventDefault();
+                      next(e);
+                    }}
+                    disabled={!isStepValid}
+                  >
+                    Next
+                  </button>
                 </div>
-                <button
-                  className="px-4 py-2 border border-gray-300 rounded-lg my-6 mr-2 cursor-pointer bg-blue-600 dark:border-gray-700 text-white"
-                  onClick={() => back()}
-                >
-                  Back
-                </button>
-                <button
-                  className={`px-4 py-2 border border-gray-300 rounded-lg my-6 cursor-pointer text-white dark:border-gray-700 ${
-                    isStepValid
-                      ? "bg-blue-600"
-                      : "bg-gray-400 cursor-not-allowed"
-                  }`}
-                  onClick={(e) => {
-                    e.preventDefault();
-                    next(e);
-                  }}
-                  disabled={!isStepValid}
-                >
-                  Next
-                </button>
-              </div>
-            )}
+              )}
 
-            {step === 3 && (
-              <div className="text-center">
-                <h2 className="block w-full rounded-lg my-6 text-left">
-                  Additional Information:
-                </h2>
-                <input
-                  type="text"
-                  id="coverletter"
-                  name="coverletter"
-                  placeholder="Cover Letter Link (if any)"
-                  onChange={(e) => handleForm(e)}
-                  value={formData.coverletter}
-                  className="block w-full p-2 border border-gray-300 dark:border-gray-700 rounded-lg my-4"
-                />
-                <label
-                  htmlFor="startdate"
-                  className="block text-sm text-gray-500 text-left mb-1"
-                >
-                  Start Date
-                </label>
-                <input
-                  type="date"
-                  id="startdate"
-                  name="startdate"
-                  placeholder="Start Date"
-                  onChange={(e) => handleForm(e)}
-                  value={formData.startdate}
-                  className="block w-full p-2 border border-gray-300 dark:border-gray-700 rounded-lg mb-4"
-                />
-                
-                
-                <input
-                  type="text"
-                  id="referral"
-                  name="referral"
-                  placeholder="Referral Code (if any)"
-                  onChange={(e) => handleForm(e)}
-                  value={formData.referral}
-                  className="block w-full p-2 border border-gray-300 dark:border-gray-700 rounded-lg my-4"
-                />
-                <button
-                  className="px-4 py-2 border border-gray-300 dark:border-gray-700 rounded-lg my-6 mr-2 cursor-pointer bg-blue-500 text-white"
-                  onClick={() => back()}
-                >
-                  Back
-                </button>
-                <input
-                  type="submit"
-                  value="Submit"
-                  className="px-4 py-2 border border-gray-300 dark:border-gray-700 rounded-lg my-6 cursor-pointer bg-blue-600 text-white"
-                />
-              </div>
-            )}
-          </form>
-        </div>
-      )}
-    </div>
+              {step === 3 && (
+                <div className="text-center">
+                  <h2 className="block w-full rounded-lg my-6 text-left">
+                    Additional Information:
+                  </h2>
+                  <input
+                    type="text"
+                    id="coverletter"
+                    name="coverletter"
+                    placeholder="Cover Letter Link (if any)"
+                    onChange={(e) => handleForm(e)}
+                    value={formData.coverletter}
+                    className="block w-full p-2 border border-gray-300 dark:border-gray-700 rounded-lg my-4"
+                  />
+                  <label
+                    htmlFor="startdate"
+                    className="block text-sm text-gray-500 text-left mb-1"
+                  >
+                    Start Date
+                  </label>
+                  <input
+                    type="date"
+                    id="startdate"
+                    name="startdate"
+                    placeholder="Start Date"
+                    onChange={(e) => handleForm(e)}
+                    value={formData.startdate}
+                    className="block w-full p-2 border border-gray-300 dark:border-gray-700 rounded-lg mb-4"
+                  />
+
+                  <input
+                    type="text"
+                    id="referral"
+                    name="referral"
+                    placeholder="Referral Code (if any)"
+                    onChange={(e) => handleForm(e)}
+                    value={formData.referral}
+                    className="block w-full p-2 border border-gray-300 dark:border-gray-700 rounded-lg my-4"
+                  />
+                  <button
+                    className="px-4 py-2 border border-gray-300 dark:border-gray-700 rounded-lg my-6 mr-2 cursor-pointer bg-blue-500 text-white"
+                    onClick={() => back()}
+                  >
+                    Back
+                  </button>
+                  <input
+                    type="submit"
+                    value="Submit"
+                    className="px-4 py-2 border border-gray-300 dark:border-gray-700 rounded-lg my-6 cursor-pointer bg-blue-600 text-white"
+                  />
+                </div>
+              )}
+            </form>
+          </div>
+        )}
+      </div>
+    </>
   );
 };
 

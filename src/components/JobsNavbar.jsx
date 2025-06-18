@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useRef } from "react";
 import { Link } from "react-router-dom";
 import { useJobSearch } from "../hooks/useJobSearch";
 
@@ -6,6 +6,7 @@ const JobsNavbar = () => {
   const [searchResults, setSearchResults] = useState([]);
   const [openSearchBar, setOpenSearchBar] = useState(false);
   const { searchJobs } = useJobSearch();
+  const searchRef = useRef(null);
 
   const handleSearch = (e) => {
     const { value } = e.target;
@@ -26,15 +27,19 @@ const JobsNavbar = () => {
           <div
             className={`search relative border border-gray-300 dark:border-gray-700 rounded-lg w-full md:w-96  ${openSearchBar ? "block" : "hidden md:block"}`}
           >
-            {searchResults.length > 0 && (
+            {searchRef.current?.value && (
               <img
                 src="/images/close.png"
                 alt=""
-                className="absolute right-1 top-1/2 -translate-y-1/2  w-6 dark:invert-80"
-                onClick={() => setSearchResults([])}
+                className="absolute right-1 top-1/2 -translate-y-1/2  w-6 dark:invert-80 cursor-pointer"
+                onClick={() => {
+                  setSearchResults([]);
+                  searchRef.current.value = "";
+                }}
               />
             )}
             <input
+              ref={searchRef}
               className="p-2 px-4 outline-none w-full pr-8 md:pr-0"
               type="text"
               placeholder="Search Jobs"
@@ -45,9 +50,8 @@ const JobsNavbar = () => {
             {searchResults.length > 0 && (
               <div className="absolute w-96 z-10 max-h-52 bg-white dark:bg-slate-900 mt-1 rounded-lg overflow-auto custom-scrollbar shadow-lg">
                 {searchResults.map((item, index) => (
-                  <Link to={`/apply/${item._id}`} state={item}>
+                  <Link to={`/apply/${item._id}`} state={item} key={index}>
                     <div
-                      key={index}
                       className="flex justify-between p-2 hover:bg-gray-200 text-gray-700 dark:hover:bg-gray-800 dark:text-gray-300 cursor-pointer"
                       onClick={() => setSearchResults([])}
                     >

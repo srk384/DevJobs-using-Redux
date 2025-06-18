@@ -5,6 +5,7 @@ import ThemeToggler from "./components/ThemeToggler";
 import Jobs from "./pages/Jobs";
 import ApplyJob from "./pages/ApplyJob";
 import AppliedJobs from "./pages/AppliedJobs";
+import JobSuccess from "./components/JobSuccess";
 
 function App() {
   const { theme } = useThemeContext();
@@ -29,6 +30,7 @@ function App() {
         <Route path="/jobs" element={<Jobs />} />
         <Route path="/apply/:id" element={<ApplyJob />} />
         <Route path="/applied-jobs" element={<AppliedJobs />} />
+        <Route path="/confirmation" element={<JobSuccess />} />
       </Routes>
     </div>
   );

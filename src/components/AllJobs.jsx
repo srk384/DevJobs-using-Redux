@@ -36,7 +36,7 @@ const Alljobs = () => {
   return (
     <>
       {filteredJobs.length == 0 && (
-        <div className="flex justify-center items-center min-h-[70vh] text-2xl font-semibold">
+        <div className="flex justify-center items-center min-h-[70vh] text-2xl font-semibold dark:text-gray-300">
           No Result Found
         </div>
       )}

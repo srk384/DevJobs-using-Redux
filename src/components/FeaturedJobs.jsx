@@ -35,7 +35,7 @@ const FeaturedJobs = () => {
 
       <div className="overflow-auto md:overflow-hidden py-5 ">
         <motion.div
-          className="flex flex-nowrap gap-4 transition-transform 0.5 ease-in pl-2"
+          className="flex flex-nowrap gap-2 md:gap-4 transition-transform 0.5 ease-in pl-2"
           ref={overflowRef}
         >
           {jobsList.length &&
