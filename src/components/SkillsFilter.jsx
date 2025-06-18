@@ -41,7 +41,7 @@ const SkillsFilter = () => {
       <div className=" ">
         Skills{" "}
         {selectedSkills.length > 0 && (
-          <span className="text-xs bg-[rgb(144,190,109)] inline-block size-4 rounded-full text-center text-white">
+          <span className="text-xs absolute md:static -top-0.5 -right-0.5 bg-[rgb(144,190,109)] inline-block size-4 rounded-full text-center text-white">
             {selectedSkills.length}
           </span>
         )}{" "}

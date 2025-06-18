@@ -47,7 +47,7 @@ const Alljobs = () => {
               {filteredJobs &&
                 filteredJobs.map((job, index) => {
                   const CardContent = (
-                    <div className="flex gap-3 p-4 shadow-sm mb-3 rounded-lg bg-white cursor-pointer dark:bg-slate-800">
+                    <div className="flex gap-3 p-2 md:p-4 shadow-sm mb-3 rounded-lg bg-white cursor-pointer dark:bg-slate-800">
                       <div>
                         <img
                           className="w-16 h-14 object-cover border-4 border-gray-200 rounded-lg dark:border-slate-700"

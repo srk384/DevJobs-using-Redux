@@ -72,7 +72,7 @@ const JobDisplay = ({ job }) => {
       {job && (
         <div className="lg:max-h-full lg:overflow-auto custom-scrollbar lg:pr-3">
           {/* section 1 */}
-          <div className="w-full bg-white p-5 shadow-sm mb-4 rounded-lg dark:bg-slate-800">
+          <div className="w-full bg-white p-3 md:p-5 shadow-sm mb-4 rounded-lg dark:bg-slate-800">
             <div className="flex gap-5 items-center">
               <div>
                 <img
@@ -82,7 +82,7 @@ const JobDisplay = ({ job }) => {
                 />
               </div>
               <div>
-                <h1 className="text-4xl font-semibold text-gray-800 dark:text-white">
+                <h1 className="text-2xl md:text-4xl font-semibold text-gray-800 dark:text-white">
                   {job.title}
                 </h1>
                 <p className="mt-2 text-gray-700 dark:text-gray-300">
@@ -125,7 +125,7 @@ const JobDisplay = ({ job }) => {
 
           {/* section 2 */}
 
-          <div className=" bg-white p-5 mb-4 shadow-sm rounded-lg dark:bg-slate-800">
+          <div className=" bg-white p-3 md:p-5 mb-4 shadow-sm rounded-lg dark:bg-slate-800">
             <h1 className="font-semibold dark:text-white text-2xl text-gray-900 mb-6">
               Skills
             </h1>
@@ -142,7 +142,7 @@ const JobDisplay = ({ job }) => {
 
           {/* section 3 */}
           {job.description && (
-            <div className=" bg-white px-5 pt-5 mb-4 shadow-sm rounded-lg dark:bg-slate-800">
+            <div className=" bg-white px-3 md:px-5 pt-3 md:pt-5 mb-4 shadow-sm rounded-lg dark:bg-slate-800">
               <h1 className="font-semibold dark:text-white text-2xl text-gray-900">
                 Job Description
               </h1>
@@ -186,7 +186,7 @@ const JobDisplay = ({ job }) => {
           )}
 
           {/* section 4 */}
-          <div className="bg-white p-5 shadow-sm mb-4 rounded-lg dark:bg-slate-800">
+          <div className="bg-white p-3 md:p-5 shadow-sm mb-4 rounded-lg dark:bg-slate-800">
             <h1 className="font-semibold dark:text-white text-2xl text-gray-900">
               Additional Information
             </h1>

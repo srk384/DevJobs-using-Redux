@@ -5,8 +5,8 @@ import { useDispatch, useSelector } from "react-redux";
 import { object, string } from "yup";
 import JobSuccess from "./JobSuccess";
 
-const ApplyForm = ({job}) => {
-  console.log(job)
+const ApplyForm = ({ job }) => {
+  console.log(job);
   const [step, setStep] = useState(1);
   const [openSelectSkills, setOpenSelectSkills] = useState(false);
   const [SelectedSkills, setSelectedSkills] = useState([]);
@@ -143,8 +143,7 @@ const ApplyForm = ({job}) => {
   }, [step]);
 
   return (
-    <div className="px-4 my-4 lg:my-0 bg-white lg:w-2/4 lg:ml-3 rounded-lg h-fit shadow-sm dark:bg-slate-800 dark:text-gray-200">
-
+    <div className="px-2 md:px-4 my-4 lg:my-0 bg-white lg:w-2/4 lg:ml-3 rounded-lg h-fit shadow-sm dark:bg-slate-800 dark:text-gray-200">
       {isApplied && <JobSuccess jobId={JobId} />}
 
       {!isApplied && (
@@ -153,7 +152,6 @@ const ApplyForm = ({job}) => {
             Applicaton Form
           </h1>
           <form action="" onSubmit={(e) => submitForm(e)}>
-
             {step === 1 && (
               <div className="text-center">
                 <h2 className="block w-full rounded-lg my-6 text-left">
@@ -338,6 +336,12 @@ const ApplyForm = ({job}) => {
                   value={formData.coverletter}
                   className="block w-full p-2 border border-gray-300 dark:border-gray-700 rounded-lg my-4"
                 />
+                <label
+                  htmlFor="startdate"
+                  className="block text-sm text-gray-500 text-left mb-1"
+                >
+                  Start Date
+                </label>
                 <input
                   type="date"
                   id="startdate"
@@ -345,8 +349,10 @@ const ApplyForm = ({job}) => {
                   placeholder="Start Date"
                   onChange={(e) => handleForm(e)}
                   value={formData.startdate}
-                  className="block w-full p-2 border border-gray-300 dark:border-gray-700 rounded-lg my-4 text-gray-500"
+                  className="block w-full p-2 border border-gray-300 dark:border-gray-700 rounded-lg mb-4"
                 />
+                
+                
                 <input
                   type="text"
                   id="referral"

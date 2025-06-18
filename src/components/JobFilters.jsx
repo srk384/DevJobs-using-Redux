@@ -67,7 +67,7 @@ const JobFilters = () => {
         <div className="bg-[rgb(144,190,109)] px-4 p-2 inline-block text-white rounded-lg text-sm">
           Sort
         </div>
-        <div className="w-px h-10 bg-gray-300 dark:bg-gray-700 inline-block mx-2 lg:mx-4"></div>
+        <div className="w-px h-10 bg-gray-300 dark:bg-gray-700 mx-2 lg:mx-4 inline-block"></div>
         <div
           className={`text-xs md:text-sm text-gray-700 p-2 border rounded-lg cursor-pointer hover:bg-gray-50 dark:hover:bg-slate-800 dark:text-gray-200 mr-2 lg:mr-4 ${isSalarySortClicked ? "border-[rgb(144,190,109)] border-2" : "border-gray-300 dark:border-gray-700"}`}
           onClick={() => {
@@ -93,16 +93,16 @@ const JobFilters = () => {
       {/* filters */}
 
       <div className="filter flex items-center justify-start">
-        <div className="bg-[rgb(144,190,109)] px-4 p-2 inline-block text-white rounded-lg text-sm lg:ml-10">
+        <div className="bg-[rgb(144,190,109)] px-4 p-2 inline-block text-white rounded-lg text-sm lg:ml-10 relative">
           Filter{" "}
           {filterCount() > 0 && (
-            <span className="text-xs bg-white inline-block size-4 rounded-full text-center text-[rgb(144,190,109)] ml-1">
+            <span className="absolute md:static top-0 right-0 text-xs bg-white inline-block size-4 rounded-full text-center text-[rgb(144,190,109)] ml-1">
               {filterCount()}
             </span>
           )}
         </div>
 
-        <div className="w-px h-10 bg-gray-300 inline-block mx-2 lg:mx-4  dark:bg-gray-700"></div>
+        <div className="w-px h-10 bg-gray-300  mx-2 lg:mx-4  dark:bg-gray-700 inline-block"></div>
 
         {/* job titles */}
 
@@ -117,7 +117,7 @@ const JobFilters = () => {
           <div className="">
             Category{" "}
             {selectedTitles.length > 0 && (
-              <span className="text-xs bg-[rgb(144,190,109)] inline-block size-4 rounded-full text-center text-white">
+              <span className="absolute md:static -top-0.5 -right-0.5 text-xs bg-[rgb(144,190,109)] inline-block size-4 rounded-full text-center text-white">
                 {selectedTitles.length}
               </span>
             )}{" "}

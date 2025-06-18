@@ -37,7 +37,7 @@ const LocationFilter = () => {
       <div className=" ">
         Location{" "}
         {selectedLocation.length > 0 && (
-          <span className="text-xs bg-[rgb(144,190,109)] inline-block size-4 rounded-full text-center text-white">
+          <span className="absolute md:static -top-0.5 -right-0.5 text-xs bg-[rgb(144,190,109)] inline-block size-4 rounded-full text-center text-white">
             {selectedLocation.length}
           </span>
         )}{" "}
