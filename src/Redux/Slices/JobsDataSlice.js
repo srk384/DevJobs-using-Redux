@@ -37,7 +37,7 @@ const JobsDataSlice = createSlice({
     },
     setAppliedJobs: (state, action) => {
       state.appliedJobs = action.payload;
-      console.log(action.payload);
+      // console.log(action.payload);
     },
   },
 });

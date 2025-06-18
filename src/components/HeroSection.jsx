@@ -30,7 +30,7 @@ export const HeroSection = () => {
   };
 
   return (
-    <div className="flex flex-col-reverse md:flex-row justify-center items-center  lg:px-12 lg:py-10 border-b border-gray-100 dark:border-gray-800">
+    <div className="flex flex-col-reverse md:flex-row justify-center items-center px-4 lg:px-12 lg:py-10 border-b border-gray-100 dark:border-gray-800 pb-10">
       <div className="text-center md:text-left pb-6 md:pb-0">
         <motion.div
           className="text-4xl lg:text-5xl font-bold leading-tight text-gray-800 dark:text-white"
@@ -66,7 +66,7 @@ export const HeroSection = () => {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 2, duration: 1 }}
-            className="relative z-1 mt-6 cursor-pointer font-semibold bg-slate-700 text-white px-4 py-3 rounded-full dark:bg-neutral-200 dark:text-slate-800 shadow-md"
+            className="relative z-1 mt-6 cursor-pointer font-semibold bg-slate-700 text-white px-4 py-3 rounded-full dark:bg-neutral-200 dark:text-slate-800 shadow-md hidden md:block"
             onClick={() => {
               setIsSearchClicked(!isSearchClicked);
               setSearchResults([]);
@@ -88,7 +88,7 @@ export const HeroSection = () => {
               className="absolute left-20 bottom-0.5"
             >
               <input
-                className="pl-12 border-gray-300 bg-white border dark:bg-slate-800 dark:border-gray-500 p-2 px-6 w-96 border-l-0 rounded-full shadow-md dark:text-gray-200"
+                className="pl-12 border-gray-300 bg-white border dark:bg-slate-800 dark:border-gray-500 p-2 px-6 lg:w-96 border-l-0 rounded-full shadow-md dark:text-gray-200"
                 type="text"
                 name=""
                 id=""
@@ -99,13 +99,40 @@ export const HeroSection = () => {
               />
             </motion.span>
           )}
+          {/* mobile search bar */}
+          <div className="relative">
+            <input
+              className="border-gray-300 bg-white border dark:bg-slate-800 dark:border-gray-500 pl-12 p-2 px-8 w-full rounded-full shadow-md dark:text-gray-200 block md:hidden mx-auto mt-8"
+              type="text"
+              name=""
+              id=""
+              placeholder="Search for job titles"
+              onChange={(e) => {
+                handleSearch(e);
+              }}
+            />
+
+            <img
+              src="/images/search.png"
+              alt=""
+              className="dark:invert-75 w-8 absolute top-1 left-2 invert-50 block md:hidden"
+            />
+            {searchResults.length > 0 && (
+              <img
+                src="/images/close.png"
+                alt=""
+                className="dark:invert-75 w-8 absolute top-1 right-2 invert-50 block md:hidden"
+                onClick={() => setSearchResults([])}
+              />
+            )}
+          </div>
+
           {searchResults.length > 0 && (
-            <div className="absolute w-1/2 max-h-52 bg-white ml-24 mt-1 rounded-lg overflow-auto custom-scrollbar">
+            <div className="absolute md:w-1/2 max-h-52 bg-white dark:bg-slate-900 ml-5 md:ml-24 mt-1 rounded-lg overflow-auto custom-scrollbar shadow-lg z-10 ">
               {searchResults.map((item, index) => (
-                <Link to={`/apply/${item._id}`} state={item}>
+                <Link to={`/apply/${item._id}`} state={item} key={index}>
                   <div
-                    key={index}
-                    className="flex justify-between p-2 hover:bg-gray-200 text-gray-700 cursor-pointer"
+                    className="flex justify-between p-2 hover:bg-gray-200 text-gray-700 cursor-pointer dark:hover:bg-gray-800 dark:text-gray-300"
                     onClick={() => console.log("first")}
                   >
                     {`${item.title} | ${item.company}`}

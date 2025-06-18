@@ -7,13 +7,13 @@ const AllJobs = lazy(() => import("../components/AllJobs"));
 
 const Jobs = () => {
   return (
-    <>
+    <div className="h-screen">
       <JobsNavbar />
       <JobFilters/>
       <Suspense fallback={<LoadingFallback />}>
         <AllJobs />
       </Suspense>
-    </>
+    </div>
   );
 };
 

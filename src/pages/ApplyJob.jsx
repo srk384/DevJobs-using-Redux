@@ -31,11 +31,11 @@ const ApplyJob = () => {
   return (
     <>
       <JobsNavbar />
-      <div className="max-w-7xl mx-auto bg-gray-50 p-2 flex">
+      <div className="max-w-7xl mx-auto bg-gray-50 dark:bg-slate-900 p-2 lg:p-4 flex flex-col-reverse lg:flex-row lg:h-[92.5vh]">
         <JobDisplay job={state ?? job} />
-        <ApplyForm />
+        <ApplyForm  job={state ?? job}/>
       </div>
-      ;
+      
     </>
   );
 };

@@ -70,7 +70,7 @@ const JobDisplay = ({ job }) => {
   return (
     <>
       {job && (
-        <div className="max-h-[88.5vh] overflow-auto custom-scrollbar pr-3">
+        <div className="lg:max-h-full lg:overflow-auto custom-scrollbar lg:pr-3">
           {/* section 1 */}
           <div className="w-full bg-white p-5 shadow-sm mb-4 rounded-lg dark:bg-slate-800">
             <div className="flex gap-5 items-center">
@@ -133,7 +133,7 @@ const JobDisplay = ({ job }) => {
               job.skills.map((skill, index) => (
                 <div
                   key={index}
-                  className="inline-block px-4 py-1 mr-2 text-md bg-gray-200 text-gray-600 rounded-lg dark:bg-slate-700 dark:text-gray-300"
+                  className="inline-block px-4 py-1 m-1 lg:m-2 text-md bg-gray-200 text-gray-600 rounded-lg dark:bg-slate-700 dark:text-gray-300"
                 >
                   {skill}
                 </div>

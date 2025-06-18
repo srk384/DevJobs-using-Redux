@@ -94,7 +94,7 @@ const FeaturedJobs = () => {
 
       {/* {--arrow right--} */}
       <div
-        className=" absolute -right-15  top-1/2 translate-1/2 bg-gray-200/60 cursor-pointer text-3xl rounded-lg hover:bg-blue-600 hover:text-white p-2 px-4 hidden md:block"
+        className=" absolute -right-15  top-1/2 translate-1/2 bg-gray-200/60 cursor-pointer text-3xl rounded-lg hover:bg-blue-600 hover:text-white p-2 px-4 hidden lg:block"
         onClick={() => {
           moveX > -1824 && setMoveX((prev) => prev - 304);
         }}
@@ -104,7 +104,7 @@ const FeaturedJobs = () => {
 
       {/* {--left right--} */}
       <div
-        className=" absolute -left-25  top-1/2 translate-1/2 bg-gray-200/60 cursor-pointer text-3xl rounded-lg hover:bg-blue-600 hover:text-white p-2 px-4 hidden md:block"
+        className=" absolute -left-25  top-1/2 translate-1/2 bg-gray-200/60 cursor-pointer text-3xl rounded-lg hover:bg-blue-600 hover:text-white p-2 px-4 hidden lg:block"
         onClick={() => {
           moveX < 0 && setMoveX((prev) => prev + 304);
         }}

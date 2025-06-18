@@ -15,16 +15,16 @@ const JobSuccess = ({jobId}) => {
       {isLoading && (
         <div className="flex h-[70vh] flex-col items-center justify-center bg-bg-gray-50 text-center">
           <FaSpinner className="mb-4 animate-spin text-5xl text-[#fe5156]" />
-          <h2 className="text-2xl font-semibold text-gray-700">
+          <h2 className="text-2xl font-semibold text-gray-700 dark:text-gray-300">
             Processing your request...
           </h2>
-          <p className="text-gray-500 mt-2">
+          <p className="text-gray-500 mt-2 dark:text-gray-300">
             Please wait while we confirm your application.
           </p>
         </div>
       )}
       {!isLoading && (
-        <div className="flex min-h-[70vh] items-center justify-center bg-gray-50 px-4">
+        <div className="flex min-h-[70vh] items-center justify-center bg-gray-50 dark:bg-slate-900 px-4">
           <div className="w-full max-w-md rounded-2xl bg-white p-8 text-center shadow-lg">
             <div className="mx-auto mb-6 h-28 w-28">
               <img src="/images/check.jpg" alt="" />

@@ -1,4 +1,5 @@
 import { motion } from "motion/react";
+import { useRef } from "react";
 const Carousel = () => {
   const brandsArray = [
     "aditya_birla_group.webp",
@@ -17,6 +18,9 @@ const Carousel = () => {
     "wipro2.webp",
   ];
 
+  const animationRef = useRef();
+  const isMobile = window.innerWidth <= 425;
+
   return (
     <div className="py-10">
       <h1 className="text-center py-8 text-3xl font-bold bg-gradient-to-r from-pink-500 to-violet-500 max-w-sm mx-auto bg-clip-text text-transparent">
@@ -28,9 +32,14 @@ const Carousel = () => {
         {/* Right Fade */}
         <div className="absolute right-0 top-0 h-full w-12 bg-gradient-to-l from-white dark:from-slate-950 to-transparent z-20" />
         <motion.div
+          ref={animationRef}
           className="flex"
           animate={{ x: ["0%", "-100%"] }}
-          transition={{ duration: 15, repeat: Infinity, ease: "linear" }}
+          transition={
+            isMobile
+              ? { duration: 5, repeat: Infinity, ease: "linear" }
+              : { duration: 15, repeat: Infinity, ease: "linear" }
+          }
         >
           {brandsArray.map((brand, index) => (
             <img

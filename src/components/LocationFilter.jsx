@@ -7,7 +7,7 @@ const LocationFilter = () => {
   const [isLocationOpen, setIsLocationOpen] = useState(false);
   const [selectedLocation, setSelectedLocation] = useState([]);
 
-  const { jobsList, jobFilters } = useSelector((state) => state.JobsData);
+  const { jobsList } = useSelector((state) => state.JobsData);
   const dispatch = useDispatch();
 
   const filterByLocation = () => {
@@ -27,7 +27,7 @@ const LocationFilter = () => {
 
   return (
     <div
-      className={`relative flex items-center gap-1 p-2  pr-1 border rounded-lg cursor-pointer hover:bg-gray-50 mr-4 text-sm text-gray-700 ${selectedLocation.length > 0 ? "border-[rgb(144,190,109)] border-2" : "border-gray-300 "}`}
+      className={`relative flex items-center gap-1 p-2  pr-1 border rounded-lg cursor-pointer hover:bg-gray-50  text-sm text-gray-700 dark:hover:bg-slate-800 dark:text-gray-200 ${selectedLocation.length > 0 ? "border-[rgb(144,190,109)] border-2" : "border-gray-300 dark:border-gray-700"}`}
       onClick={() => {
         filterByLocation();
         setIsLocationOpen(!isLocationOpen);
@@ -42,9 +42,9 @@ const LocationFilter = () => {
           </span>
         )}{" "}
       </div>
-      <img className="w-5" src="/images/icon_down-filled.png" alt="" />
+      <img className="w-5 dark:invert-100" src="/images/icon_down-filled.png" alt="" />
       {location && isLocationOpen && (
-        <div className="absolute bg-white/50 backdrop-blur-lg top-10 left-0 w-52 shadow-lg rounded-lg flex flex-col ">
+        <div className="absolute bg-white/50 dark:bg-black/50 backdrop-blur-lg top-10 right-0 lg:left-0 w-52 shadow-lg rounded-lg flex flex-col z-10">
           <div className="max-h-54 overflow-y-auto custom-scrollbar">
             {location.map((item, index) => {
               const isSelected = selectedLocation.includes(item);
@@ -52,7 +52,7 @@ const LocationFilter = () => {
               return (
                 <div
                   key={index}
-                  className="flex justify-between p-2 hover:bg-gray-200"
+                  className="flex justify-between p-2 hover:bg-gray-200 dark:hover:bg-gray-700"
                   onClick={(e) => {
                     e.preventDefault();
                     e.stopPropagation();

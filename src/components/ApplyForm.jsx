@@ -5,7 +5,8 @@ import { useDispatch, useSelector } from "react-redux";
 import { object, string } from "yup";
 import JobSuccess from "./JobSuccess";
 
-const ApplyForm = () => {
+const ApplyForm = ({job}) => {
+  console.log(job)
   const [step, setStep] = useState(1);
   const [openSelectSkills, setOpenSelectSkills] = useState(false);
   const [SelectedSkills, setSelectedSkills] = useState([]);
@@ -111,6 +112,9 @@ const ApplyForm = () => {
       ...formData,
       createdAt: new Date().toLocaleString(),
       jobId: generateRandomId(),
+      title: job.title,
+      company: job.company,
+      location: job.location,
     };
 
     dispatch(setAppliedJobs([...appliedJobs, updatedFormData]));
@@ -139,16 +143,17 @@ const ApplyForm = () => {
   }, [step]);
 
   return (
-    <div className="p-4 bg-white w-2/4 ml-3 rounded-lg h-fit shadow-sm">
+    <div className="px-4 my-4 lg:my-0 bg-white lg:w-2/4 lg:ml-3 rounded-lg h-fit shadow-sm dark:bg-slate-800 dark:text-gray-200">
 
       {isApplied && <JobSuccess jobId={JobId} />}
 
       {!isApplied && (
         <div>
-          <h1 className="text-xl font-semibold text-center my-5">
+          <h1 className="text-xl font-semibold text-center my-5 dark:text-white">
             Applicaton Form
           </h1>
           <form action="" onSubmit={(e) => submitForm(e)}>
+
             {step === 1 && (
               <div className="text-center">
                 <h2 className="block w-full rounded-lg my-6 text-left">
@@ -161,7 +166,7 @@ const ApplyForm = () => {
                   placeholder="Name"
                   onChange={(e) => handleForm(e)}
                   value={formData.name}
-                  className="block w-full p-2 border border-gray-300 rounded-lg my-4"
+                  className="block w-full p-2 border border-gray-300 dark:border-gray-700 rounded-lg my-4 dark:placeholder-bg-amber-500"
                 />
                 {validationError && validationError.name && (
                   <span className="text-sm text-red-500">
@@ -172,7 +177,7 @@ const ApplyForm = () => {
               type="text"
               id="lastname"
               placeholder="Last Name"
-              className="block w-full p-2 border border-gray-300 rounded-lg my-4"
+              className="block w-full p-2 border border-gray-300 dark:border-gray-700 rounded-lg my-4"
             /> */}
                 <input
                   type="email"
@@ -181,7 +186,7 @@ const ApplyForm = () => {
                   placeholder="Email ID"
                   onChange={(e) => handleForm(e)}
                   value={formData.email}
-                  className="block w-full p-2 border border-gray-300 rounded-lg my-4"
+                  className="block w-full p-2 border border-gray-300 dark:border-gray-700 rounded-lg my-4"
                 />
                 {validationError && validationError.email && (
                   <span className="text-sm text-red-500">
@@ -195,7 +200,7 @@ const ApplyForm = () => {
                   placeholder="Contact Number"
                   onChange={(e) => handleForm(e)}
                   value={formData.phone}
-                  className="block w-full p-2 border border-gray-300 rounded-lg my-4"
+                  className="block w-full p-2 border border-gray-300 dark:border-gray-700 rounded-lg my-4"
                 />
                 {validationError && validationError.phone && (
                   <span className="text-sm text-red-500 block">
@@ -204,9 +209,9 @@ const ApplyForm = () => {
                 )}
 
                 <button
-                  className={`px-4 py-2 border border-gray-300 rounded-lg my-6 cursor-pointer text-white ${
+                  className={`px-4 py-2 border border-gray-300 dark:border-gray-700 rounded-lg my-6 cursor-pointer text-white ${
                     isStepValid
-                      ? "bg-blue-500"
+                      ? "bg-blue-600"
                       : "bg-gray-400 cursor-not-allowed"
                   }`}
                   onClick={(e) => {
@@ -226,7 +231,7 @@ const ApplyForm = () => {
                   Experience:
                 </h2>
                 <input
-                  className="block w-full p-2 border border-gray-300 rounded-lg my-4"
+                  className="block w-full p-2 border border-gray-300 dark:border-gray-700 rounded-lg my-4"
                   type="number"
                   id="experience"
                   name="experience"
@@ -242,7 +247,7 @@ const ApplyForm = () => {
                   </span>
                 )}
                 <div
-                  className={`flex justify-between items-center w-full px-2 py-1 border border-gray-300 rounded-lg my-4 text-gray-500 text-md font-light cursor-pointer ${openSelectSkills && "border-b-0 rounded-b-none mb-0"}`}
+                  className={`flex justify-between items-center w-full px-2 py-1 border border-gray-300 dark:border-gray-700 rounded-lg my-4 text-gray-500 text-md font-light cursor-pointer ${openSelectSkills && "border-b-0 rounded-b-none mb-0"}`}
                   onClick={() => setOpenSelectSkills(!openSelectSkills)}
                 >
                   Select Skills{" "}
@@ -252,7 +257,7 @@ const ApplyForm = () => {
                   />
                 </div>
                 {openSelectSkills && (
-                  <div className="block w-full py-2 border border-gray-300 rounded-lg border-t-0 rounded-t-none max-h-54 overflow-auto custom-scrollbar mb-4">
+                  <div className="block w-full py-2 border border-gray-300 dark:border-gray-700 rounded-lg border-t-0 rounded-t-none max-h-54 overflow-auto custom-scrollbar mb-4">
                     {skills.map((item, index) => {
                       const isSelected = SelectedSkills.includes(item);
 
@@ -260,7 +265,7 @@ const ApplyForm = () => {
                         <div
                           key={index}
                           name="skills"
-                          className="p-2 px-3 text-gray-700 text-sm flex gap-2 items-center hover:bg-gray-200 cursor-pointer"
+                          className="p-2 px-3 text-gray-700 text-sm flex gap-2 items-center hover:bg-gray-200 cursor-pointer dark:text-gray-300 dark:hover:bg-gray-900"
                           onClick={(e) => {
                             // e.preventDefault();
                             // e.stopPropagation();
@@ -290,22 +295,22 @@ const ApplyForm = () => {
                     SelectedSkills.map((skill, index) => (
                       <div
                         key={index}
-                        className="inline-block px-4 py-1 m-1 text-md bg-gray-200 text-gray-600 rounded-lg dark:bg-slate-700 dark:text-gray-300"
+                        className="inline-block px-4 py-1 m-1 text-md bg-gray-200 dark:hover:bg-gray-800 text-gray-600 rounded-lg dark:bg-slate-700 dark:text-gray-300"
                       >
                         {skill}
                       </div>
                     ))}
                 </div>
                 <button
-                  className="px-4 py-2 border border-gray-300 rounded-lg my-6 mr-2 cursor-pointer bg-blue-500 text-white"
+                  className="px-4 py-2 border border-gray-300 rounded-lg my-6 mr-2 cursor-pointer bg-blue-600 dark:border-gray-700 text-white"
                   onClick={() => back()}
                 >
                   Back
                 </button>
                 <button
-                  className={`px-4 py-2 border border-gray-300 rounded-lg my-6 cursor-pointer text-white ${
+                  className={`px-4 py-2 border border-gray-300 rounded-lg my-6 cursor-pointer text-white dark:border-gray-700 ${
                     isStepValid
-                      ? "bg-blue-500"
+                      ? "bg-blue-600"
                       : "bg-gray-400 cursor-not-allowed"
                   }`}
                   onClick={(e) => {
@@ -331,7 +336,7 @@ const ApplyForm = () => {
                   placeholder="Cover Letter Link (if any)"
                   onChange={(e) => handleForm(e)}
                   value={formData.coverletter}
-                  className="block w-full p-2 border border-gray-300 rounded-lg my-4"
+                  className="block w-full p-2 border border-gray-300 dark:border-gray-700 rounded-lg my-4"
                 />
                 <input
                   type="date"
@@ -340,7 +345,7 @@ const ApplyForm = () => {
                   placeholder="Start Date"
                   onChange={(e) => handleForm(e)}
                   value={formData.startdate}
-                  className="block w-full p-2 border border-gray-300 rounded-lg my-4 text-gray-500"
+                  className="block w-full p-2 border border-gray-300 dark:border-gray-700 rounded-lg my-4 text-gray-500"
                 />
                 <input
                   type="text"
@@ -349,10 +354,10 @@ const ApplyForm = () => {
                   placeholder="Referral Code (if any)"
                   onChange={(e) => handleForm(e)}
                   value={formData.referral}
-                  className="block w-full p-2 border border-gray-300 rounded-lg my-4"
+                  className="block w-full p-2 border border-gray-300 dark:border-gray-700 rounded-lg my-4"
                 />
                 <button
-                  className="px-4 py-2 border border-gray-300 rounded-lg my-6 mr-2 cursor-pointer bg-blue-500 text-white"
+                  className="px-4 py-2 border border-gray-300 dark:border-gray-700 rounded-lg my-6 mr-2 cursor-pointer bg-blue-500 text-white"
                   onClick={() => back()}
                 >
                   Back
@@ -360,7 +365,7 @@ const ApplyForm = () => {
                 <input
                   type="submit"
                   value="Submit"
-                  className="px-4 py-2 border border-gray-300 rounded-lg my-6 cursor-pointer bg-blue-500 text-white"
+                  className="px-4 py-2 border border-gray-300 dark:border-gray-700 rounded-lg my-6 cursor-pointer bg-blue-600 text-white"
                 />
               </div>
             )}

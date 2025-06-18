@@ -4,6 +4,7 @@ import { useJobSearch } from "../hooks/useJobSearch";
 
 const JobsNavbar = () => {
   const [searchResults, setSearchResults] = useState([]);
+  const [openSearchBar, setOpenSearchBar] = useState(false);
   const { searchJobs } = useJobSearch();
 
   const handleSearch = (e) => {
@@ -12,33 +13,43 @@ const JobsNavbar = () => {
   };
 
   return (
-    <div className="max-w-7xl mx-auto">
-      <div className="bg-white p-2 flex justify-between items-center border-b border-gray-300">
-        <div className="flex gap-4 items-center">
+    <div className="sticky top-0 z-100">
+      <div className="bg-white p-2 px-4 flex justify-between lg:justify-around items-center border-b border-gray-300 dark:border-gray-700 dark:text-gray-200 dark:bg-slate-900">
+        <div className="flex md:gap-4 items-center">
           <Link to={"/"}>
-            <img className="w-46" src="/images/logo2.png" alt="" />
+            <img
+              className={`w-32 md:w-40 lg:w-full ${openSearchBar ? "hidden md:block" : "block"}`}
+              src="/images/logo2.png"
+              alt=""
+            />
           </Link>
-          <div className="search border border-gray-300 rounded-lg w-96">
+          <div
+            className={`search relative border border-gray-300 dark:border-gray-700 rounded-lg w-full md:w-96  ${openSearchBar ? "block" : "hidden md:block"}`}
+          >
+            {searchResults.length > 0 && (
+              <img
+                src="/images/close.png"
+                alt=""
+                className="absolute right-1 top-1/2 -translate-y-1/2  w-6 dark:invert-80"
+                onClick={() => setSearchResults([])}
+              />
+            )}
             <input
-              className="p-2 px-4 outline-none w-full"
+              className="p-2 px-4 outline-none w-full pr-8 md:pr-0"
               type="text"
               placeholder="Search Jobs"
               onChange={(e) => {
                 handleSearch(e);
               }}
-              onBlur={(e) => {
-                setSearchResults([]);
-                e.target.value = "";
-              }}
             />
             {searchResults.length > 0 && (
-              <div className="absolute w-96 z-10 max-h-52 bg-white mt-1 rounded-lg overflow-auto custom-scrollbar shadow-lg">
+              <div className="absolute w-96 z-10 max-h-52 bg-white dark:bg-slate-900 mt-1 rounded-lg overflow-auto custom-scrollbar shadow-lg">
                 {searchResults.map((item, index) => (
                   <Link to={`/apply/${item._id}`} state={item}>
                     <div
                       key={index}
-                      className="flex justify-between p-2 hover:bg-gray-200 text-gray-700 cursor-pointer"
-                      onClick={() => console.log("first")}
+                      className="flex justify-between p-2 hover:bg-gray-200 text-gray-700 dark:hover:bg-gray-800 dark:text-gray-300 cursor-pointer"
+                      onClick={() => setSearchResults([])}
                     >
                       {`${item.title} | ${item.company}`}
                     </div>
@@ -48,16 +59,37 @@ const JobsNavbar = () => {
             )}
           </div>
         </div>
-        <div className="flex items-center  gap-8">
+        <div className="flex items-center gap-4 lg:gap-8">
+          <div
+            className="flex flex-col items-center md:hidden"
+            onClick={() => setOpenSearchBar(!openSearchBar)}
+          >
+            <img
+              className="w-6 md:w-8 dark:invert-75 "
+              src="/images/search-bold.png"
+              alt=""
+            />
+            <div className="text-sm lg:text-md font-semibold">Search</div>
+          </div>
           <Link to={"/jobs"}>
-            <div className="cursor-pointer hover:underline underline-offset-4 transition flex flex-col items-center">
-              <img src="/images/suitcase.png" alt="" />
-              <div className="text-md font-semibold">Jobs</div>
+            <div className="cursor-pointer hover:underline underline-offset-4 transition flex flex-col items-center group">
+              <img
+                className="w-6 md:w-8 dark:invert-75 dark:group-hover:invert-100"
+                src="/images/suitcase.png"
+                alt=""
+              />
+              <div className="text-sm lg:text-md font-semibold dark:hover:text-white">
+                Jobs
+              </div>
             </div>
           </Link>
-          <div className="flex flex-col items-center pr-2">
-            <img src="/images/profile.png" alt="" />
-            <div className="text-md font-semibold">Profile</div>
+          <div className="hidden flex-col items-center md:flex">
+            <img
+              className="w-6 md:w-8 dark:invert-75 "
+              src="/images/profile.png"
+              alt=""
+            />
+            <div className="text-sm lg:text-md font-semibold">Profile</div>
           </div>
         </div>
       </div>

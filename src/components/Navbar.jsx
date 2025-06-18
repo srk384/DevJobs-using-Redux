@@ -1,18 +1,92 @@
-import { Link } from "react-router-dom"
+import { useState } from "react";
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
-  return (
-    <div className="h-20 flex justify-around items-center ">
-        <div>
-            <img src="/images/logo2.png" alt="" />
-        </div>
-        <ul className="flex gap-8 font-semibold dark:text-gray-100">
-            <Link to={"/jobs"}><li className='cursor-pointer hover:underline underline-offset-4 transition'>Jobs</li></Link>
-            <Link to={"/applied-jobs"}><li className='cursor-pointer hover:underline underline-offset-4 transition'>Applied Jobs</li></Link>
-            <li className='cursor-pointer hover:underline underline-offset-4 transition'>About Us</li>
-        </ul>
-    </div>
-  )
-} 
+  const [isHamOpen, setIsHamOpen] = useState(false);
 
-export default Navbar
+  return (
+    <div className="h-16 lg:h-20 flex justify-between lg:justify-around items-center px-4">
+      <div>
+        <img className="w-42 lg:w-full" src="/images/logo2.png" alt="" />
+      </div>
+      <ul className="gap-8 font-semibold dark:text-gray-100 hidden lg:flex">
+        <Link to={"/jobs"}>
+          <li className="cursor-pointer hover:underline underline-offset-4 transition flex gap-2 items-center">
+            <img
+              className="dark:invert-100 w-6"
+              src="/images/suitcase.png"
+              alt=""
+            />
+            Jobs
+          </li>
+        </Link>
+        <Link to={"/applied-jobs"}>
+          <li className="cursor-pointer hover:underline underline-offset-4 transition flex gap-2 items-center">
+            <img
+              className="dark:invert-100 w-6"
+              src="/images/appliedjobs.png"
+              alt=""
+            />
+            Applied Jobs
+          </li>
+        </Link>
+        <li className="cursor-pointer hover:underline underline-offset-4 transition flex gap-2 items-center">
+          <img className="dark:invert-100 w-6" src="/images/about.png" alt="" />
+          About Us
+        </li>
+      </ul>
+      <div
+        className="block lg:hidden relative"
+        onClick={() => setIsHamOpen(!isHamOpen)}
+      >
+        {isHamOpen ? (
+          <img className="dark:invert-100" src="/images/close.png" alt="" />
+        ) : (
+          <img className="dark:invert-100" src="/images/hamburger.png" alt="" />
+        )}
+
+        {isHamOpen && (
+          <div className="absolute right-0 bg-white/80 dark:bg-slate-900/80 backdrop-blur-lg w-62 rounded-lg shadow-lg">
+            <img
+              className="w-full object-cover rounded-t-lg"
+              src="/images/hambanner.webp"
+              alt=""
+            />
+            <ul className="gap-8 font-semibold dark:text-gray-100 p-2 py-4">
+              <Link to={"/jobs"}>
+                <li className="cursor-pointer underline-offset-4 transition p-2 active:bg-gray-700 flex gap-2 items-center">
+                  <img
+                    className="dark:invert-100 w-6"
+                    src="/images/suitcase.png"
+                    alt=""
+                  />
+                  Jobs
+                </li>
+              </Link>
+              <Link to={"/applied-jobs"}>
+                <li className="cursor-pointer underline-offset-4 transition p-2 active:bg-gray-700 flex gap-2 items-center">
+                  <img
+                    className="dark:invert-100 w-6"
+                    src="/images/appliedjobs.png"
+                    alt=""
+                  />
+                  Applied Jobs
+                </li>
+              </Link>
+              <li className="cursor-pointer underline-offset-4 transition p-2 active:bg-gray-700 flex gap-2 items-center">
+                <img
+                  className="dark:invert-100 w-6"
+                  src="/images/about.png"
+                  alt=""
+                />
+                About Us
+              </li>
+            </ul>
+          </div>
+        )}
+      </div>
+    </div>
+  );
+};
+
+export default Navbar;

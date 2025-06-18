@@ -31,7 +31,7 @@ const SkillsFilter = () => {
 
   return (
     <div
-      className={`relative flex items-center gap-1 p-2  pr-1 border rounded-lg cursor-pointer hover:bg-gray-50 mr-4 text-sm text-gray-700 ${selectedSkills.length > 0 ? "border-[rgb(144,190,109)] border-2" : "border-gray-300 "}`}
+      className={`relative flex items-center gap-1 p-2  pr-1 border rounded-lg cursor-pointer hover:bg-gray-50 mr-2 lg:mr-4 text-sm text-gray-700 dark:hover:bg-slate-800 dark:text-gray-200 ${selectedSkills.length > 0 ? "border-[rgb(144,190,109)] border-2" : "border-gray-300 dark:border-gray-700"}`}
       onClick={() => {
         filterBySkills();
         setIsSkillsOpen(!isSkillsOpen);
@@ -46,9 +46,9 @@ const SkillsFilter = () => {
           </span>
         )}{" "}
       </div>
-      <img className="w-5" src="/images/icon_down-filled.png" alt="" />
+      <img className="w-5 dark:invert-100" src="/images/icon_down-filled.png" alt="" />
       {skills && isSkillsOpen && (
-        <div className="absolute bg-white/50 backdrop-blur-lg top-10 left-0 w-52 shadow-lg rounded-lg flex flex-col ">
+        <div className="absolute bg-white/50 dark:bg-black/50 backdrop-blur-lg top-10 right-0 lg:left-0 w-52 shadow-lg rounded-lg flex flex-col z-10">
           <div className="h-54 overflow-y-auto custom-scrollbar">
             {skills.map((item, index) => {
               const isSelected = selectedSkills.includes(item);
@@ -56,7 +56,7 @@ const SkillsFilter = () => {
               return (
                 <div
                   key={index}
-                  className="flex justify-between p-2 hover:bg-gray-200"
+                  className="flex justify-between p-2 hover:bg-gray-200 dark:hover:bg-gray-700"
                   onClick={(e) => {
                     e.preventDefault();
                     e.stopPropagation();
