@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { setSkillsFilter } from "../Redux/Slices/JobsDataSlice";
+import { filter } from "motion/react-client";
 
 const SkillsFilter = () => {
   const { jobsList, filters } = useSelector((state) => state.JobsData);
@@ -34,7 +35,7 @@ const SkillsFilter = () => {
   return (
     <div
       className={`relative flex items-center gap-1 p-2 pr-1 border rounded-lg cursor-pointer hover:bg-gray-50 mr-2 lg:mr-4 text-sm text-gray-700 dark:hover:bg-slate-800 dark:text-gray-200 ${
-        selectedSkills.length > 0
+        filters.skills.length > 0
           ? "border-[rgb(144,190,109)] border-2"
           : "border-gray-300 dark:border-gray-700"
       }`}
@@ -42,9 +43,9 @@ const SkillsFilter = () => {
     >
       <div>
         Skills{" "}
-        {selectedSkills.length > 0 && (
+        {filters.skills.length > 0 && (
           <span className="text-xs absolute md:static -top-0.5 -right-0.5 bg-[rgb(144,190,109)] inline-block size-4 rounded-full text-center text-white">
-            {selectedSkills.length}
+            {filters.skills.length}
           </span>
         )}
       </div>
@@ -64,7 +65,7 @@ const SkillsFilter = () => {
                   key={index}
                   className="flex justify-between p-2 hover:bg-gray-200 dark:hover:bg-gray-700"
                   onClick={(e) => {
-                    e.preventDefault();
+                    // e.preventDefault();
                     e.stopPropagation();
                     toggleSkill(item);
                   }}

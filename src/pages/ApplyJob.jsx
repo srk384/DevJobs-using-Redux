@@ -15,6 +15,7 @@ const ApplyJob = () => {
     if (!state) {
       fetchJobsData();
     }
+    window.scrollTo({ top: 0});
   }, []);
 
   async function fetchJobsData() {
@@ -33,9 +34,8 @@ const ApplyJob = () => {
       <JobsNavbar />
       <div className="max-w-7xl mx-auto bg-gray-50 dark:bg-slate-900 p-2 lg:p-4 flex flex-col-reverse lg:flex-row lg:h-[92.5vh]">
         <JobDisplay job={state ?? job} />
-        <ApplyForm  job={state ?? job}/>
+        <ApplyForm job={state ?? job} />
       </div>
-      
     </>
   );
 };

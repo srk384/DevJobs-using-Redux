@@ -7,9 +7,6 @@ import JobsNavbar from "./JobsNavbar";
 const JobSuccess = ({ jobId }) => {
   const {id} = useParams();
   const isMobile = useIsMobile();
-
-  console.log(id)
-
   const [isLoading, setisLoading] = useState(true);
 
   setTimeout(() => {
@@ -43,8 +40,7 @@ const JobSuccess = ({ jobId }) => {
               Application ID: <span className="font-semibold">{jobId ?? id}</span>
             </p>
             <p className="text-gray-700 mb-6">
-              Thank you for applying. Your application has been received
-              successfully.
+              Thank you for applying. Your application has been received.
             </p>
             <Link
               to="/jobs"

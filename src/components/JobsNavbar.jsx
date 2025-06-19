@@ -14,7 +14,7 @@ const JobsNavbar = () => {
   };
 
   return (
-    <div className="sticky top-0 z-100">
+    <div className="sticky lg:static top-0 z-100">
       <div className="bg-white p-2 px-4 flex justify-between lg:justify-around items-center border-b border-gray-300 dark:border-gray-700 dark:text-gray-200 dark:bg-slate-900">
         <div className="flex md:gap-4 items-center">
           <Link to={"/"}>

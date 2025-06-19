@@ -112,16 +112,16 @@ const JobFilters = () => {
         {/* job titles */}
 
         <div
-          className={`relative flex items-center gap-1 p-2  pr-1 border rounded-lg cursor-pointer hover:bg-gray-50 mr-2 lg:mr-4 text-sm text-gray-700 dark:hover:bg-slate-800 dark:text-gray-200 ${selectedTitles.length > 0 ? "border-[rgb(144,190,109)] border-2" : "border-gray-300 dark:border-gray-700"}`}
+          className={`relative flex items-center gap-1 p-2  pr-1 border rounded-lg cursor-pointer hover:bg-gray-50 mr-2 lg:mr-4 text-sm text-gray-700 dark:hover:bg-slate-800 dark:text-gray-200 ${filters.titles.length > 0 ? "border-[rgb(144,190,109)] border-2" : "border-gray-300 dark:border-gray-700"}`}
           onClick={() => {
             setIsCategoryOpen(!isCategoryOpen);
           }}
         >
           <div className="">
             Category{" "}
-            {selectedTitles.length > 0 && (
+            {filters.titles.length > 0 && (
               <span className="absolute md:static -top-0.5 -right-0.5 text-xs bg-[rgb(144,190,109)] inline-block size-4 rounded-full text-center text-white">
-                {selectedTitles.length}
+                {filters.titles.length}
               </span>
             )}{" "}
           </div>
@@ -140,7 +140,7 @@ const JobFilters = () => {
                     key={index}
                     className="flex justify-between p-2 hover:bg-gray-200 dark:hover:bg-gray-700"
                     onClick={(e) => {
-                      e.preventDefault();
+                      // e.preventDefault();
                       e.stopPropagation();
                       toggleTitle(item);
                     }}
@@ -155,7 +155,7 @@ const JobFilters = () => {
                 onClick={(e) => {
                   e.stopPropagation();
                   applyFilters();
-                  setIsCategoryOpen(!isCategoryOpen);
+                  setIsCategoryOpen(false);
                 }}
               >
                 Apply

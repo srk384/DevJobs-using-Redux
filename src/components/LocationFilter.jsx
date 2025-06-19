@@ -63,7 +63,7 @@ const LocationFilter = () => {
                   key={index}
                   className="flex justify-between p-2 hover:bg-gray-200 dark:hover:bg-gray-700"
                   onClick={(e) => {
-                    e.preventDefault();
+                    // e.preventDefault();
                     e.stopPropagation();
                     toggleLocation(item);
                   }}

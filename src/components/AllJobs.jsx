@@ -7,11 +7,9 @@ import { Link } from "react-router-dom";
 
 const Alljobs = () => {
   const [job, setJob] = useState("");
- 
-
+  const [activeJobId, setActiveJobId] = useState(null);
   const { filteredJobs } = useSelector((state) => state.JobsData);
   const dispatch = useDispatch();
-
   const isMobile = useIsMobile();
 
   useEffect(() => {
@@ -26,7 +24,7 @@ const Alljobs = () => {
   }, []);
 
   useEffect(() => {
-      setJob(filteredJobs[0]);
+    setJob(filteredJobs[0]);
   }, [filteredJobs]);
 
   return (
@@ -39,11 +37,15 @@ const Alljobs = () => {
       <div className="md:flex max-w-7xl mx-auto">
         {filteredJobs.length > 0 && (
           <>
-            <div className="left w-full lg:w-1/3 h-full lg:h-[86.5vh] bg-gray-50 dark:bg-slate-900 p-4 md:overflow-auto custom-scrollbar mx-auto">
+            <div
+              className="left w-full lg:w-1/3 h-full lg:h-[86.5vh] bg-gray-50 dark:bg-slate-900 p-4 lg:overflow-auto custom-scrollbar mx-auto"
+            >
               {filteredJobs &&
                 filteredJobs.map((job, index) => {
                   const CardContent = (
-                    <div className="flex gap-3 p-2 md:p-4 shadow-sm mb-3 rounded-lg bg-white cursor-pointer dark:bg-slate-800">
+                    <div
+                      className={`flex gap-3 p-2 md:p-4 md:pl-2.5 shadow-sm mb-3 rounded-lg bg-white cursor-pointer dark:bg-slate-800 border-l-5 ${job._id === activeJobId ? "border-l-[rgb(144,190,109)]" : "border-l-transparent"}`}
+                    >
                       <div>
                         <img
                           className="w-16 h-14 object-cover border-4 border-gray-200 rounded-lg dark:border-slate-700"
@@ -99,7 +101,13 @@ const Alljobs = () => {
                       {CardContent}
                     </Link>
                   ) : (
-                    <div key={index} onClick={() => setJob(job)}>
+                    <div
+                      key={index}
+                      onClick={() => {
+                        setJob(job);
+                        setActiveJobId(job._id);
+                      }}
+                    >
                       {CardContent}
                     </div>
                   );
