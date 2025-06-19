@@ -1,16 +1,19 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { setLocationFilter } from "../Redux/Slices/JobsDataSlice";
 
 const LocationFilter = () => {
+  const { jobsList, filters } = useSelector((state) => state.JobsData);
+  
   const [location, setLocation] = useState(null);
   const [isLocationOpen, setIsLocationOpen] = useState(false);
-  const [selectedLocation, setSelectedLocation] = useState([]);
+  const [selectedLocation, setSelectedLocation] = useState(()=>filters.location );
 
-  const { jobsList, filters } = useSelector((state) => state.JobsData);
   const dispatch = useDispatch();
 
-  const filterByLocation = () => {
+  // const selectedLocation = updatedLocation || filters.location 
+
+  useEffect(() => {
     const uniqueLocation = [];
     jobsList.forEach((job) => {
       if (!uniqueLocation.includes(job.location)) {
@@ -18,18 +21,23 @@ const LocationFilter = () => {
       }
     });
     setLocation(uniqueLocation);
-  };
+  }, [jobsList]);
 
-  const resultsByLocation = () => dispatch(setLocationFilter(selectedLocation));
+  const toggleLocation = (item) => {
+    if (selectedLocation.includes(item)) {
+      setSelectedLocation(
+        selectedLocation.filter((location) => location !== item)
+      );
+    } else {
+      setSelectedLocation([...selectedLocation, item]);
+    }
+  };
+  const applyFilters = () => dispatch(setLocationFilter(selectedLocation));
 
   return (
     <div
       className={`relative flex items-center gap-1 p-2  pr-1 border rounded-lg cursor-pointer hover:bg-gray-50  text-sm text-gray-700 dark:hover:bg-slate-800 dark:text-gray-200 ${filters.location.length > 0 ? "border-[rgb(144,190,109)] border-2" : "border-gray-300 dark:border-gray-700"}`}
-      onClick={() => {
-        filterByLocation();
-        setIsLocationOpen(!isLocationOpen);
-        // resultsByLocation();
-      }}
+      onClick={() => setIsLocationOpen(!isLocationOpen)}
     >
       <div className=" ">
         Location{" "}
@@ -48,7 +56,7 @@ const LocationFilter = () => {
         <div className="absolute bg-white/50 dark:bg-black/50 backdrop-blur-lg top-10 right-0 lg:left-0 w-52 shadow-lg rounded-lg flex flex-col z-10">
           <div className="max-h-54 overflow-y-auto custom-scrollbar">
             {location.map((item, index) => {
-              const isSelected = filters.location.includes(item);
+              const isSelected = selectedLocation.includes(item);
 
               return (
                 <div
@@ -57,14 +65,7 @@ const LocationFilter = () => {
                   onClick={(e) => {
                     e.preventDefault();
                     e.stopPropagation();
-
-                    if (selectedLocation.includes(item)) {
-                      setSelectedLocation(
-                        selectedLocation.filter((location) => location !== item)
-                      );
-                    } else {
-                      setSelectedLocation([...selectedLocation, item]);
-                    }
+                    toggleLocation(item);
                   }}
                 >
                   <span>{item}</span>
@@ -76,8 +77,9 @@ const LocationFilter = () => {
           <button
             className="bg-[rgb(144,190,109)] px-4 py-1.5 rounded-b-lg text-white cursor-pointer hover:bg-[rgb(115,155,85)] mt-1"
             onClick={(e) => {
-              resultsByLocation();
-              setIsLocationOpen(!isLocationOpen);
+              e.stopPropagation();
+              applyFilters();
+              setIsLocationOpen(false);
             }}
           >
             Apply

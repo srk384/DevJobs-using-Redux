@@ -1,72 +1,8 @@
 import { IoLocationOutline } from "react-icons/io5";
 import { SlCalender } from "react-icons/sl";
-import { useEffect, useRef } from "react";
 import { Link } from "react-router-dom";
 
 const JobDisplay = ({ job }) => {
-  const { company_logo } = job;
-
-  const colorRef = useRef();
-  const skipFirstRender = useRef(true);
-
-  function getDominantColorFromImage(imgUrl) {
-    return new Promise((resolve, reject) => {
-      const img = new Image();
-      img.crossOrigin = "anonymous";
-      img.src = imgUrl;
-
-      img.onload = () => {
-        const canvas = document.createElement("canvas");
-        canvas.width = img.width;
-        canvas.height = img.height;
-        const ctx = canvas.getContext("2d");
-        ctx.drawImage(img, 0, 0);
-
-        const imageData = ctx.getImageData(
-          0,
-          0,
-          canvas.width,
-          canvas.height
-        ).data;
-
-        const colorCount = {};
-        for (let i = 0; i < imageData.length; i += 4) {
-          const rgb = `${imageData[i]},${imageData[i + 1]},${imageData[i + 2]}`;
-          colorCount[rgb] = (colorCount[rgb] || 0) + 1;
-        }
-
-        const dominantRGB = Object.entries(colorCount).sort(
-          (a, b) => b[1] - a[1]
-        )[0][0];
-        resolve(`rgb(${dominantRGB})`);
-      };
-
-      img.onerror = reject;
-    });
-  }
-
-  useEffect(() => {
-    window.scrollTo(0, 0);
-
-    if (skipFirstRender.current) {
-      skipFirstRender.current = false;
-      return;
-    }
-
-    if (company_logo){
-      getDominantColorFromImage(company_logo)
-        .then((color) => {
-          Object.assign(colorRef.current.style, {
-            backgroundColor: color,
-            color: "white",
-            borderRadius: "8px",
-          });
-          // console.log(color);
-        })
-        .catch((err) => console.error("Color extraction failed", err));
-        }
-  }, [company_logo]);
-
   return (
     <>
       {job && (
@@ -113,8 +49,7 @@ const JobDisplay = ({ job }) => {
               ) : (
                 <Link to={`/apply/${job._id}`} state={job}>
                   <button
-                    ref={colorRef}
-                    className={`border-2 px-10 py-2 rounded-lg cursor-pointer transition text-white font-semibold`}
+                    className={`border-2 px-10 py-2 rounded-lg cursor-pointer transition font-bold border-[rgb(144,190,109)] bg-[rgb(144,190,109)] text-white `}
                   >
                     Apply
                   </button>

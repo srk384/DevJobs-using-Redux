@@ -72,7 +72,7 @@ export const HeroSection = () => {
             onClick={() => {
               setIsSearchClicked(!isSearchClicked);
               setSearchResults([]);
-              searchRef2.current.value = ""
+              searchRef2.current.value = "";
             }}
           >
             Search Jobs
@@ -96,7 +96,7 @@ export const HeroSection = () => {
                   : {
                       opacity: 0,
                       translateX: "-40%",
-                      transition: { duration: 0.3 }
+                      transition: { duration: 0.3 },
                     }
               }
               className="absolute left-20 bottom-0.5"
@@ -147,14 +147,13 @@ export const HeroSection = () => {
             )}
           </div>
 
+          {/* display searchResults */}
+
           {searchResults.length > 0 && (
             <div className="absolute md:w-1/2 max-h-52 bg-white dark:bg-slate-900 ml-5 md:ml-24 mt-1 rounded-lg overflow-auto custom-scrollbar shadow-lg z-10 ">
               {searchResults.map((item, index) => (
                 <Link to={`/apply/${item._id}`} state={item} key={index}>
-                  <div
-                    className="flex justify-between p-2 hover:bg-gray-200 text-gray-700 cursor-pointer dark:hover:bg-gray-800 dark:text-gray-300"
-                    onClick={() => console.log("first")}
-                  >
+                  <div className="flex justify-between p-2 hover:bg-gray-200 text-gray-700 cursor-pointer dark:hover:bg-gray-800 dark:text-gray-300">
                     {`${item.title} | ${item.company}`}
                   </div>
                 </Link>

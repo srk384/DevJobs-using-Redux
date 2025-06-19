@@ -76,6 +76,7 @@ const AppliedJobs = () => {
                   <p className="text-sm">Company: {job.company}</p>
                   <p className="text-sm">Location: {job.location}</p>
                   <p className="text-sm">Experience: {job.experience} years</p>
+                  <p className="text-sm">Job Id: {job.jobId}</p>
                   <p className="text-sm">Applied On: {job.createdAt}</p>
                   <div className="flex flex-wrap gap-2 mt-2">
                     {job.skills.map((skill, idx) => (

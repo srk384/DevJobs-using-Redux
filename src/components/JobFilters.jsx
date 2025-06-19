@@ -5,16 +5,25 @@ import SkillsFilter from "./SkillsFilter";
 import LocationFilter from "./LocationFilter";
 
 const JobFilters = () => {
-  const [category, setCategory] = useState(null);
-  const [isCategoryOpen, setIsCategoryOpen] = useState(false);
-  const [selectedTitles, setSelectedTitles] = useState([]);
-  const [isSalarySortClicked, setIsSalarySortClicked] = useState(false);
-  const [isApplicantSortClicked, setIsApplicantSortClicked] = useState(false);
-
   const { jobsList, filteredJobs, filters } = useSelector(
     (state) => state.JobsData
   );
+  const [category, setCategory] = useState(null);
+  const [isCategoryOpen, setIsCategoryOpen] = useState(false);
+  const [selectedTitles, setSelectedTitles] = useState(() => filters.titles);
+  const [isSalarySortClicked, setIsSalarySortClicked] = useState(false);
+  const [isApplicantSortClicked, setIsApplicantSortClicked] = useState(false);
   const dispatch = useDispatch();
+
+  useEffect(() => {
+    const uniqueTitles = [];
+    jobsList.forEach((job) => {
+      if (!uniqueTitles.includes(job.title)) {
+        uniqueTitles.push(job.title);
+      }
+    });
+    setCategory(uniqueTitles);
+  }, [jobsList]);
 
   const SalaryHightoLow = () => {
     let sortedSalary = [...filteredJobs].sort((a, b) => {
@@ -31,20 +40,16 @@ const JobFilters = () => {
     });
     dispatch(sortJobs(sortedApplicants));
   };
-
-  const filterTitles = () => {
-    const uniqueTitles = [];
-    jobsList.forEach((job) => {
-      if (!uniqueTitles.includes(job.title)) {
-        uniqueTitles.push(job.title);
-      }
-    });
-    setCategory(uniqueTitles);
+  
+  const toggleTitle = (item) => {
+    if (selectedTitles.includes(item)) {
+      setSelectedTitles(selectedTitles.filter((title) => title !== item));
+    } else {
+      setSelectedTitles([...selectedTitles, item]);
+    }
   };
 
-  const resultsByTitle = () => {
-    dispatch(setTitlesFilter(selectedTitles));
-  };
+  const applyFilters = () => dispatch(setTitlesFilter(selectedTitles));
 
   const filterCount = () => {
     let count = 0;
@@ -109,9 +114,7 @@ const JobFilters = () => {
         <div
           className={`relative flex items-center gap-1 p-2  pr-1 border rounded-lg cursor-pointer hover:bg-gray-50 mr-2 lg:mr-4 text-sm text-gray-700 dark:hover:bg-slate-800 dark:text-gray-200 ${selectedTitles.length > 0 ? "border-[rgb(144,190,109)] border-2" : "border-gray-300 dark:border-gray-700"}`}
           onClick={() => {
-            filterTitles();
             setIsCategoryOpen(!isCategoryOpen);
-            //   resultsByTitle();
           }}
         >
           <div className="">
@@ -139,14 +142,7 @@ const JobFilters = () => {
                     onClick={(e) => {
                       e.preventDefault();
                       e.stopPropagation();
-
-                      if (selectedTitles.includes(item)) {
-                        setSelectedTitles(
-                          selectedTitles.filter((title) => title !== item)
-                        );
-                      } else {
-                        setSelectedTitles([...selectedTitles, item]);
-                      }
+                      toggleTitle(item);
                     }}
                   >
                     <span>{item}</span>
@@ -156,8 +152,9 @@ const JobFilters = () => {
               })}
               <button
                 className="bg-[rgb(144,190,109)] px-4 py-1.5 rounded-b-lg text-white cursor-pointer hover:bg-[rgb(115,155,85)] mt-1"
-                onClick={() => {
-                  resultsByTitle();
+                onClick={(e) => {
+                  e.stopPropagation();
+                  applyFilters();
                   setIsCategoryOpen(!isCategoryOpen);
                 }}
               >

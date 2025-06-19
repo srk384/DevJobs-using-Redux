@@ -30,7 +30,7 @@ function App() {
         <Route path="/jobs" element={<Jobs />} />
         <Route path="/apply/:id" element={<ApplyJob />} />
         <Route path="/applied-jobs" element={<AppliedJobs />} />
-        <Route path="/confirmation" element={<JobSuccess />} />
+        <Route path="/confirmation/:id" element={<JobSuccess />} />
       </Routes>
     </div>
   );

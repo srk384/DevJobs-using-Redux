@@ -1,7 +1,7 @@
 import { useEffect, useState, useRef } from "react";
+import { useNavigate } from "react-router-dom";
 import { setAppliedJobs } from "../Redux/Slices/JobsDataSlice";
 import { useDispatch, useSelector } from "react-redux";
-// import FormValidation from "./FormValidation";
 import { object, string } from "yup";
 import JobSuccess from "./JobSuccess";
 import { useIsMobile } from "../hooks/useIsMobile";
@@ -16,6 +16,7 @@ const ApplyForm = ({ job }) => {
   const [isApplied, setIsApplied] = useState(false);
   const [JobId, setJobId] = useState("");
   const skipFirstRender = useRef(true);
+  const navigate = useNavigate();
 
   const skills = [
     "Python",
@@ -46,7 +47,6 @@ const ApplyForm = ({ job }) => {
     coverletter: "",
     startdate: "",
     referral: "",
-    createdAt: "",
   });
 
   const dispatch = useDispatch();
@@ -104,23 +104,19 @@ const ApplyForm = ({ job }) => {
   function generateRandomId() {
     let id = "JOB-" + Math.random().toString(36).substr(2, 9).toUpperCase();
     setJobId(id);
-    return id;
   }
 
   const submitForm = (e) => {
     e.preventDefault();
-
     const updatedFormData = {
       ...formData,
       createdAt: new Date().toLocaleString(),
-      jobId: generateRandomId(),
+      jobId: JobId,
       title: job.title,
       company: job.company,
       location: job.location,
     };
-
     dispatch(setAppliedJobs([...appliedJobs, updatedFormData]));
-    // localStorage.setItem("application", JSON.stringify(updatedFormData));
     setFormData({
       name: "",
       email: "",
@@ -134,6 +130,10 @@ const ApplyForm = ({ job }) => {
     setSelectedSkills([]);
     setOpenSelectSkills(false);
     setIsApplied(true);
+
+    if (isMobile) {
+      navigate(`/confirmation/${JobId}`);
+    }
   };
 
   useEffect(() => {
@@ -148,9 +148,10 @@ const ApplyForm = ({ job }) => {
 
   return (
     <>
-      {isMobile && isApplied && <JobSuccess jobId={JobId} />}
+      {/* {isMobile && isApplied && <JobSuccess jobId={JobId} />} */}
+
       <div className="px-2 md:px-4 mt-2 mb-4 lg:my-0 bg-white lg:w-2/4 lg:ml-3 rounded-lg h-fit shadow-sm dark:bg-slate-800 dark:text-gray-200">
-        {isApplied && <JobSuccess jobId={JobId} />}
+        {isApplied && !isMobile && <JobSuccess jobId={JobId} />}
 
         {!isApplied && (
           <div>
@@ -208,9 +209,9 @@ const ApplyForm = ({ job }) => {
                   )}
 
                   <button
-                    className={`px-4 py-2 border border-gray-300 dark:border-gray-700 rounded-lg my-6 cursor-pointer text-white ${
+                    className={`px-4 py-2 border border-gray-300 dark:border-gray-700 rounded-lg my-6 text-white font-semibold ${
                       isStepValid
-                        ? "bg-blue-600"
+                        ? "bg-[rgb(144,190,109)] cursor-pointer"
                         : "bg-gray-400 cursor-not-allowed"
                     }`}
                     onClick={(e) => {
@@ -303,20 +304,21 @@ const ApplyForm = ({ job }) => {
                       ))}
                   </div>
                   <button
-                    className="px-4 py-2 border border-gray-300 rounded-lg my-6 mr-2 cursor-pointer bg-blue-600 dark:border-gray-700 text-white"
+                    className="px-4 py-2 border border-gray-300 rounded-lg my-6 mr-2 cursor-pointer bg-[rgb(144,190,109)] font-semibold dark:border-gray-700 text-white"
                     onClick={() => back()}
                   >
                     Back
                   </button>
                   <button
-                    className={`px-4 py-2 border border-gray-300 rounded-lg my-6 cursor-pointer text-white dark:border-gray-700 ${
+                    className={`px-4 py-2 border border-gray-300 rounded-lg my-6 font-semibold text-white dark:border-gray-700 ${
                       isStepValid
-                        ? "bg-blue-600"
+                        ? "bg-[rgb(144,190,109)] cursor-pointer"
                         : "bg-gray-400 cursor-not-allowed"
                     }`}
                     onClick={(e) => {
                       e.preventDefault();
                       next(e);
+                      generateRandomId();
                     }}
                     disabled={!isStepValid}
                   >
@@ -365,7 +367,7 @@ const ApplyForm = ({ job }) => {
                     className="block w-full p-2 border border-gray-300 dark:border-gray-700 rounded-lg my-4"
                   />
                   <button
-                    className="px-4 py-2 border border-gray-300 dark:border-gray-700 rounded-lg my-6 mr-2 cursor-pointer bg-blue-500 text-white"
+                    className="px-4 py-2 border border-gray-300 dark:border-gray-700 rounded-lg my-6 mr-2 cursor-pointer bg-[rgb(144,190,109)] font-semibold text-white"
                     onClick={() => back()}
                   >
                     Back
@@ -373,7 +375,7 @@ const ApplyForm = ({ job }) => {
                   <input
                     type="submit"
                     value="Submit"
-                    className="px-4 py-2 border border-gray-300 dark:border-gray-700 rounded-lg my-6 cursor-pointer bg-blue-600 text-white"
+                    className="px-4 py-2 border border-gray-300 dark:border-gray-700 rounded-lg my-6 cursor-pointer bg-[rgb(144,190,109)] font-semibold text-white"
                   />
                 </div>
               )}
