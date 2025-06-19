@@ -16,7 +16,7 @@ export const HeroSection = () => {
     hidden: {},
     visible: {
       transition: {
-        staggerChildren: 0.2, // delay between words
+        staggerChildren: 0.2,
       },
     },
   };
@@ -31,7 +31,6 @@ export const HeroSection = () => {
     setSearchResults(searchJobs(value));
   };
 
-  console.log(searchRef2.current?.value)
   return (
     <div className="flex flex-col-reverse md:flex-row justify-center items-center px-4 lg:px-12 lg:py-10 border-b border-gray-100 dark:border-gray-800 pb-10">
       <div className="text-center md:text-left pb-6 md:pb-0">

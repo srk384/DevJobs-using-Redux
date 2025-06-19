@@ -7,7 +7,7 @@ import { Link } from "react-router-dom";
 
 const Alljobs = () => {
   const [job, setJob] = useState("");
-  const skipFirstRender = useRef(true);
+ 
 
   const { filteredJobs } = useSelector((state) => state.JobsData);
   const dispatch = useDispatch();
@@ -26,11 +26,7 @@ const Alljobs = () => {
   }, []);
 
   useEffect(() => {
-    if (skipFirstRender.current) {
-      skipFirstRender.current = false;
-      return;
-    }
-    setJob(filteredJobs[0]);
+      setJob(filteredJobs[0]);
   }, [filteredJobs]);
 
   return (

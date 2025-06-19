@@ -2,6 +2,7 @@ import { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { setAppliedJobs } from "../Redux/Slices/JobsDataSlice";
 import JobsNavbar from "../components/JobsNavbar";
+import useSyncCartToLocalStorage from "../hooks/useSyncCartToLocalStorage";
 
 const AppliedJobs = () => {
   const { appliedJobs } = useSelector((state) => state.JobsData);
@@ -29,7 +30,7 @@ const AppliedJobs = () => {
 
   const confirmWithdraw = () => {
     const updatedJobs = appliedJobs.filter(
-      (job) => job._id !== jobToDelete._id
+      (job) => job.jobId !== jobToDelete.jobId
     );
     dispatch(setAppliedJobs(updatedJobs));
     setShowConfirmModal(false);
@@ -48,11 +49,13 @@ const AppliedJobs = () => {
 
   const saveEdit = () => {
     const updatedJobs = appliedJobs.map((job) =>
-      job._id === jobToEdit._id ? jobToEdit : job
+      job.jobId === jobToEdit.jobId ? jobToEdit : job
     );
     dispatch(setAppliedJobs(updatedJobs));
     closeEditModal();
   };
+
+  useSyncCartToLocalStorage(appliedJobs)
 
   return (
     <div >
@@ -65,7 +68,7 @@ const AppliedJobs = () => {
           <div className="space-y-4">
             {appliedJobs.map((job) => (
               <div
-                key={job._id}
+                key={job.jobId}
                 className="border border-gray-300 bg-white shadow-lg rounded-lg p-4 flex justify-between dark:bg-slate-800 dark:text-gray-300 dark:border-slate-700"
               >
                 <div>

@@ -8,7 +8,7 @@ const initialState = {
     skills: [],
   },
   filteredJobs: [],
-  appliedJobs: [],
+  appliedJobs: JSON.parse(localStorage.getItem("application")) || [],
 };
 
 const JobsDataSlice = createSlice({

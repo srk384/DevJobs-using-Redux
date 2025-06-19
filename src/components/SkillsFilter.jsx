@@ -7,7 +7,7 @@ const SkillsFilter = () => {
   const [isSkillsOpen, setIsSkillsOpen] = useState(false);
   const [selectedSkills, setSelectedSkills] = useState([]);
 
-  const { jobsList} = useSelector((state) => state.JobsData);
+  const { jobsList } = useSelector((state) => state.JobsData);
   const dispatch = useDispatch();
 
   const filterBySkills = () => {

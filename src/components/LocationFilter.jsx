@@ -7,7 +7,7 @@ const LocationFilter = () => {
   const [isLocationOpen, setIsLocationOpen] = useState(false);
   const [selectedLocation, setSelectedLocation] = useState([]);
 
-  const { jobsList } = useSelector((state) => state.JobsData);
+  const { jobsList, filters } = useSelector((state) => state.JobsData);
   const dispatch = useDispatch();
 
   const filterByLocation = () => {
@@ -20,14 +20,11 @@ const LocationFilter = () => {
     setLocation(uniqueLocation);
   };
 
-  const resultsByLocation = () => {
-    console.log(selectedLocation)
-    dispatch(setLocationFilter(selectedLocation));
-  };
+  const resultsByLocation = () => dispatch(setLocationFilter(selectedLocation));
 
   return (
     <div
-      className={`relative flex items-center gap-1 p-2  pr-1 border rounded-lg cursor-pointer hover:bg-gray-50  text-sm text-gray-700 dark:hover:bg-slate-800 dark:text-gray-200 ${selectedLocation.length > 0 ? "border-[rgb(144,190,109)] border-2" : "border-gray-300 dark:border-gray-700"}`}
+      className={`relative flex items-center gap-1 p-2  pr-1 border rounded-lg cursor-pointer hover:bg-gray-50  text-sm text-gray-700 dark:hover:bg-slate-800 dark:text-gray-200 ${filters.location.length > 0 ? "border-[rgb(144,190,109)] border-2" : "border-gray-300 dark:border-gray-700"}`}
       onClick={() => {
         filterByLocation();
         setIsLocationOpen(!isLocationOpen);
@@ -36,18 +33,22 @@ const LocationFilter = () => {
     >
       <div className=" ">
         Location{" "}
-        {selectedLocation.length > 0 && (
+        {filters.location.length > 0 && (
           <span className="absolute md:static -top-0.5 -right-0.5 text-xs bg-[rgb(144,190,109)] inline-block size-4 rounded-full text-center text-white">
-            {selectedLocation.length}
+            {filters.location.length}
           </span>
         )}{" "}
       </div>
-      <img className="w-5 dark:invert-100" src="/images/icon_down-filled.png" alt="" />
+      <img
+        className="w-5 dark:invert-100"
+        src="/images/icon_down-filled.png"
+        alt=""
+      />
       {location && isLocationOpen && (
         <div className="absolute bg-white/50 dark:bg-black/50 backdrop-blur-lg top-10 right-0 lg:left-0 w-52 shadow-lg rounded-lg flex flex-col z-10">
           <div className="max-h-54 overflow-y-auto custom-scrollbar">
             {location.map((item, index) => {
-              const isSelected = selectedLocation.includes(item);
+              const isSelected = filters.location.includes(item);
 
               return (
                 <div
@@ -58,7 +59,9 @@ const LocationFilter = () => {
                     e.stopPropagation();
 
                     if (selectedLocation.includes(item)) {
-                      setSelectedLocation(selectedLocation.filter((location) => location !== item));
+                      setSelectedLocation(
+                        selectedLocation.filter((location) => location !== item)
+                      );
                     } else {
                       setSelectedLocation([...selectedLocation, item]);
                     }

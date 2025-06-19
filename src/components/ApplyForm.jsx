@@ -5,9 +5,9 @@ import { useDispatch, useSelector } from "react-redux";
 import { object, string } from "yup";
 import JobSuccess from "./JobSuccess";
 import { useIsMobile } from "../hooks/useIsMobile";
+import useSyncCartToLocalStorage from "../hooks/useSyncCartToLocalStorage";
 
 const ApplyForm = ({ job }) => {
-  console.log(job);
   const [step, setStep] = useState(1);
   const [openSelectSkills, setOpenSelectSkills] = useState(false);
   const [SelectedSkills, setSelectedSkills] = useState([]);
@@ -120,6 +120,7 @@ const ApplyForm = ({ job }) => {
     };
 
     dispatch(setAppliedJobs([...appliedJobs, updatedFormData]));
+    // localStorage.setItem("application", JSON.stringify(updatedFormData));
     setFormData({
       name: "",
       email: "",
@@ -142,6 +143,8 @@ const ApplyForm = ({ job }) => {
     }
     FormValidation(formData, step);
   }, [step]);
+
+  useSyncCartToLocalStorage(appliedJobs);
 
   return (
     <>
