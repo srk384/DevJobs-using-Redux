@@ -1,5 +1,7 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
+import { LazyLoadImage } from "react-lazy-load-image-component";
+import "react-lazy-load-image-component/src/effects/blur.css";
 
 const Navbar = () => {
   const [isHamOpen, setIsHamOpen] = useState(false);
@@ -30,10 +32,16 @@ const Navbar = () => {
             Applied Jobs
           </li>
         </Link>
-        <li className="cursor-pointer hover:underline underline-offset-4 transition flex gap-2 items-center">
-          <img className="dark:invert-100 w-6" src="/images/about.png" alt="" />
-          About Us
-        </li>
+        <a href="https://shahrukh-khan.netlify.app/" target="blank">
+          <li className="cursor-pointer hover:underline underline-offset-4 transition flex gap-2 items-center">
+            <img
+              className="dark:invert-100 w-6"
+              src="/images/about.png"
+              alt=""
+            />
+            About Me
+          </li>
+        </a>
       </ul>
       <div
         className="block lg:hidden relative"
@@ -47,10 +55,11 @@ const Navbar = () => {
 
         {isHamOpen && (
           <div className="absolute right-0 bg-white/80 dark:bg-slate-900/80 backdrop-blur-lg w-62 rounded-lg shadow-lg">
-            <img
-              className="w-full object-cover rounded-t-lg"
+            <LazyLoadImage
+              alt="Popup Banner"
+              effect="blur"
               src="/images/hambanner.webp"
-              alt=""
+              className="w-full h-auto object-cover rounded-t-lg"
             />
             <ul className="gap-8 font-semibold dark:text-gray-100 p-2 py-4">
               <Link to={"/jobs"}>

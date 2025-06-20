@@ -336,7 +336,7 @@ const ApplyForm = ({ job }) => {
                     type="text"
                     id="coverletter"
                     name="coverletter"
-                    placeholder="Cover Letter Link (if any)"
+                    placeholder="Resume Link"
                     onChange={(e) => handleForm(e)}
                     value={formData.coverletter}
                     className="block w-full p-2 border border-gray-300 dark:border-gray-700 rounded-lg my-4"

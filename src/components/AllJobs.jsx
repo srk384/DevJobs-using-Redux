@@ -25,6 +25,7 @@ const Alljobs = () => {
 
   useEffect(() => {
     setJob(filteredJobs[0]);
+     setActiveJobId(filteredJobs[0]._id)
   }, [filteredJobs]);
 
   return (

@@ -48,7 +48,7 @@ const JobsNavbar = () => {
               }}
             />
             {searchResults.length > 0 && (
-              <div className="absolute w-96 z-10 max-h-52 bg-white dark:bg-slate-900 mt-1 rounded-lg overflow-auto custom-scrollbar shadow-lg">
+              <div className="absolute w-86 md:w-96 z-10 max-h-52 bg-white dark:bg-slate-900 mt-1 rounded-lg overflow-auto custom-scrollbar shadow-lg">
                 {searchResults.map((item, index) => (
                   <Link to={`/apply/${item._id}`} state={item} key={index}>
                     <div

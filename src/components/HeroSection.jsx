@@ -1,5 +1,5 @@
 import { useState, useRef } from "react";
-import { motion } from "motion/react";
+import { motion, AnimatePresence } from "motion/react";
 import { useJobSearch } from "../hooks/useJobSearch";
 import { Link } from "react-router-dom";
 
@@ -77,43 +77,43 @@ export const HeroSection = () => {
           >
             Search Jobs
           </motion.button>
-          {
-            <motion.span
-              initial={{
-                opacity: 0,
-                translateX: "-40%",
-              }}
-              animate={
-                isSearchClicked
-                  ? {
-                      opacity: 1,
-                      translateX: 0,
-                      transition: {
-                        opacity: { delay: 0.1, duration: 0.3 },
-                        translateX: { duration: 0.3 },
-                      },
-                    }
-                  : {
-                      opacity: 0,
-                      translateX: "-40%",
-                      transition: { duration: 0.3 },
-                    }
-              }
-              className="absolute left-20 bottom-0.5"
-            >
-              <input
-                ref={searchRef2}
-                className="pl-12 border-gray-300 bg-white border dark:bg-slate-800 dark:border-gray-500 p-2 px-6 lg:w-96 border-l-0 rounded-full shadow-md dark:text-gray-200"
-                type="text"
-                name=""
-                id=""
-                placeholder="Search for job titles"
-                onChange={(e) => {
-                  handleSearch(e);
+
+          <AnimatePresence>
+            {isSearchClicked && (
+              <motion.span
+                initial={{
+                  opacity: 0,
+                  translateX: "-40%",
                 }}
-              />
-            </motion.span>
-          }
+                animate={{
+                  opacity: 1,
+                  translateX: 0,
+                  transition: {
+                    opacity: { delay: 0.1, duration: 0.3 },
+                    translateX: { duration: 0.3 },
+                  },
+                }}
+                exit={{
+                  opacity: 0,
+                  translateX: "-40%",
+                  transition: { duration: 0.3 },
+                }}
+                className="absolute left-20 bottom-0.5"
+              >
+                <input
+                  ref={searchRef2}
+                  className="pl-12 border-gray-300 bg-white border dark:bg-slate-800 dark:border-gray-500 p-2 px-6 lg:w-96 border-l-0 rounded-full shadow-md dark:text-gray-200"
+                  type="text"
+                  name=""
+                  id=""
+                  placeholder="Search for job titles"
+                  onChange={(e) => {
+                    handleSearch(e);
+                  }}
+                />
+              </motion.span>
+            )}
+          </AnimatePresence>
 
           {/* mobile search bar */}
           <div className="relative">
