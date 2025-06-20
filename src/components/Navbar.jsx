@@ -55,12 +55,14 @@ const Navbar = () => {
 
         {isHamOpen && (
           <div className="absolute right-0 bg-white/80 dark:bg-slate-900/80 backdrop-blur-lg w-62 rounded-lg shadow-lg">
-            <LazyLoadImage
-              alt="Popup Banner"
-              effect="blur"
-              src="/images/hambanner.webp"
-              className="w-full h-auto object-cover rounded-t-lg"
-            />
+            <div className="w-full h-34">
+              <LazyLoadImage
+                alt="Popup Banner"
+                effect="blur"
+                src="/images/hambanner.webp"
+                className="w-full h-auto object-cover rounded-t-lg"
+              />
+            </div>
             <ul className="gap-8 font-semibold dark:text-gray-100 p-2 py-4">
               <Link to={"/jobs"}>
                 <li className="cursor-pointer underline-offset-4 transition p-2 active:bg-gray-700 flex gap-2 items-center">
