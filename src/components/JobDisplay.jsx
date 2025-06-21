@@ -5,7 +5,6 @@ import { useEffect, useRef } from "react";
 
 const JobDisplay = ({ job }) => {
   const containerRef = useRef(null);
-  const skipRender = useRef(true);
   useEffect(() => {
     if (job) {
       containerRef.current.scrollTo({ top: 0, behavior: "smooth" });
