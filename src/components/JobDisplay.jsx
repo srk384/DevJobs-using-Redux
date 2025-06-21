@@ -4,18 +4,21 @@ import { Link } from "react-router-dom";
 import { useEffect, useRef } from "react";
 
 const JobDisplay = ({ job }) => {
-
   const containerRef = useRef(null);
-
+  const skipRender = useRef(true);
   useEffect(() => {
-   containerRef.current.scrollTo({ top: 0, behavior: 'smooth' });
-  },[job])
-  
+    if (job) {
+      containerRef.current.scrollTo({ top: 0, behavior: "smooth" });
+    }
+  }, [job]);
+
   return (
     <>
       {job && (
-        <div className="lg:max-h-full lg:overflow-auto custom-scrollbar lg:pr-3"
-        ref={containerRef}>
+        <div
+          className="lg:max-h-full lg:overflow-auto custom-scrollbar lg:pr-3"
+          ref={containerRef}
+        >
           {/* section 1 */}
           <div className="w-full bg-white p-3 md:p-5 shadow-sm mb-4 rounded-lg dark:bg-slate-800">
             <div className="flex gap-5 items-center">
