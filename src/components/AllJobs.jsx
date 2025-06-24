@@ -1,4 +1,4 @@
-import { useEffect, useState, useRef } from "react";
+import { useEffect, useState } from "react";
 import JobDisplay from "./JobDisplay";
 import { useSelector, useDispatch } from "react-redux";
 import { setAllJobs } from "../Redux/Slices/JobsDataSlice";
@@ -24,8 +24,10 @@ const Alljobs = () => {
   }, []);
 
   useEffect(() => {
-    setJob(filteredJobs[0]);
-     setActiveJobId(filteredJobs[0]._id)
+    if (filteredJobs.length > 0) {
+      setJob(filteredJobs[0]);
+      setActiveJobId(filteredJobs[0]._id);
+    }
   }, [filteredJobs]);
 
   return (
@@ -38,9 +40,7 @@ const Alljobs = () => {
       <div className="md:flex max-w-7xl mx-auto">
         {filteredJobs.length > 0 && (
           <>
-            <div
-              className="left w-full lg:w-1/3 h-full lg:h-[86.5vh] bg-gray-50 dark:bg-slate-900 p-4 lg:overflow-auto custom-scrollbar mx-auto"
-            >
+            <div className="left w-full lg:w-1/3 h-full lg:h-[86.5vh] bg-gray-50 dark:bg-slate-900 p-4 lg:overflow-auto custom-scrollbar mx-auto">
               {filteredJobs &&
                 filteredJobs.map((job, index) => {
                   const CardContent = (
